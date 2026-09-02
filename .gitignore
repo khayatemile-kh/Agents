@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# Secrets
+.env
+!.env.example
+!.env.enterprise.example
+
+# OS
+.DS_Store
+
+# Node (financial-services plugins, if any)
+node_modules/

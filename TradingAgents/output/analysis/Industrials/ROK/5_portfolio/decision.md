@@ -1,0 +1,17 @@
+**Rating**: Underweight
+
+**Executive Summary**: Trim ROK by 20-30% into strength ($430-445 bounce zone) rather than selling into current weakness near $417; do not add at current levels or on dips. Set a hard stop/de-risk trigger at $425 (near the 200 SMA) and use the freed capital as dry powder. Re-underwrite the position only if two consecutive quarters show gross margin expansion >150bps (not just SG&A cuts) and disclosed software/subscription mix moves meaningfully above ~25%, which would support moving back to Hold/Overweight as the multiple compresses toward 20-24x.
+
+**Investment Thesis**: The Research Manager's Underweight call and the Trader's Sell proposal are the most defensible synthesis of a debate where all three risk analysts actually converge more than they diverge once the rhetoric is stripped away.
+
+Fundamentals: The bear/aggressive case's core numerical critique was never rebutted on the facts, only reframed - Q2 FY2026's 40%+ EPS growth came on 7.9% revenue growth, with the delta explained by margin expansion that the bear demonstrated is ~180bps SG&A deleverage vs only ~70bps gross margin/pricing power. The conservative analyst's rebuttal (108% FCF conversion, "software stickiness") is a reasonable defense of cash quality but does not actually contest the SG&A-vs-gross-margin composition point, nor does it produce evidence that software/subscription mix is currently large (hardware remains ~80% of segment revenue per the original research). The neutral analyst's "Option A vs Option B" framing implicitly concedes the aggressive analyst is right that this is a sentiment/multiple risk, not a business-collapse risk - which is precisely the "priced for perfection" framing the Research Manager used, not a reason to hold or add.
+
+Valuation: 40.3x trailing / 28.5x forward P/E, justified by bulls using management-guided (not consensus) forward EPS of $14.85, remains the single largest unresolved risk. The bear's peer-comp math (480bps margin edge, mid-single-digit growth edge do not support a 40-60% P/E premium to EMR/ABB/Siemens) was never actually refuted by either the conservative or neutral analyst - both instead argued the premium is "transitional," which is itself an admission that today's multiple is not supported by today's demonstrated fundamentals.
+
+Macro/technical: All three analysts agree the stock has broken the 50 SMA, sits at/near the 200 SMA ($417.07 vs price ~$417.53), shows oversold RSI (34.45) with an expanding negative MACD histogram, and that the industrials sector is underperforming the S&P by ~13pts YTD. The neutral analyst correctly flags that the 200 SMA has not yet been tested/validated as support, undercutting the conservative analyst's "dip-buying opportunity" framing. This tips the technical read toward confirming further downside risk rather than an imminent reversal, consistent with the Trader's proposed stop at $425.
+
+Net: no participant produced evidence of an accelerating, structurally-improving revenue/margin trend independent of a low base and cost cuts; no participant produced evidence contradicting the technical breakdown; and the bull's software/AI optionality remains explicitly unpriced in current disclosures. That combination supports trimming exposure and de-risking, but the strong absolute margins, FCF conversion, and legitimate long-term optionality argue against an outright sell/liquidation.
+
+**Price Target**: 440.0
+
+**Time Horizon**: 2-3 quarters (re-evaluate at next two earnings prints)

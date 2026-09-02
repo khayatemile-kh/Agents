@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: EQIX is trading at $1,027.59 in a technical pullback (below 50 SMA at $1,047.07) within a longer-term uptrend (well above 200 SMA at $947.43). While the fundamental growth story (13%+ revenue, 22%+ EBITDA growth YoY) remains intact, the research plan identifies critical balance-sheet concerns: negative FCF in recent quarters (-$511M, -$539M), net debt rising 8.9% while EBITDA growth moderates, and valuation stretched at 65x trailing P/E. Technical indicators show momentum fading (MACD below signal line, RSI at 42.24) with price near Bollinger lower band, suggesting mean-reversion bounce potential around $1,047–$1,061. The plan explicitly recommends holding current exposure and avoiding new capital deployment at current valuations until Q3/Q4 2026 earnings clarify FCF and leverage trajectory.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: MRK is trading at $149.86 in a corrective phase after an exhaustion rally to $156.45 on August 25. While the mRNA melanoma data is genuine, the research plan identifies critical balance-sheet fragility: TTM FCF of $15.2B is nearly fully consumed by debt service, dividends, capex, and deleveraging (99-105%), leaving minimal cushion. Operating margins have collapsed from +37.9% (Q3'25) to -19.6% (Q1'26) to -2.6% (Q2'26), with R&D spiking to 59-77% of revenue. Net leverage of 3.1x FCF is elevated versus peers (JNJ 1.2x, BMY 2.1x, LLY 1.8x), and Moderna's 156-176% rally versus MRK's 12.6% signals the market believes value capture skews to the partner, not MRK. The clinical upside is 3-4+ years out (2028-2030). Technically, RSI has normalized from overbought 83 to 63.73, MACD histogram has compressed from 0.96 to 0.53 signaling momentum weakening, and price is only 1.3% above the 10 EMA—vulnerable to pullback. A trim/sell recommendation aligns with reducing exposure until margin normalization and deleveraging confirm.
+
+**Position Sizing**: Trim existing position by 15-25% rather than full exit; do not add new positions.
+
+FINAL TRANSACTION PROPOSAL: **SELL**

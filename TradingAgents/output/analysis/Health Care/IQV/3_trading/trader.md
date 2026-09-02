@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: IQV exhibits strong operational momentum (12.1% adjusted EPS growth, 8.7% revenue growth, guidance raise) with bullish technical alignment (price > 10 EMA > 50 SMA > 200 SMA) and confirmed uptrend structure. However, the investment plan identifies two material unresolved risks that justify holding rather than buying: (1) highest leverage among stated peers at 4.4x net debt/EBITDA with $2.3B debt maturing within 12 months into a stable-but-elevated rate environment, creating refinancing risk; and (2) unproven AI-driven moat narrative priced into a 40.6% YTD appreciation and 21.7% one-month rally. Technical momentum shows signs of deceleration (MACD histogram negative, RSI 67.38 approaching overbought at 70), consistent with consolidation after a strong run. Position should be held to capture continued upside if operational momentum sustains and leverage de-risks, but not added to given valuation already prices in bullish assumptions.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

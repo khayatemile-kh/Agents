@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: IBM is trading at $231.40, recovered ~10% from July lows but still 11% below the 200-day SMA ($260.30), confirming downtrend structure. MACD is approaching a bullish crossover with positive histogram (+0.67) and RSI neutral at 47.28—early stabilization signals but no sustained reversal yet. Critically, the research plan identifies genuine unresolved uncertainty: while the balance sheet (Debt/FCF ~5.4x, interest coverage ~9-10x) is more resilient than feared and the 17.58x forward P/E offers valuation cushion, the key growth catalysts (Arm-mainframe customer wins, quantum revenue) remain unproven 6-9+ years out with no guidance lift. Volatility has normalized (ATR 7.38 vs. crisis peak 15.24), and current volume is below average (3.24M), indicating low conviction. The technical recovery is incomplete but downside appears partially priced in after the 21% YTD decline. This stalemate—partially priced weakness offset by stable cash generation and below-peer multiple, but unproven near-term catalysts—warrants holding current position size rather than forcing conviction either direction.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

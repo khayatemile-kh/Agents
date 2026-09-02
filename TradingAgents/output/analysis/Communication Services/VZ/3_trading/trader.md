@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: The research plan identifies VZ as structurally underweight due to critical cash-flow coverage deterioration: TTM FCF of $17.5B is insufficient to cover dividends ($9.9B) plus interest expense (~$8B), totaling ~102% of FCF before capex or debt principal. While the technical setup is constructively bullish (RSI 67.19, MACD positive, price above all major moving averages at $50.30), the investment plan emphasizes this momentum is unsustainable when core funding metrics are this tight. The 20%+ rally off June lows with fading volume (August 31-September 1 both below 21.4M) and declining ATR (0.987) into elevated resistance ($51.21 Bollinger upper band) presents an optimal exit opportunity rather than a breakout entry. The negative working capital position (current ratio ~0.60) leaves no liquidity buffer in a flat-to-higher rate environment through 2026, and the unconfirmed hyperscaler dark-fiber thesis cannot justify holding through refinancing and dividend-cut risk. Technical momentum does not override balance-sheet insolvency risk on a multi-year horizon.
+
+**Position Sizing**: Trim 20-30% of existing exposure near $50.30; reduce speculative dark-fiber bets to zero; retain only core income position sized at <50% of original allocation pending FCF coverage improvement.
+
+FINAL TRANSACTION PROPOSAL: **SELL**

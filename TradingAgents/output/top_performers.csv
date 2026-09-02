@@ -1,0 +1,106 @@
+Sector,Ticker,Industry,Index,SectorRank,SectorCount
+Communication Services,GOOG,Interactive Media & Services,97.4,1,20
+Communication Services,META,Interactive Media & Services,91.8,2,20
+Communication Services,VZ,Integrated Telecommunication Services,60.2,3,20
+Communication Services,NFLX,Movies & Entertainment,59.6,4,20
+Consumer Discretionary,AMZN,Broadline Retail,98.8,1,48
+Consumer Discretionary,EBAY,Broadline Retail,86.7,2,48
+Consumer Discretionary,DASH,Specialized Consumer Services,80.7,3,48
+Consumer Discretionary,EXPE,"Hotels, Resorts & Cruise Lines",79.9,4,48
+Consumer Discretionary,TSLA,Automobile Manufacturers,78.1,5,48
+Consumer Discretionary,GM,Automobile Manufacturers,75.4,6,48
+Consumer Discretionary,ABNB,"Hotels, Resorts & Cruise Lines",72.8,7,48
+Consumer Discretionary,APTV,Automotive Parts & Equipment,72.3,8,48
+Consumer Discretionary,HD,Home Improvement Retail,65.2,9,48
+Consumer Discretionary,BKNG,"Hotels, Resorts & Cruise Lines",61.4,10,48
+Consumer Staples,WMT,Consumer Staples Merchandise Retail,97.9,1,37
+Consumer Staples,TGT,Consumer Staples Merchandise Retail,77.6,2,37
+Consumer Staples,PG,Personal Care Products,73.8,3,37
+Consumer Staples,PEP,Soft Drinks & Non-alcoholic Beverages,73.1,4,37
+Consumer Staples,CVS,Drug Retail,68.9,5,37
+Consumer Staples,EL,Personal Care Products,68.2,6,37
+Consumer Staples,KHC,Packaged Foods & Meats,65.3,7,37
+Consumer Staples,CL,Household Products,59.8,8,37
+Energy,SLB,Oil & Gas Equipment & Services,99.4,1,22
+Energy,BKR,Oil & Gas Equipment & Services,88.0,2,22
+Energy,HAL,Oil & Gas Equipment & Services,81.9,3,22
+Energy,CVX,Integrated Oil & Gas,76.1,4,22
+Energy,XOM,Integrated Oil & Gas,62.0,5,22
+Financials,XYZ,Transaction & Payment Processing Services,88.8,1,76
+Financials,MA,Transaction & Payment Processing Services,86.4,2,76
+Financials,V,Transaction & Payment Processing Services,84.5,3,76
+Financials,NDAQ,Financial Exchanges & Data,84.4,4,76
+Financials,JPM,Diversified Banks,79.1,5,76
+Financials,COIN,Financial Exchanges & Data,70.1,6,76
+Financials,MSCI,Financial Exchanges & Data,69.6,7,76
+Financials,BK,Asset Management & Custody Banks,69.4,8,76
+Financials,HOOD,Investment Banking & Brokerage,69.3,9,76
+Financials,MCO,Financial Exchanges & Data,68.7,10,76
+Financials,SPGI,Financial Exchanges & Data,68.5,11,76
+Financials,AXP,Consumer Finance,67.3,12,76
+Financials,FIS,Transaction & Payment Processing Services,67.2,13,76
+Financials,PYPL,Transaction & Payment Processing Services,66.9,14,76
+Financials,FDS,Financial Exchanges & Data,66.8,15,76
+Financials,BX,Asset Management & Custody Banks,65.6,16,76
+Health Care,JNJ,Pharmaceuticals,87.3,1,59
+Health Care,GEHC,Health Care Equipment,84.3,2,59
+Health Care,MDT,Health Care Equipment,81.3,3,59
+Health Care,IQV,Life Sciences Tools & Services,80.7,4,59
+Health Care,UNH,Managed Health Care,78.2,5,59
+Health Care,MRNA,Biotechnology,77.2,6,59
+Health Care,PFE,Pharmaceuticals,74.7,7,59
+Health Care,BMY,Pharmaceuticals,73.9,8,59
+Health Care,TMO,Life Sciences Tools & Services,70.7,9,59
+Health Care,LLY,Pharmaceuticals,69.9,10,59
+Health Care,MRK,Pharmaceuticals,67.4,11,59
+Health Care,CI,Health Care Services,66.9,12,59
+Industrials,AXON,Aerospace & Defense,95.0,1,80
+Industrials,ROK,Electrical Components & Equipment,86.7,2,80
+Industrials,UBER,Passenger Ground Transportation,85.3,3,80
+Industrials,JCI,Building Products,84.1,4,80
+Industrials,LMT,Aerospace & Defense,83.4,5,80
+Industrials,LDOS,Diversified Support Services,82.9,6,80
+Industrials,BR,Data Processing & Outsourced Services,81.7,7,80
+Industrials,ADP,Human Resource & Employment Services,81.6,8,80
+Industrials,DE,Agricultural & Farm Machinery,81.3,9,80
+Industrials,CHRW,Air Freight & Logistics,79.6,10,80
+Industrials,HON,Industrial Conglomerates,77.4,11,80
+Industrials,CAT,Construction Machinery & Heavy Transportation Equipment,76.7,12,80
+Industrials,EFX,Research & Consulting Services,76.6,13,80
+Industrials,VRSK,Research & Consulting Services,74.9,14,80
+Industrials,RTX,Aerospace & Defense,71.0,15,80
+Industrials,DAY,Human Resource & Employment Services,70.0,16,80
+Information Technology,MSFT,Systems Software,93.9,1,70
+Information Technology,CRM,Application Software,88.7,2,70
+Information Technology,NOW,Systems Software,84.8,3,70
+Information Technology,ADBE,Application Software,83.4,4,70
+Information Technology,PANW,Systems Software,82.4,5,70
+Information Technology,CSCO,Communications Equipment,80.4,6,70
+Information Technology,IBM,IT Consulting & Other Services,78.6,7,70
+Information Technology,NVDA,Semiconductors,78.6,8,70
+Information Technology,ACN,IT Consulting & Other Services,77.6,9,70
+Information Technology,PLTR,Application Software,77.3,10,70
+Information Technology,INTC,Semiconductors,75.8,11,70
+Information Technology,AMD,Semiconductors,75.3,12,70
+Information Technology,CRWD,Systems Software,75.3,13,70
+Information Technology,CDNS,Application Software,72.3,14,70
+Maerials,ECL,Specialty Chemicals,93.1,1,26
+Maerials,DOW,Commodity Chemicals,81.7,2,26
+Maerials,IFF,Specialty Chemicals,76.6,3,26
+Maerials,LIN,Industrial Gases,75.3,4,26
+Maerials,AVY,Paper & Plastic Packaging Products & Materials,73.0,5,26
+Maerials,CRH,Construction Materials,68.0,6,26
+Real Estate,EQIX,Data Center REITs,95.9,1,31
+Real Estate,DLR,Data Center REITs,93.5,2,31
+Real Estate,IRM,Other Specialized REITs,89.5,3,31
+Real Estate,CBRE,Real Estate Services,79.9,4,31
+Real Estate,CSGP,Real Estate Services,72.9,5,31
+Real Estate,WELL,Health Care REITs,64.9,6,31
+Real Estate,AMT,Telecom Tower REITs,63.4,7,31
+Untilities,AES,Independent Power Producers & Energy Traders,95.4,1,31
+Untilities,DUK,Electric Utilities,82.5,2,31
+Untilities,PCG,Multi-Utilities,77.4,3,31
+Untilities,EXC,Electric Utilities,72.9,4,31
+Untilities,ETR,Electric Utilities,71.3,5,31
+Untilities,NEE,Multi-Utilities,68.2,6,31
+Untilities,NRG,Independent Power Producers & Energy Traders,67.2,7,31

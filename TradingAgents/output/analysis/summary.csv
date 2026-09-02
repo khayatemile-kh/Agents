@@ -1,0 +1,106 @@
+Sector,Ticker,Index,Signal,ElapsedSeconds,Status
+Communication Services,GOOG,97.4,Underweight,312,ok
+Communication Services,META,91.8,Hold,305,ok
+Communication Services,VZ,60.2,Underweight,318,ok
+Communication Services,NFLX,59.6,Underweight,323,ok
+Consumer Discretionary,TSLA,78.1,Underweight,266,ok
+Consumer Discretionary,AMZN,98.8,Hold,294,ok
+Consumer Discretionary,EBAY,86.7,Underweight,309,ok
+Consumer Discretionary,DASH,80.7,Underweight,312,ok
+Consumer Discretionary,EXPE,79.9,Underweight,314,ok
+Consumer Discretionary,GM,75.4,Underweight,317,ok
+Consumer Discretionary,ABNB,72.8,Underweight,312,ok
+Consumer Discretionary,BKNG,61.4,Overweight,303,ok
+Consumer Discretionary,HD,65.2,Underweight,318,ok
+Consumer Discretionary,APTV,72.3,Underweight,339,ok
+Consumer Staples,WMT,97.9,Hold,305,ok
+Consumer Staples,TGT,77.6,Hold,300,ok
+Consumer Staples,PG,73.8,Underweight,316,ok
+Consumer Staples,PEP,73.1,Underweight,309,ok
+Consumer Staples,CVS,68.9,Hold,317,ok
+Consumer Staples,EL,68.2,Underweight,311,ok
+Consumer Staples,KHC,65.3,Underweight,305,ok
+Consumer Staples,CL,59.8,Underweight,304,ok
+Energy,SLB,99.4,Underweight,311,ok
+Energy,BKR,88.0,Hold,303,ok
+Energy,HAL,81.9,Hold,308,ok
+Energy,CVX,76.1,Underweight,323,ok
+Energy,XOM,62.0,Underweight,301,ok
+Financials,XYZ,88.8,Underweight,306,ok
+Financials,MA,86.4,Overweight,304,ok
+Financials,V,84.5,Overweight,305,ok
+Financials,BK,69.4,ERROR,3,No market data for 'BK': Yahoo Finance returned no rows
+Financials,NDAQ,84.4,Underweight,312,ok
+Financials,JPM,79.1,Hold,309,ok
+Financials,COIN,70.1,Underweight,302,ok
+Financials,MSCI,69.6,Underweight,298,ok
+Financials,HOOD,69.3,Hold,302,ok
+Financials,SPGI,68.5,Underweight,304,ok
+Financials,MCO,68.7,Hold,305,ok
+Financials,FIS,67.2,Underweight,305,ok
+Financials,AXP,67.3,Hold,325,ok
+Financials,PYPL,66.9,Underweight,301,ok
+Financials,FDS,66.8,Underweight,302,ok
+Financials,BX,65.6,Overweight,303,ok
+Health Care,JNJ,87.3,Underweight,293,ok
+Health Care,GEHC,84.3,Underweight,311,ok
+Health Care,MDT,81.3,Hold,294,ok
+Health Care,IQV,80.7,Hold,299,ok
+Health Care,UNH,78.2,Underweight,310,ok
+Health Care,MRNA,77.2,Underweight,323,ok
+Health Care,PFE,74.7,Hold,311,ok
+Health Care,BMY,73.9,Underweight,315,ok
+Health Care,TMO,70.7,Underweight,286,ok
+Health Care,LLY,69.9,Overweight,313,ok
+Health Care,MRK,67.4,Underweight,298,ok
+Health Care,CI,66.9,Underweight,315,ok
+Industrials,AXON,95.0,Underweight,302,ok
+Industrials,ROK,86.7,Underweight,298,ok
+Industrials,UBER,85.3,Hold,266,ok
+Industrials,JCI,84.1,Underweight,254,ok
+Industrials,LMT,83.4,Hold,303,ok
+Industrials,BR,81.7,Overweight,270,ok
+Industrials,LDOS,82.9,Overweight,306,ok
+Industrials,DE,81.3,Hold,302,ok
+Industrials,ADP,81.6,Overweight,319,ok
+Industrials,CHRW,79.6,Underweight,321,ok
+Industrials,HON,77.4,Underweight,322,ok
+Industrials,CAT,76.7,Underweight,295,ok
+Industrials,DAY,70.0,ERROR,3,No market data for 'DAY': Yahoo Finance returned no rows
+Industrials,EFX,76.6,Underweight,294,ok
+Industrials,VRSK,74.9,Hold,300,ok
+Industrials,RTX,71.0,Underweight,291,ok
+Information Technology,MSFT,93.9,Overweight,270,ok
+Information Technology,CRM,88.7,Underweight,308,ok
+Information Technology,NOW,84.8,Underweight,298,ok
+Information Technology,ADBE,83.4,Underweight,310,ok
+Information Technology,PANW,82.4,Underweight,261,ok
+Information Technology,CSCO,80.4,Underweight,300,ok
+Information Technology,NVDA,78.6,Hold,290,ok
+Information Technology,IBM,78.6,Hold,300,ok
+Information Technology,PLTR,77.3,Hold,263,ok
+Information Technology,ACN,77.6,Underweight,297,ok
+Information Technology,INTC,75.8,Underweight,301,ok
+Information Technology,AMD,75.3,Underweight,296,ok
+Information Technology,CRWD,75.3,Hold,298,ok
+Information Technology,CDNS,72.3,Underweight,297,ok
+Maerials,ECL,93.1,Underweight,323,ok
+Maerials,IFF,76.6,Hold,264,ok
+Maerials,DOW,81.7,Underweight,289,ok
+Maerials,AVY,73.0,Hold,269,ok
+Maerials,LIN,75.3,Underweight,292,ok
+Maerials,CRH,68.0,Underweight,292,ok
+Real Estate,EQIX,95.9,Hold,293,ok
+Real Estate,DLR,93.5,Hold,298,ok
+Real Estate,CBRE,79.9,Hold,269,ok
+Real Estate,IRM,89.5,Underweight,280,ok
+Real Estate,CSGP,72.9,Underweight,311,ok
+Real Estate,WELL,64.9,Underweight,291,ok
+Real Estate,AMT,63.4,Underweight,295,ok
+Untilities,AES,95.4,Hold,296,ok
+Untilities,DUK,82.5,Underweight,304,ok
+Untilities,PCG,77.4,Underweight,261,ok
+Untilities,EXC,72.9,Underweight,299,ok
+Untilities,ETR,71.3,Underweight,304,ok
+Untilities,NEE,68.2,Underweight,329,ok
+Untilities,NRG,67.2,Underweight,317,ok

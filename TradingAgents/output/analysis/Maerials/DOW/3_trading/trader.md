@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: The research plan's "Underweight" stance coupled with deteriorating technical momentum and elevated valuation risk warrants a trimming action. MACD has turned bearish (histogram -0.11, crossover confirmed) with 78% momentum erosion since the August 21 peak, RSI is neutral at 48.08 (no oversold bounce catalyst), and volume has collapsed below average on recent price action, signaling weak conviction. The technical report itself flags that the current price ($30.46) sits in a low-conviction range between the 50 SMA ($29.97) and 200 SMA ($30.98), with the critical $31.00 breakout level not yet achieved. More critically, the research plan identifies material fundamental risks—extreme 112x debt-to-equity leverage, a non-linear $1.25B net income swing from Q1 to Q2 on only 23% revenue growth (suggesting one-time items or accounting timing), deeply negative TTM earnings (-$1.3B), and 30-40% feedstock cost exposure to oil price spikes—that are not offset by a single anomalous quarter. The plan explicitly recommends trimming 20-30% of exposure into recent strength as a de-risking opportunity rather than adding, and flags the bull's breakout thesis as speculative pending confirmation of consecutive quarters of clean GAAP earnings. At $30.46, near the upper-middle of the recent range and with momentum clearly rolling over, this represents a tactical exit window.
+
+**Position Sizing**: Trim 20-30% of existing DOW position
+
+FINAL TRANSACTION PROPOSAL: **SELL**

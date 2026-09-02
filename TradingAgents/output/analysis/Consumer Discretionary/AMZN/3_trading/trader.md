@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: AMZN is at a critical inflection point with deteriorating near-term technicals offsetting long-term franchise strength. The research plan identifies that normalized earnings (excluding one-time security gains) are materially lower than headline figures, removing the "undervalued" argument and placing the stock at fair-to-full valuation. Technical evidence strongly supports caution: MACD has collapsed from +8.43 to +1.09 with histogram now -1.45 (imminent negative crossover), RSI has normalized from 72 to 46.33, price is below the 10-EMA ($260.33) signaling momentum loss, and only 1% of downside remains to break the critical 50-SMA support ($252.41). The 10% post-peak decline (Aug 3 high $284.02 → current $254.92) reflects distribution, not accumulation. While AWS liquidity ($143.1B balance sheet) and advertising growth (+30%) provide offsetting strengths, the rising AWS disruption probability (50% per macro report) remains unresolved and presents real operational risk. No asymmetric catalyst justifies increasing exposure; next trigger is Q3 2026 earnings scrutiny.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

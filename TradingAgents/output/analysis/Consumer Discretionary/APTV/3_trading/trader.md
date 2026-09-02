@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: APTV exhibits deeply oversold technicals (RSI 30.85, MACD flattening at -2.72) that suggest a tactical bounce is plausible after the 22.5% crash and record volume selling ($44.85 now sits $0.45 above the lower Bollinger Band). However, the research plan's underweight thesis is grounded in material fundamental deterioration: revenue collapsed 36% QoQ while EPS rose (earnings quality risk), free cash flow burned $329M over 9 months, and leverage remains at extreme 64.9x D/E despite debt reduction. A hold posture respects both the technical rebound setup and the fundamental distress risk—trimming existing exposure is prudent, but adding on this weakness contradicts the evidence. Wait for stabilization signals (MACD crossover, revenue stabilization at next earnings) before committing fresh capital.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

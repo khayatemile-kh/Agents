@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: NEE faces a converging technical and fundamental headwind that justifies reducing exposure. Technically, the stock is trading below all three major moving averages (10 EMA $83.56, 50 SMA $86.24, 200 SMA $86.53) with MACD deteriorating to –1.01 and RSI deeply oversold at 36.16, confirming a multi-timeframe downtrend with no stabilization signal. Fundamentally, the research plan's critical finding—that NEE is funding dividend and growth primarily through debt issuance ($21.3B trailing net debt issuance vs. –$17.8B TTM FCF) with leverage rising to 1.62x D/E—reveals unsustainable capital structure dynamics that conflict with the 3.01% dividend's sustainability. The regulatory disallowance risk in the Virginia/Texas corridor (71% base-case probability of at least one moratorium) is a material threat to the backlog conversion narrative, and 18.64x P/E premium to AEP is not justified given NEE's deteriorating metrics. A trim (Sell 10–20% of position) rather than full liquidation acknowledges the A-rated credit rating and structural demand tailwind, but near-term risk/reward favors reducing exposure.
+
+**Position Sizing**: Trim 10–20% of existing NEE position; do not initiate new buys
+
+FINAL TRANSACTION PROPOSAL: **SELL**

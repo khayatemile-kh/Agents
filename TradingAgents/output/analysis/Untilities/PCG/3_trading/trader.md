@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: PCG exhibits a structural breakdown across all technical indicators (RSI 29.8, MACD death cross, price below all moving averages and lower Bollinger Band) following a 27.8% crash driven by panic-liquidation volumes. While the technical oversold condition and 22% mean-reversion upside to the 20 SMA ($17.19) might invite bottom-fishing, the research plan explicitly flags a "genuine deterioration in the thesis" tied to failed wildfire legislation, BofA downgrade, forward P/E implying earnings compression (not growth), and rising debt against flat OCF—unresolved regulatory catalysts that undermine the rate-recovery mechanism the entire bull case depends on. The 5.9% recovery on 2026-09-01 reflects technical relief, not fundamental validation. The plan recommends trimming 25-40% on relief rallies and holding a hard checkpoint: sell if forward guidance confirms EPS compression toward ~$1.90. Current technical conditions (price far below all MAs, MACD still diving negative at -0.484) make this a defensible exit window before further deterioration.
+
+**Position Sizing**: Trim existing PCG exposure by 25-40% on current or any further relief bounce above $14.50 resistance
+
+FINAL TRANSACTION PROPOSAL: **SELL**
