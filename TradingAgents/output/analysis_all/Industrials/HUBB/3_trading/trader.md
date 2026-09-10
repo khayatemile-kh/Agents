@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: HUBB is trading near the lower Bollinger Band ($436.98) with deeply negative momentum (MACD –10.22, histogram –4.47) and oversold RSI (32.76), but these technical capitulation signals do not offset the fundamental deterioration outlined in the research plan. The investment thesis explicitly recommends underweighting due to a critical balance-sheet deterioration: Net Debt/EBITDA jumped from 1.32x to 3.30x, leverage to 1.42x (vs. 0.65x prior), and goodwill ballooned to 63.7% of assets against thin $379M cash cover on $5.56B debt. The bull's required 12–15% organic growth assumption is 2.5–3x above the historical 4–6% industry norm and has zero margin for error; TTM P/E of 26.24x offers no safety margin. The market's negative reaction (sell-off on guidance raise, only 'Moderate Buy' consensus) validates the bear's competitive-positioning and refinancing-risk concerns. While technicals suggest oversold mean reversion potential, oversold conditions often persist when selling is driven by fundamental catalysts rather than pure sentiment. Trim exposure moderately on any bounce toward the middle Bollinger Band (~$484.86, +9.3% from current), not into weakness.
+
+**Position Sizing**: Reduce existing position by 20–30%; do not initiate new longs. Use rallies toward $484.86 for tactical exit, not entry.
+
+FINAL TRANSACTION PROPOSAL: **SELL**

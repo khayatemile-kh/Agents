@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: The research plan explicitly recommends "Underweight" with a strategic directive to "trim existing ABNB positions by 20-30% into any near-term bounce toward the 200-day MA (~$144)." The technical setup reinforces this bearish view: ABNB is trading at $126.81, which is 12.1% below the 200-day SMA ($144.33) in a confirmed downtrend. MACD momentum is flattening despite remaining positive, and RSI has moderated to neutral (55.62), with no catalyst supporting near-term re-rating. The research plan identifies deteriorating operating income (-19.8% YoY despite 18% revenue growth), 40x P/E valuation unsustainable on normalized earnings, regulatory headwinds (NYC, Paris precedent), and macro headwinds from elevated rates pressuring discretionary travel. The confluence of weak fundamentals (decelerating core profitability), stretched valuation, real regulatory risk, and unfavorable technicals (price below 200-day MA, flattening momentum) creates an asymmetric risk/reward skewed to the downside. The plan calls for trimming on any near-term bounce, and the recent consolidation near $126.81 after profit-taking from the $131.95 peak presents an opportune exit point before further deterioration.
+
+**Position Sizing**: Trim existing positions by 20-30% of total ABNB holdings
+
+FINAL TRANSACTION PROPOSAL: **SELL**

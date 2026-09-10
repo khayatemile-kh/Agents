@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: GEN presents a balanced risk/reward profile that justifies a Hold rather than conviction action. The technical setup is constructively bullish—clean moving average alignment, RSI at 61.7 (not overbought), positive MACD with only modest histogram compression, and light-volume pullback from $31.00 to $30.02 suggesting continuation rather than reversal. However, the research plan correctly identifies material offsets: revenue growth inconsistency (3.2% in Q1 2026 vs. 10-25% for cyber peers), margin volatility including a Q3 2025 collapse to 14.3% and a $79M Q1 2026 impairment, and elevated leverage (~45% of market cap) with mediocre 5x interest coverage. The 9.27x forward P/E and 11.8x FCF multiples appear to price this risk fairly, leaving upside/downside roughly balanced near current levels.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

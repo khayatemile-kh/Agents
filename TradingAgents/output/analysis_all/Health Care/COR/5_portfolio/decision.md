@@ -1,0 +1,19 @@
+**Rating**: Underweight
+
+**Executive Summary**: Trim COR by 20-30% into strength near $330-334 (upper Bollinger Band $334.29), using a tight stop at $333.22 (Aug 11 high) to cap downside if the breakout is genuine. Retain a small residual position for defensive/demographic optionality, but do not add on the sub-1x PEG narrative. Re-underwrite the position after 1-2 more quarterly prints clarify whether Q1 2026's $8.40 EPS was structural or anomalous, and whether net debt is genuinely trending down (Conservative's $10.21B→$8.91B read) or up. Horizon: 1-2 quarters to next re-rating decision.
+
+**Investment Thesis**: The debate surfaced one decisive, verifiable error and one genuinely unresolved question, and the net effect still favors reducing exposure rather than holding or adding.
+
+Resolved in the bulls'/Conservative's favor: the Aggressive Analyst's headline leverage claim ("net debt exploded 168% sequentially") was directly contradicted by their own cited figures ($10.21B → $8.91B, a 12.7% decline), and the Neutral Analyst confirmed this was a real arithmetic/narrative error, not noise. Net debt-to-EBITDA at ~1.6-2.1x is within normal range for a defensive distributor. So the "deteriorating balance sheet" pillar of the sell case is weak as presented — I discount it heavily.
+
+Unresolved and still the crux of the decision: earnings quality. Q1 2026 EPS of $8.40 is 2-4x the run-rate of surrounding quarters ($2.87, $3.94, -$1.75), and critically, Q2 2026 reverted sharply to $3.94 — a ~60% sequential drop from Q1's level, which the Neutral Analyst correctly flags as evidence of lumpiness/timing dependency rather than a clean step-change in structural margin. The Conservative Analyst's rebuttal — that management didn't explicitly flag Q1 as anomalous, so we shouldn't override guidance — is a reasonable process point, but it does not answer the Neutral Analyst's sharper question: what is the *composition* of the 44.6% forward growth guidance (organic volume vs. margin execution vs. one-time items)? That breakdown was never provided by any analyst, which itself is a red flag for underwriting a "cheap PEG" thesis on faith.
+
+Given that gap, the Neutral Analyst's framework is the most defensible: treat the $19.80 forward EPS / 44.6% growth as a ceiling/optionality case, not the base case, and underwrite on a more conservative 10-15% growth trajectory off a normalized earnings base. Under that framework, PEG moves from an apparently cheap 0.69x to roughly 1.1-1.3x — fair value at best, not a bargain. That directly undercuts the primary bull argument for owning COR here.
+
+Technically, the Neutral Analyst's read is the most balanced: price at $330.97 sitting modestly above 10 EMA/50 SMA/200 SMA with RSI at 61.97 (not technically overbought) is a consolidative, not exhaustive, setup — this tempers the Aggressive Analyst's "bull trap" framing. But it also means there's no technical margin of safety to justify holding full size into a name whose valuation support is now in question; the stock is not offering a discount to compensate for the earnings-composition uncertainty.
+
+Net conclusion: the leverage bear-case pillar collapses under scrutiny, but the earnings-quality pillar survives scrutiny from all three analysts in some form (even Conservative concedes the need to understand why Q1 spiked). Since the valuation case for owning/adding to COR depends entirely on trusting the 44.6% growth number, and that number's composition remains unverified and contradicted by Q2's reversion, the prudent stance is to reduce exposure modestly, not exit entirely (business is not distressed, distribution franchise is real and defensive) and not add (valuation support is unconfirmed).
+
+**Price Target**: 300.0
+
+**Time Horizon**: 1-2 quarters (through next 2 earnings prints)

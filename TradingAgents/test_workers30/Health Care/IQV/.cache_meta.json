@@ -1,0 +1,9 @@
+{
+  "ticker": "IQV",
+  "sector": "Health Care",
+  "index": "1.0",
+  "signal": "Hold",
+  "provider": "glm-5.3",
+  "elapsed": 579.6477921009064,
+  "generated_at": "2026-09-08T19:24:04.289359+00:00"
+}

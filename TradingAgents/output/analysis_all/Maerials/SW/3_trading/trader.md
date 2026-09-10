@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: SW is technically oversold (RSI 42.35, price below lower Bollinger Band at $45.43 vs. $45.97) with heavy capitulation volume (8.2M shares, +82% above average), creating a near-term bounce setup. However, the research plan explicitly recommends Underweight, citing unconfirmed margin recovery (one-quarter bounce vs. multi-quarter deterioration from 2023 peaks) and customer pass-through friction with large accounts. The long-term uptrend structure (200 SMA at $41.43) and reasonable valuation (13.35x forward P/E, 6.1x EV/EBITDA, 3.98% dividend) argue against an aggressive Sell, but MACD has turned bearish (histogram -0.415, signal line crossover) and momentum remains negative. The prudent stance is to Hold current positions while trimming exposure on bounces toward the 50 SMA (~$46.36), deferring new commitments until margin recovery is confirmed across multiple quarters.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

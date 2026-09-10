@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: PM's technical picture shows clear momentum deterioration—MACD has collapsed 87% from July peaks (4.28 to 0.56), RSI has fallen to 47.13 (neutral-to-bearish from overbought 65.71), and price now trades below the 10 EMA (189.59) while hovering near the critical 50 SMA (187.06). This distribution is inconsistent with aggressive accumulation. Fundamentally, the smoke-free transformation is real and FCF generation is strong (~$9.71B), but the bear case on negative common equity (~-$6.66B against $49B debt) and regulatory compression risks on pouches/IQOS margins presents material execution risk that the technical deterioration now reflects. Valuation at 20.5x forward and 3.14% dividend are fair but not compelling enough to override both technical weakness and balance-sheet fragility. The research plan correctly identifies this as a "collect dividend + optionality" hold, not a directional commitment.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

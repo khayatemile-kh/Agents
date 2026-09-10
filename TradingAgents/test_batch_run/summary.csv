@@ -1,0 +1,6 @@
+Sector,Ticker,Index,Signal,ElapsedSeconds,Status
+Consumer Staples,CVS,1.0,Underweight,265,ok
+Consumer Discretionary,AMZN,1.0,Overweight,269,ok
+Consumer Staples,TGT,1.0,Underweight,269,ok
+Communication Services,META,1.0,Hold,272,ok
+Consumer Staples,WMT,1.0,Underweight,278,ok

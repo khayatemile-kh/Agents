@@ -1,0 +1,16 @@
+Sector,Ticker,Index,Signal,ElapsedSeconds,Status
+Health Care,IQV,1.0,Underweight,251,ok
+Financials,MCO,1.0,Hold,253,ok
+Consumer Discretionary,AMZN,1.0,Overweight,266,ok
+Communication Services,META,1.0,Overweight,266,ok
+Energy,BKR,1.0,Hold,267,ok
+Consumer Staples,TGT,1.0,Underweight,267,ok
+Financials,HOOD,1.0,Hold,270,ok
+Financials,JPM,1.0,Underweight,271,ok
+Health Care,MDT,1.0,Underweight,273,ok
+Industrials,UBER,1.0,Overweight,274,ok
+Energy,HAL,1.0,Underweight,276,ok
+Health Care,PFE,1.0,Hold,278,ok
+Consumer Staples,WMT,1.0,Hold,281,ok
+Consumer Staples,CVS,1.0,Hold,281,ok
+Financials,AXP,1.0,Underweight,292,ok

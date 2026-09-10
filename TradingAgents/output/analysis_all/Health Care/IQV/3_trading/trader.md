@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: IQV exhibits a genuine mixed risk-reward profile that warrants a balanced stance. Bullish technicals (price above all key moving averages, RSI 67.38 in healthy momentum range, positive MACD, +30.6% rally from July low) and operational momentum (+8.7% revenue growth, +12.1% adjusted EPS, guidance raise, HSBC price target raised to $300) are offset by material balance-sheet concerns: free cash flow deteriorating quarter-over-quarter ($491M → $360M), net leverage elevated at 4.6x EBITDA with debt roughly doubling YoY, and current ratio below 1.0 (0.706). The trailing PE of 32x and adjusted-vs-GAAP EPS gap suggest market skepticism about earnings repeatability. Maintain position without adding or trimming until next 1–2 quarters clarify whether FCF stabilizes and leverage trends improve or deteriorate further.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

@@ -1,0 +1,1 @@
+The prediction market feed is live but only surfacing markets resolving in 2026–2028 — a temporal mismatch I'll flag. Before finalizing, let me make one last attempt with much wider windows to confirm the news gap is a vendor limitation rather than a window issue.

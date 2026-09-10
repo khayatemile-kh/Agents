@@ -1,0 +1,4 @@
+
+Neutral Analyst: I want to challenge both of you here, because you're arguing opposite extremes of the same coin, and neither extreme actually serves the portfolio in a data vacuum like this one.
+
+To the Aggressive Analyst, who has stayed silent so far: I know the case you'd make the moment you showed up. BKNG is the global leader in online travel, an asset-light cash machine with a long track record of execution, and travel demand has repeatedly proven stickier than the pessimists expect. Fine, maybe all true. But here's the problem: without a single verified data point on valuation, margins, leverage, or sentiment, you have no idea what you'd be paying for that

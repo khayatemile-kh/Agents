@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: The research plan identifies genuine fundamental strength (balance sheet deleveraged to 0.58x EBITDA, FCF of $2.05B, consistent capital returns) alongside decelerating revenue growth (20.6% YoY to 9.1% YoY), raising questions about margin sustainability in a cyclical sector. Technical analysis reinforces caution: MACD has crossed below signal line (bearish), RSI at 47.40 lacks conviction, and price sits marginally below the critical 50-day SMA at $39.86 with only modest upside to resistance at $42.92. The combination of visible growth deceleration, peak-cycle earnings risk, and weakened momentum does not justify aggressive entry, but strong balance sheet quality and reasonable 18.8x forward valuation prevent a sell signal. Position should be maintained pending next 1-2 quarterly reports to confirm margin and growth trajectory.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

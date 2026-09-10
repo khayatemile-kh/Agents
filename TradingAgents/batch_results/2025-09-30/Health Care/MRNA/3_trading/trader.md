@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: The research plan advocates for Underweight positioning, and the technical setup supports tactical reduction now. MRNA is trading below both the 50 SMA ($26.84) and 200 SMA ($30.58), confirming a downtrend that remains intact despite short-term RSI and MACD signs of stabilization. The fundamental case from the investment plan is clear: near-term cash runway is tight (~12–17 months), Q4 seasonal uplift assumptions lack evidentiary support, RSV market penetration at 3–6% contradicts bull assumptions, and gross margin compression (Q3 ~65% vs. Q2 72%) undermines operating loss resolution. While the technical bounce from $24.49 (09/26) to $25.83 (09/30) shows short-term relief, it does not invalidate the longer-term bearish structure or fundamental deterioration. Selling now at $25.83 and trimming exposure aligns with the "reduce risk, wait for concrete evidence of inflection" stance, locking in exits before potential further deterioration if cash burn accelerates or quarterly results disappoint.
+
+**Position Sizing**: Trim 30–40% of existing MRNA position; retain residual stake (low single-digit % of portfolio) to preserve optionality on pipeline catalysts.
+
+FINAL TRANSACTION PROPOSAL: **SELL**

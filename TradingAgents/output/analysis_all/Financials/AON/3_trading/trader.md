@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: AON presents a tactical sell/trim opportunity based on convergent technical and fundamental signals. Technically, the stock has reached capitulation extremes (RSI 34.07, price below Bollinger lower band at $330.47, volume 4-5x normal) that create a tactical bounce risk into the $336-351 moving average cluster—a natural exit zone. Fundamentally, the USI acquisition re-risks the balance sheet materially: pro-forma net debt/EBITDA of 4.1-4.4x approximately doubles the current 2.36x leverage, coinciding with elevated refinancing costs (89% probability of no 2026 rate cuts). The 6x sales multiple paid for USI is at a premium to sector comps (MMC 2.8x, WTW 3.1x, BRO 4.2x), and historical M&A integration risks in this space (NFP, JLT) suggest synergy realization timelines are uncertain. The investment plan calls for a trim (20-30% reduction) into near-term bounce rather than full exit; given oversold technicals now offer a near-term rebound vector, this is the optimal execution window.
+
+**Position Sizing**: Trim existing AON positions by 20-30% on any intraday bounce toward $336–351 resistance cluster (50 SMA and 200 SMA zone).
+
+FINAL TRANSACTION PROPOSAL: **SELL**

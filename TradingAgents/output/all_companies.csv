@@ -1,0 +1,501 @@
+Sector,Ticker,Industry,Index,SectorRank,SectorCount
+Communication Services,GOOG,Interactive Media & Services,97.4,1,20
+Communication Services,META,Interactive Media & Services,91.8,2,20
+Communication Services,VZ,Integrated Telecommunication Services,60.2,3,20
+Communication Services,NFLX,Movies & Entertainment,59.6,4,20
+Communication Services,TMUS,Wireless Telecommunication Services,56.3,5,20
+Communication Services,EA,Interactive Home Entertainment,52.1,6,20
+Communication Services,TTD,Advertising,50.5,7,20
+Communication Services,MTCH,Interactive Media & Services,49.5,8,20
+Communication Services,T,Integrated Telecommunication Services,49.0,9,20
+Communication Services,OMC,Advertising,41.2,10,20
+Communication Services,DIS,Movies & Entertainment,38.3,11,20
+Communication Services,TKO,Movies & Entertainment,34.3,12,20
+Communication Services,NWS,Publishing,29.7,13,20
+Communication Services,CMCSA,Cable & Satellite,28.8,14,20
+Communication Services,WBD,Broadcasting,27.0,15,20
+Communication Services,PSKY,Movies & Entertainment,23.4,16,20
+Communication Services,CHTR,Cable & Satellite,19.7,17,20
+Communication Services,LYV,Movies & Entertainment,15.3,18,20
+Communication Services,FOX,Broadcasting,11.2,19,20
+Communication Services,TTWO,Interactive Home Entertainment,8.7,20,20
+Consumer Discretionary,AMZN,Broadline Retail,98.8,1,48
+Consumer Discretionary,EBAY,Broadline Retail,86.7,2,48
+Consumer Discretionary,DASH,Specialized Consumer Services,80.7,3,48
+Consumer Discretionary,EXPE,"Hotels, Resorts & Cruise Lines",79.9,4,48
+Consumer Discretionary,TSLA,Automobile Manufacturers,78.1,5,48
+Consumer Discretionary,GM,Automobile Manufacturers,75.4,6,48
+Consumer Discretionary,ABNB,"Hotels, Resorts & Cruise Lines",72.8,7,48
+Consumer Discretionary,APTV,Automotive Parts & Equipment,72.3,8,48
+Consumer Discretionary,HD,Home Improvement Retail,65.2,9,48
+Consumer Discretionary,BKNG,"Hotels, Resorts & Cruise Lines",61.4,10,48
+Consumer Discretionary,HAS,Leisure Products,60.9,11,48
+Consumer Discretionary,SBUX,Restaurants,60.9,12,48
+Consumer Discretionary,YUM,Restaurants,58.6,13,48
+Consumer Discretionary,LOW,Home Improvement Retail,55.3,14,48
+Consumer Discretionary,BBY,Computer & Electronics Retail,52.7,15,48
+Consumer Discretionary,F,Automobile Manufacturers,52.1,16,48
+Consumer Discretionary,CVNA,Automotive Retail,51.4,17,48
+Consumer Discretionary,NKE,"Apparel, Accessories & Luxury Goods",49.4,18,48
+Consumer Discretionary,ULTA,Other Specialty Retail,49.2,19,48
+Consumer Discretionary,TPR,"Apparel, Accessories & Luxury Goods",47.2,20,48
+Consumer Discretionary,MAR,"Hotels, Resorts & Cruise Lines",45.5,21,48
+Consumer Discretionary,WSM,Homefurnishing Retail,45.4,22,48
+Consumer Discretionary,RCL,"Hotels, Resorts & Cruise Lines",45.1,23,48
+Consumer Discretionary,MCD,Restaurants,44.2,24,48
+Consumer Discretionary,DPZ,Restaurants,43.6,25,48
+Consumer Discretionary,HLT,"Hotels, Resorts & Cruise Lines",43.4,26,48
+Consumer Discretionary,LEN,Homebuilding,43.1,27,48
+Consumer Discretionary,TSCO,Other Specialty Retail,41.4,28,48
+Consumer Discretionary,LULU,"Apparel, Accessories & Luxury Goods",40.7,29,48
+Consumer Discretionary,CMG,Restaurants,40.5,30,48
+Consumer Discretionary,CCL,"Hotels, Resorts & Cruise Lines",35.6,31,48
+Consumer Discretionary,GPC,Distributors,35.5,32,48
+Consumer Discretionary,RL,"Apparel, Accessories & Luxury Goods",34.9,33,48
+Consumer Discretionary,GRMN,Consumer Electronics,32.6,34,48
+Consumer Discretionary,MGM,Casinos & Gaming,31.5,35,48
+Consumer Discretionary,AZO,Automotive Retail,26.8,36,48
+Consumer Discretionary,DECK,Footwear,26.2,37,48
+Consumer Discretionary,NCLH,"Hotels, Resorts & Cruise Lines",26.0,38,48
+Consumer Discretionary,WYNN,Casinos & Gaming,25.1,39,48
+Consumer Discretionary,DRI,Restaurants,23.3,40,48
+Consumer Discretionary,PHM,Homebuilding,20.8,41,48
+Consumer Discretionary,POOL,Distributors,19.5,42,48
+Consumer Discretionary,LVS,Casinos & Gaming,16.1,43,48
+Consumer Discretionary,TJX,Apparel Retail,11.2,44,48
+Consumer Discretionary,ROST,Apparel Retail,9.9,45,48
+Consumer Discretionary,DHI,Homebuilding,9.0,46,48
+Consumer Discretionary,ORLY,Automotive Retail,6.9,47,48
+Consumer Discretionary,NVR,Homebuilding,4.3,48,48
+Consumer Staples,WMT,Consumer Staples Merchandise Retail,97.9,1,37
+Consumer Staples,TGT,Consumer Staples Merchandise Retail,77.6,2,37
+Consumer Staples,PG,Personal Care Products,73.8,3,37
+Consumer Staples,PEP,Soft Drinks & Non-alcoholic Beverages,73.1,4,37
+Consumer Staples,CVS,Drug Retail,68.9,5,37
+Consumer Staples,EL,Personal Care Products,68.2,6,37
+Consumer Staples,KHC,Packaged Foods & Meats,65.3,7,37
+Consumer Staples,CL,Household Products,59.8,8,37
+Consumer Staples,KR,Food Retail,58.7,9,37
+Consumer Staples,KO,Soft Drinks & Non-alcoholic Beverages,58.6,10,37
+Consumer Staples,COST,Consumer Staples Merchandise Retail,56.3,11,37
+Consumer Staples,KVUE,Personal Care Products,53.8,12,37
+Consumer Staples,PM,Tobacco,53.0,13,37
+Consumer Staples,MDLZ,Packaged Foods & Meats,52.2,14,37
+Consumer Staples,GIS,Packaged Foods & Meats,49.6,15,37
+Consumer Staples,HSY,Packaged Foods & Meats,48.4,16,37
+Consumer Staples,MKC,Packaged Foods & Meats,47.7,17,37
+Consumer Staples,SYY,Food Distributors,47.0,18,37
+Consumer Staples,KDP,Soft Drinks & Non-alcoholic Beverages,44.5,19,37
+Consumer Staples,CAG,Packaged Foods & Meats,44.2,20,37
+Consumer Staples,KMB,Household Products,43.7,21,37
+Consumer Staples,CLX,Household Products,41.8,22,37
+Consumer Staples,CHD,Household Products,40.1,23,37
+Consumer Staples,HRL,Packaged Foods & Meats,37.4,24,37
+Consumer Staples,TAP,Brewers,36.5,25,37
+Consumer Staples,TSN,Packaged Foods & Meats,36.2,26,37
+Consumer Staples,SJM,Packaged Foods & Meats,32.0,27,37
+Consumer Staples,ADM,Agricultural Products & Services,27.4,28,37
+Consumer Staples,DLTR,Consumer Staples Merchandise Retail,27.2,29,37
+Consumer Staples,LW,Packaged Foods & Meats,25.8,30,37
+Consumer Staples,DG,Consumer Staples Merchandise Retail,25.8,31,37
+Consumer Staples,CPB,Packaged Foods & Meats,24.6,32,37
+Consumer Staples,BG,Agricultural Products & Services,22.8,33,37
+Consumer Staples,MO,Tobacco,14.8,34,37
+Consumer Staples,BF.B,Distillers & Vintners,13.5,35,37
+Consumer Staples,STZ,Distillers & Vintners,12.6,36,37
+Consumer Staples,MNST,Soft Drinks & Non-alcoholic Beverages,0.0,37,37
+Energy,SLB,Oil & Gas Equipment & Services,99.4,1,22
+Energy,BKR,Oil & Gas Equipment & Services,88.0,2,22
+Energy,HAL,Oil & Gas Equipment & Services,81.9,3,22
+Energy,CVX,Integrated Oil & Gas,76.1,4,22
+Energy,XOM,Integrated Oil & Gas,62.0,5,22
+Energy,PSX,Oil & Gas Refining & Marketing,58.4,6,22
+Energy,DVN,Oil & Gas Exploration & Production,52.8,7,22
+Energy,COP,Oil & Gas Exploration & Production,49.1,8,22
+Energy,WMB,Oil & Gas Storage & Transportation,47.7,9,22
+Energy,EQT,Oil & Gas Exploration & Production,47.7,10,22
+Energy,MPC,Oil & Gas Refining & Marketing,43.5,11,22
+Energy,TPL,Oil & Gas Exploration & Production,40.5,12,22
+Energy,EXE,Oil & Gas Exploration & Production,36.2,13,22
+Energy,OXY,Oil & Gas Exploration & Production,35.2,14,22
+Energy,EOG,Oil & Gas Exploration & Production,30.4,15,22
+Energy,FANG,Oil & Gas Exploration & Production,29.4,16,22
+Energy,CTRA,Oil & Gas Exploration & Production,27.0,17,22
+Energy,KMI,Oil & Gas Storage & Transportation,25.9,18,22
+Energy,VLO,Oil & Gas Refining & Marketing,22.8,19,22
+Energy,APA,Oil & Gas Exploration & Production,18.0,20,22
+Energy,OKE,Oil & Gas Storage & Transportation,17.7,21,22
+Energy,TRGP,Oil & Gas Storage & Transportation,8.1,22,22
+Financials,XYZ,Transaction & Payment Processing Services,88.8,1,76
+Financials,MA,Transaction & Payment Processing Services,86.4,2,76
+Financials,V,Transaction & Payment Processing Services,84.5,3,76
+Financials,NDAQ,Financial Exchanges & Data,84.4,4,76
+Financials,JPM,Diversified Banks,79.1,5,76
+Financials,COIN,Financial Exchanges & Data,70.1,6,76
+Financials,MSCI,Financial Exchanges & Data,69.6,7,76
+Financials,BK,Asset Management & Custody Banks,69.4,8,76
+Financials,HOOD,Investment Banking & Brokerage,69.3,9,76
+Financials,MCO,Financial Exchanges & Data,68.7,10,76
+Financials,SPGI,Financial Exchanges & Data,68.5,11,76
+Financials,AXP,Consumer Finance,67.3,12,76
+Financials,FIS,Transaction & Payment Processing Services,67.2,13,76
+Financials,PYPL,Transaction & Payment Processing Services,66.9,14,76
+Financials,FDS,Financial Exchanges & Data,66.8,15,76
+Financials,BX,Asset Management & Custody Banks,65.6,16,76
+Financials,C,Diversified Banks,63.4,17,76
+Financials,BLK,Asset Management & Custody Banks,62.1,18,76
+Financials,JKHY,Transaction & Payment Processing Services,61.9,19,76
+Financials,TFC,Diversified Banks,60.9,20,76
+Financials,MET,Life & Health Insurance,60.5,21,76
+Financials,MS,Investment Banking & Brokerage,58.2,22,76
+Financials,COF,Consumer Finance,57.8,23,76
+Financials,SYF,Consumer Finance,57.0,24,76
+Financials,HIG,Property & Casualty Insurance,56.5,25,76
+Financials,FISV,Transaction & Payment Processing Services,56.3,26,76
+Financials,NTRS,Asset Management & Custody Banks,55.7,27,76
+Financials,MRSH,Insurance Brokers,55.5,28,76
+Financials,BAC,Diversified Banks,55.5,29,76
+Financials,BEN,Asset Management & Custody Banks,53.8,30,76
+Financials,ICE,Financial Exchanges & Data,53.0,31,76
+Financials,GS,Investment Banking & Brokerage,52.4,32,76
+Financials,BRK.B,Multi-Sector Holdings,52.4,33,76
+Financials,PFG,Life & Health Insurance,51.6,34,76
+Financials,TRV,Property & Casualty Insurance,51.0,35,76
+Financials,ALL,Property & Casualty Insurance,50.0,36,76
+Financials,AON,Insurance Brokers,50.0,37,76
+Financials,STT,Asset Management & Custody Banks,49.9,38,76
+Financials,WTW,Insurance Brokers,49.4,39,76
+Financials,PRU,Life & Health Insurance,49.4,40,76
+Financials,AIG,Multi-line Insurance,49.0,41,76
+Financials,USB,Diversified Banks,48.3,42,76
+Financials,APO,Asset Management & Custody Banks,47.8,43,76
+Financials,WFC,Diversified Banks,47.6,44,76
+Financials,AIZ,Multi-line Insurance,46.7,45,76
+Financials,CFG,Regional Banks,45.2,46,76
+Financials,SCHW,Investment Banking & Brokerage,43.9,47,76
+Financials,IBKR,Investment Banking & Brokerage,43.5,48,76
+Financials,PNC,Diversified Banks,43.1,49,76
+Financials,CB,Property & Casualty Insurance,41.6,50,76
+Financials,KEY,Regional Banks,41.0,51,76
+Financials,FITB,Regional Banks,40.5,52,76
+Financials,RJF,Investment Banking & Brokerage,38.6,53,76
+Financials,TROW,Asset Management & Custody Banks,38.2,54,76
+Financials,AJG,Insurance Brokers,38.0,55,76
+Financials,HBAN,Regional Banks,37.5,56,76
+Financials,GPN,Transaction & Payment Processing Services,37.5,57,76
+Financials,CME,Financial Exchanges & Data,37.0,58,76
+Financials,IVZ,Asset Management & Custody Banks,36.2,59,76
+Financials,ARES,Asset Management & Custody Banks,34.3,60,76
+Financials,KKR,Asset Management & Custody Banks,34.0,61,76
+Financials,CPAY,Transaction & Payment Processing Services,32.9,62,76
+Financials,PGR,Property & Casualty Insurance,32.6,63,76
+Financials,MTB,Regional Banks,31.2,64,76
+Financials,RF,Regional Banks,31.0,65,76
+Financials,AMP,Asset Management & Custody Banks,27.9,66,76
+Financials,BRO,Insurance Brokers,27.9,67,76
+Financials,CBOE,Financial Exchanges & Data,27.6,68,76
+Financials,AFL,Life & Health Insurance,25.1,69,76
+Financials,CINF,Property & Casualty Insurance,24.1,70,76
+Financials,ACGL,Property & Casualty Insurance,22.3,71,76
+Financials,WRB,Property & Casualty Insurance,21.9,72,76
+Financials,L,Multi-line Insurance,17.3,73,76
+Financials,GL,Life & Health Insurance,16.4,74,76
+Financials,ERIE,Insurance Brokers,15.9,75,76
+Financials,EG,Reinsurance,9.5,76,76
+Health Care,JNJ,Pharmaceuticals,87.3,1,59
+Health Care,GEHC,Health Care Equipment,84.3,2,59
+Health Care,MDT,Health Care Equipment,81.3,3,59
+Health Care,IQV,Life Sciences Tools & Services,80.7,4,59
+Health Care,UNH,Managed Health Care,78.2,5,59
+Health Care,MRNA,Biotechnology,77.2,6,59
+Health Care,PFE,Pharmaceuticals,74.7,7,59
+Health Care,BMY,Pharmaceuticals,73.9,8,59
+Health Care,TMO,Life Sciences Tools & Services,70.7,9,59
+Health Care,LLY,Pharmaceuticals,69.9,10,59
+Health Care,MRK,Pharmaceuticals,67.4,11,59
+Health Care,CI,Health Care Services,66.9,12,59
+Health Care,ISRG,Health Care Equipment,65.5,13,59
+Health Care,AMGN,Biotechnology,64.6,14,59
+Health Care,MCK,Health Care Distributors,64.1,15,59
+Health Care,ELV,Managed Health Care,63.3,16,59
+Health Care,BSX,Health Care Equipment,62.1,17,59
+Health Care,LH,Health Care Services,62.1,18,59
+Health Care,DXCM,Health Care Equipment,59.5,19,59
+Health Care,DHR,Life Sciences Tools & Services,57.7,20,59
+Health Care,RVTY,Health Care Equipment,55.1,21,59
+Health Care,RMD,Health Care Equipment,54.0,22,59
+Health Care,DGX,Health Care Services,54.0,23,59
+Health Care,ZTS,Pharmaceuticals,53.8,24,59
+Health Care,ZBH,Health Care Equipment,53.2,25,59
+Health Care,HUM,Managed Health Care,53.2,26,59
+Health Care,IDXX,Health Care Equipment,53.1,27,59
+Health Care,SYK,Health Care Equipment,52.5,28,59
+Health Care,ALGN,Health Care Supplies,52.3,29,59
+Health Care,A,Life Sciences Tools & Services,52.2,30,59
+Health Care,SOLV,Health Care Technology,50.7,31,59
+Health Care,HOLX,Health Care Equipment,46.9,32,59
+Health Care,DVA,Health Care Services,46.0,33,59
+Health Care,PODD,Health Care Equipment,44.8,34,59
+Health Care,BDX,Health Care Equipment,42.5,35,59
+Health Care,CAH,Health Care Distributors,40.5,36,59
+Health Care,CRL,Life Sciences Tools & Services,40.3,37,59
+Health Care,CNC,Managed Health Care,40.3,38,59
+Health Care,ABT,Health Care Equipment,37.6,39,59
+Health Care,BIIB,Biotechnology,37.4,40,59
+Health Care,ABBV,Biotechnology,37.2,41,59
+Health Care,VRTX,Biotechnology,37.0,42,59
+Health Care,GILD,Biotechnology,36.2,43,59
+Health Care,COR,Health Care Distributors,33.2,44,59
+Health Care,TECH,Life Sciences Tools & Services,32.3,45,59
+Health Care,HSIC,Health Care Distributors,32.2,46,59
+Health Care,BAX,Health Care Equipment,29.9,47,59
+Health Care,EW,Health Care Equipment,29.5,48,59
+Health Care,COO,Health Care Supplies,29.1,49,59
+Health Care,HCA,Health Care Facilities,28.2,50,59
+Health Care,REGN,Biotechnology,27.9,51,59
+Health Care,UHS,Health Care Facilities,25.1,52,59
+Health Care,MTD,Life Sciences Tools & Services,24.9,53,59
+Health Care,WAT,Life Sciences Tools & Services,24.7,54,59
+Health Care,INCY,Biotechnology,23.8,55,59
+Health Care,MOH,Managed Health Care,21.5,56,59
+Health Care,WST,Health Care Supplies,17.8,57,59
+Health Care,VTRS,Pharmaceuticals,7.1,58,59
+Health Care,STE,Health Care Equipment,2.3,59,59
+Industrials,AXON,Aerospace & Defense,95.0,1,80
+Industrials,ROK,Electrical Components & Equipment,86.7,2,80
+Industrials,UBER,Passenger Ground Transportation,85.3,3,80
+Industrials,JCI,Building Products,84.1,4,80
+Industrials,LMT,Aerospace & Defense,83.4,5,80
+Industrials,LDOS,Diversified Support Services,82.9,6,80
+Industrials,BR,Data Processing & Outsourced Services,81.7,7,80
+Industrials,ADP,Human Resource & Employment Services,81.6,8,80
+Industrials,DE,Agricultural & Farm Machinery,81.3,9,80
+Industrials,CHRW,Air Freight & Logistics,79.6,10,80
+Industrials,HON,Industrial Conglomerates,77.4,11,80
+Industrials,CAT,Construction Machinery & Heavy Transportation Equipment,76.7,12,80
+Industrials,EFX,Research & Consulting Services,76.6,13,80
+Industrials,VRSK,Research & Consulting Services,74.9,14,80
+Industrials,RTX,Aerospace & Defense,71.0,15,80
+Industrials,DAY,Human Resource & Employment Services,70.0,16,80
+Industrials,UPS,Air Freight & Logistics,69.3,17,80
+Industrials,PAYX,Human Resource & Employment Services,68.6,18,80
+Industrials,FDX,Air Freight & Logistics,68.2,19,80
+Industrials,FTV,Industrial Machinery & Supplies & Components,67.7,20,80
+Industrials,TT,Building Products,67.6,21,80
+Industrials,EMR,Electrical Components & Equipment,67.0,22,80
+Industrials,BA,Aerospace & Defense,66.3,23,80
+Industrials,NOC,Aerospace & Defense,65.7,24,80
+Industrials,LHX,Aerospace & Defense,65.0,25,80
+Industrials,XYL,Industrial Machinery & Supplies & Components,63.1,26,80
+Industrials,GEV,Heavy Electrical Equipment,62.8,27,80
+Industrials,J,Construction & Engineering,60.6,28,80
+Industrials,GD,Aerospace & Defense,60.3,29,80
+Industrials,MMM,Industrial Conglomerates,58.5,30,80
+Industrials,DAL,Passenger Airlines,56.8,31,80
+Industrials,OTIS,Industrial Machinery & Supplies & Components,56.8,32,80
+Industrials,HII,Aerospace & Defense,56.8,33,80
+Industrials,CMI,Construction Machinery & Heavy Transportation Equipment,55.9,34,80
+Industrials,PAYC,Human Resource & Employment Services,55.3,35,80
+Industrials,PCAR,Construction Machinery & Heavy Transportation Equipment,55.0,36,80
+Industrials,ETN,Electrical Components & Equipment,54.3,37,80
+Industrials,GE,Aerospace & Defense,53.7,38,80
+Industrials,CARR,Building Products,52.5,39,80
+Industrials,UAL,Passenger Airlines,51.9,40,80
+Industrials,NSC,Rail Transportation,51.4,41,80
+Industrials,GWW,Industrial Machinery & Supplies & Components,51.0,42,80
+Industrials,WM,Environmental & Facilities Services,49.2,43,80
+Industrials,WAB,Construction Machinery & Heavy Transportation Equipment,48.6,44,80
+Industrials,LII,Building Products,48.6,45,80
+Industrials,ALLE,Building Products,47.7,46,80
+Industrials,LUV,Passenger Airlines,46.3,47,80
+Industrials,TXT,Aerospace & Defense,45.7,48,80
+Industrials,GNRC,Electrical Components & Equipment,45.4,49,80
+Industrials,JBHT,Cargo Ground Transportation,43.0,50,80
+Industrials,BLDR,Building Products,42.2,51,80
+Industrials,AME,Electrical Components & Equipment,41.3,52,80
+Industrials,UNP,Rail Transportation,41.2,53,80
+Industrials,SWK,Industrial Machinery & Supplies & Components,38.6,54,80
+Industrials,PH,Industrial Machinery & Supplies & Components,36.7,55,80
+Industrials,HUBB,Industrial Machinery & Supplies & Components,34.8,56,80
+Industrials,IR,Industrial Machinery & Supplies & Components,34.3,57,80
+Industrials,NDSN,Industrial Machinery & Supplies & Components,34.3,58,80
+Industrials,URI,Trading Companies & Distributors,33.0,59,80
+Industrials,VLTO,Environmental & Facilities Services,32.9,60,80
+Industrials,DOV,Industrial Machinery & Supplies & Components,32.4,61,80
+Industrials,RSG,Environmental & Facilities Services,32.0,62,80
+Industrials,CSX,Rail Transportation,31.3,63,80
+Industrials,PNR,Industrial Machinery & Supplies & Components,30.8,64,80
+Industrials,FAST,Trading Companies & Distributors,29.4,65,80
+Industrials,CPRT,Diversified Support Services,29.1,66,80
+Industrials,CTAS,Diversified Support Services,27.6,67,80
+Industrials,EXPD,Air Freight & Logistics,26.1,68,80
+Industrials,IEX,Industrial Machinery & Supplies & Components,26.0,69,80
+Industrials,AOS,Building Products,24.0,70,80
+Industrials,ODFL,Cargo Ground Transportation,21.9,71,80
+Industrials,TDG,Aerospace & Defense,21.2,72,80
+Industrials,HWM,Aerospace & Defense,20.6,73,80
+Industrials,PWR,Construction & Engineering,20.3,74,80
+Industrials,MAS,Building Products,19.9,75,80
+Industrials,ROL,Environmental & Facilities Services,19.6,76,80
+Industrials,FIX,Construction & Engineering,17.9,77,80
+Industrials,SNA,Industrial Machinery & Supplies & Components,17.9,78,80
+Industrials,ITW,Industrial Machinery & Supplies & Components,17.1,79,80
+Industrials,EME,Construction & Engineering,4.6,80,80
+Information Technology,MSFT,Systems Software,93.9,1,70
+Information Technology,CRM,Application Software,88.7,2,70
+Information Technology,NOW,Systems Software,84.8,3,70
+Information Technology,ADBE,Application Software,83.4,4,70
+Information Technology,PANW,Systems Software,82.4,5,70
+Information Technology,CSCO,Communications Equipment,80.4,6,70
+Information Technology,IBM,IT Consulting & Other Services,78.6,7,70
+Information Technology,NVDA,Semiconductors,78.6,8,70
+Information Technology,ACN,IT Consulting & Other Services,77.6,9,70
+Information Technology,PLTR,Application Software,77.3,10,70
+Information Technology,INTC,Semiconductors,75.8,11,70
+Information Technology,AMD,Semiconductors,75.3,12,70
+Information Technology,CRWD,Systems Software,75.3,13,70
+Information Technology,CDNS,Application Software,72.3,14,70
+Information Technology,QCOM,Semiconductors,71.9,15,70
+Information Technology,DDOG,Application Software,69.7,16,70
+Information Technology,INTU,Application Software,69.6,17,70
+Information Technology,WDAY,Application Software,69.5,18,70
+Information Technology,MU,Semiconductors,68.3,19,70
+Information Technology,ANET,Communications Equipment,68.0,20,70
+Information Technology,CTSH,IT Consulting & Other Services,67.5,21,70
+Information Technology,ORCL,Application Software,66.5,22,70
+Information Technology,HPE,"Technology Hardware, Storage & Peripherals",65.8,23,70
+Information Technology,NTAP,"Technology Hardware, Storage & Peripherals",63.3,24,70
+Information Technology,SNPS,Application Software,62.9,25,70
+Information Technology,ADSK,Application Software,62.1,26,70
+Information Technology,DELL,"Technology Hardware, Storage & Peripherals",61.7,27,70
+Information Technology,FTNT,Systems Software,61.0,28,70
+Information Technology,GEN,Systems Software,60.9,29,70
+Information Technology,AMAT,Semiconductor Materials & Equipment,57.1,30,70
+Information Technology,GDDY,Internet Services & Infrastructure,56.9,31,70
+Information Technology,HPQ,"Technology Hardware, Storage & Peripherals",56.7,32,70
+Information Technology,FFIV,Communications Equipment,56.6,33,70
+Information Technology,AAPL,"Technology Hardware, Storage & Peripherals",55.3,34,70
+Information Technology,EPAM,IT Consulting & Other Services,55.2,35,70
+Information Technology,MSI,Communications Equipment,54.8,36,70
+Information Technology,AKAM,Internet Services & Infrastructure,54.2,37,70
+Information Technology,ZBRA,Electronic Equipment & Instruments,53.5,38,70
+Information Technology,AVGO,Semiconductors,53.0,39,70
+Information Technology,WDC,"Technology Hardware, Storage & Peripherals",52.8,40,70
+Information Technology,PTC,Application Software,52.6,41,70
+Information Technology,APP,Application Software,49.0,42,70
+Information Technology,NXPI,Semiconductors,48.0,43,70
+Information Technology,TRMB,Electronic Equipment & Instruments,47.8,44,70
+Information Technology,ADI,Semiconductors,47.1,45,70
+Information Technology,JBL,Electronic Manufacturing Services,46.1,46,70
+Information Technology,TER,Semiconductor Materials & Equipment,46.0,47,70
+Information Technology,SNDK,"Technology Hardware, Storage & Peripherals",45.3,48,70
+Information Technology,STX,"Technology Hardware, Storage & Peripherals",44.6,49,70
+Information Technology,MCHP,Semiconductors,44.1,50,70
+Information Technology,CDW,Technology Distributors,41.6,51,70
+Information Technology,LRCX,Semiconductor Materials & Equipment,40.4,52,70
+Information Technology,KEYS,Electronic Equipment & Instruments,39.8,53,70
+Information Technology,FICO,Application Software,39.6,54,70
+Information Technology,ON,Semiconductors,37.3,55,70
+Information Technology,IT,IT Consulting & Other Services,35.9,56,70
+Information Technology,SMCI,"Technology Hardware, Storage & Peripherals",34.8,57,70
+Information Technology,KLAC,Semiconductor Materials & Equipment,34.8,58,70
+Information Technology,TEL,Electronic Manufacturing Services,33.6,59,70
+Information Technology,TXN,Semiconductors,31.7,60,70
+Information Technology,GLW,Electronic Components,29.2,61,70
+Information Technology,Q,Semiconductor Materials & Equipment,28.2,62,70
+Information Technology,TYL,Application Software,27.8,63,70
+Information Technology,SWKS,Semiconductors,26.4,64,70
+Information Technology,ROP,Electronic Equipment & Instruments,22.1,65,70
+Information Technology,TDY,Electronic Equipment & Instruments,13.5,66,70
+Information Technology,MPWR,Semiconductors,12.8,67,70
+Information Technology,VRSN,Internet Services & Infrastructure,7.5,68,70
+Information Technology,APH,Electronic Components,5.9,69,70
+Information Technology,FSLR,Semiconductors,5.4,70,70
+Maerials,ECL,Specialty Chemicals,93.1,1,26
+Maerials,DOW,Commodity Chemicals,81.7,2,26
+Maerials,IFF,Specialty Chemicals,76.6,3,26
+Maerials,LIN,Industrial Gases,75.3,4,26
+Maerials,AVY,Paper & Plastic Packaging Products & Materials,73.0,5,26
+Maerials,CRH,Construction Materials,68.0,6,26
+Maerials,DD,Specialty Chemicals,65.0,7,26
+Maerials,FCX,Copper,64.4,8,26
+Maerials,CTVA,Fertilizers & Agricultural Chemicals,63.8,9,26
+Maerials,PPG,Specialty Chemicals,52.8,10,26
+Maerials,ALB,Specialty Chemicals,50.3,11,26
+Maerials,SW,Paper & Plastic Packaging Products & Materials,46.1,12,26
+Maerials,LYB,Specialty Chemicals,41.6,13,26
+Maerials,AMCR,Paper & Plastic Packaging Products & Materials,38.8,14,26
+Maerials,APD,Industrial Gases,36.3,15,26
+Maerials,NEM,Gold,35.7,16,26
+Maerials,NUE,Steel,34.7,17,26
+Maerials,VMC,Construction Materials,32.8,18,26
+Maerials,MOS,Fertilizers & Agricultural Chemicals,28.8,19,26
+Maerials,SHW,Specialty Chemicals,27.3,20,26
+Maerials,BALL,"Metal, Glass & Plastic Containers",24.9,21,26
+Maerials,MLM,Construction Materials,21.6,22,26
+Maerials,IP,Paper & Plastic Packaging Products & Materials,21.0,23,26
+Maerials,STLD,Steel,18.1,24,26
+Maerials,CF,Fertilizers & Agricultural Chemicals,12.8,25,26
+Maerials,PKG,Paper & Plastic Packaging Products & Materials,5.3,26,26
+Real Estate,EQIX,Data Center REITs,95.9,1,31
+Real Estate,DLR,Data Center REITs,93.5,2,31
+Real Estate,IRM,Other Specialized REITs,89.5,3,31
+Real Estate,CBRE,Real Estate Services,79.9,4,31
+Real Estate,CSGP,Real Estate Services,72.9,5,31
+Real Estate,WELL,Health Care REITs,64.9,6,31
+Real Estate,AMT,Telecom Tower REITs,63.4,7,31
+Real Estate,PSA,Self-Storage REITs,62.6,8,31
+Real Estate,PLD,Industrial REITs,58.7,9,31
+Real Estate,HST,Hotel & Resort REITs,50.5,10,31
+Real Estate,O,Retail REITs,50.4,11,31
+Real Estate,DOC,Health Care REITs,50.4,12,31
+Real Estate,AVB,Multi-Family Residential REITs,49.7,13,31
+Real Estate,INVH,Single-Family Residential REITs,49.4,14,31
+Real Estate,KIM,Retail REITs,40.5,15,31
+Real Estate,CPT,Multi-Family Residential REITs,39.3,16,31
+Real Estate,EXR,Self-Storage REITs,36.4,17,31
+Real Estate,EQR,Multi-Family Residential REITs,36.2,18,31
+Real Estate,WY,Timber REITs,33.6,19,31
+Real Estate,CCI,Telecom Tower REITs,33.1,20,31
+Real Estate,SBAC,Telecom Tower REITs,32.4,21,31
+Real Estate,UDR,Multi-Family Residential REITs,32.2,22,31
+Real Estate,BXP,Office REITs,32.0,23,31
+Real Estate,VTR,Health Care REITs,31.1,24,31
+Real Estate,REG,Retail REITs,30.9,25,31
+Real Estate,ARE,Office REITs,30.6,26,31
+Real Estate,ESS,Multi-Family Residential REITs,30.0,27,31
+Real Estate,SPG,Retail REITs,28.8,28,31
+Real Estate,FRT,Retail REITs,25.7,29,31
+Real Estate,MAA,Multi-Family Residential REITs,24.5,30,31
+Real Estate,VICI,Hotel & Resort REITs,3.1,31,31
+Untilities,AES,Independent Power Producers & Energy Traders,95.4,1,31
+Untilities,DUK,Electric Utilities,82.5,2,31
+Untilities,PCG,Multi-Utilities,77.4,3,31
+Untilities,EXC,Electric Utilities,72.9,4,31
+Untilities,ETR,Electric Utilities,71.3,5,31
+Untilities,NEE,Multi-Utilities,68.2,6,31
+Untilities,NRG,Independent Power Producers & Energy Traders,67.2,7,31
+Untilities,CEG,Electric Utilities,61.7,8,31
+Untilities,AEE,Multi-Utilities,59.5,9,31
+Untilities,XEL,Multi-Utilities,59.1,10,31
+Untilities,PPL,Electric Utilities,58.1,11,31
+Untilities,CMS,Multi-Utilities,50.9,12,31
+Untilities,EIX,Electric Utilities,47.5,13,31
+Untilities,CNP,Multi-Utilities,47.4,14,31
+Untilities,AEP,Electric Utilities,47.3,15,31
+Untilities,ED,Multi-Utilities,47.1,16,31
+Untilities,SO,Electric Utilities,44.1,17,31
+Untilities,ES,Electric Utilities,43.6,18,31
+Untilities,D,Multi-Utilities,43.1,19,31
+Untilities,NI,Multi-Utilities,40.1,20,31
+Untilities,DTE,Multi-Utilities,36.7,21,31
+Untilities,LNT,Electric Utilities,36.1,22,31
+Untilities,SRE,Multi-Utilities,34.3,23,31
+Untilities,VST,Electric Utilities,32.7,24,31
+Untilities,PEG,Electric Utilities,31.4,25,31
+Untilities,EVRG,Electric Utilities,29.9,26,31
+Untilities,FE,Electric Utilities,29.2,27,31
+Untilities,PNW,Multi-Utilities,27.2,28,31
+Untilities,WEC,Electric Utilities,20.6,29,31
+Untilities,AWK,Water Utilities,16.6,30,31
+Untilities,ATO,Gas Utilities,5.9,31,31

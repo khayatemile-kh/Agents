@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: APTV presents a high-risk profile warranting a reduction in exposure. The stock has broken decisively below both the 50-day SMA (63.89) and 200-day SMA (65.28), with price now 8.8% and 9.0% below these key levels respectively. While RSI at 36.16 suggests oversold conditions, MACD momentum is accelerating to the downside (histogram widening from -0.11 to -0.36), contradicting a reversal signal. Critically, the research plan emphasizes that forward EPS estimates requiring a 195% jump from TTM ($2.21 to $6.51) lack credibility given sustained institutional selling despite supposedly strong guidance—this glaring contradiction undermines the bull thesis. Combined with extreme leverage (65x debt-to-equity) leaving minimal equity cushion and razor-thin net margin (2.3%) vulnerable to surprises, the risk-reward is asymmetric to the downside. Price near the Bollinger Lower Band (59.90) does not constitute support in a deteriorating trend. The research plan explicitly recommends trimming APTV exposure by 25-40% now and avoiding new buys until earnings confirm forward guidance and price reclaims the 50-day SMA on above-average volume.
+
+**Position Sizing**: Trim existing position by 30-40% immediately
+
+FINAL TRANSACTION PROPOSAL: **SELL**

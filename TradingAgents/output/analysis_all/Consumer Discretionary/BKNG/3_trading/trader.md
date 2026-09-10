@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: BKNG is consolidating near the 50-day SMA ($192.28) and lower Bollinger Band ($196.08), with RSI at neutral 43 and MACD in bearish crossover—indicating balanced risk/reward rather than a directional trigger. While technical support is holding and the business fundamentals (87% gross margins, 8.2% YoY revenue growth, positive FCF) are genuine, the deteriorating balance sheet (stockholders' equity worsened from -$8.72B to -$10.78B, net debt up 500% YoY) and seasonal distortion in forward EPS growth (comparing weak trailing to strong forward estimates) create material offsetting headwinds that prevent a conviction buy or sell at this time. The Rosenblatt initiation is a single data point, not yet confirmed by broader analyst action. Maintain current position pending Q3 results and quarterly balance-sheet stabilization.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

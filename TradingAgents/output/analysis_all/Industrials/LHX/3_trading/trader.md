@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: LHX presents a genuine case for balanced conviction that offsets directional commitment. The technical picture reveals oversold conditions (RSI 36.28) and momentum exhaustion (MACD histogram compressing from -7.37 to -1.30), supporting mean reversion potential. However, the structural bearish setup—price firmly below all major moving averages (10 EMA, 50 SMA, 200 SMA) with an 18.9% gap to the 200 SMA—remains intact, and failed recovery attempts signal weak conviction. The investment plan correctly identifies conflicting signals: genuine valuation support (19.4x forward P/E, ~39% analyst upside, durable Viper Shield/PAC-3 backlogs, net debt down to $9.48B) is offset by material execution risk (gross margin compressed to 25.5% vs. historical 30%+, requiring flawless execution on 37% forward EPS growth assumptions, CEO transition unresolved). Neither catalyst—margin stabilization or permanent CEO announcement—has yet confirmed, making aggressive positioning premature in either direction. Hold the position and await Q3 earnings and leadership clarity before adjusting sizing.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

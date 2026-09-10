@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: COIN has collapsed 34.9% in six weeks amid deteriorating fundamentals and technical capitulation, with operating income deeply negative (-$841M TTM), working capital deteriorating sharply (-$1,126.5M swing), and forward EPS guidance unrefreshed. The research plan explicitly recommends underweighting and trimming exposure, citing absent evidence of profitability inflection and a probability-weighted macro backdrop (BTC 42% to $55K or below vs. 24% to $100K) that skews negative. Technically, while RSI is oversold at 34.69 and ATR has declined, all three moving averages remain significantly above current price ($172.23), with the 50 SMA at $237.31 (27.4% above)—a gap consistent with unconfirmed downtrend structure rather than a reliable reversal setup. The research plan prescribes trimming by one-third to one-half of current allocation and waiting for confirmed evidence (positive operating income, stabilized working capital, updated guidance) before re-adding. Proceed with disciplined exit.
+
+**Position Sizing**: Trim by 33–50% of current COIN allocation; do not add on weakness until profitability inflection is confirmed (positive operating income print, working-capital reversal, refreshed management guidance).
+
+FINAL TRANSACTION PROPOSAL: **SELL**

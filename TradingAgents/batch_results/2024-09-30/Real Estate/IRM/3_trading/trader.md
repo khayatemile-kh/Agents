@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: IRM has rallied 33.4% in three months and is now trading near the upper Bollinger Band ($115.05) with technical warning signs: MACD has turned negative (below signal line), RSI has declined from 77–81 in August to 63.13 today, and momentum is decelerating despite price near highs—a classic divergence. More critically, fundamentals are deteriorating: free cash flow swung from +$44.1M (2022) to -$231.5M (2023), EBITDA fell 13.6% year-over-year despite 52% capex growth, and margins compressed 3.8pp operationally and 7.5pp on net income. The capex surge failed to drive EBITDA or profitability expansion, contradicting a "growth investing" narrative. The AI data-center thesis lacks credibility—IRM operates legacy colocation for enterprises, not hyperscaler infrastructure, meaning it will not capture the best economics of the AI buildout. With current valuation already extended and fundamentals deteriorating (negative FCF, declining EBITDA, expanding leverage to 5.79x debt/EBITDA), trimming exposure into this strength protects gains and allows re-entry at better levels.
+
+**Position Sizing**: Trim 25–35% of existing position
+
+FINAL TRANSACTION PROPOSAL: **SELL**

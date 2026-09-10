@@ -1,0 +1,9 @@
+{
+  "ticker": "NVDA",
+  "sector": "Information Technology",
+  "index": "1.0",
+  "signal": "Hold",
+  "provider": "glm-5.3",
+  "elapsed": 635.0544199943542,
+  "generated_at": "2026-09-08T19:24:59.696675+00:00"
+}

@@ -1,0 +1,9 @@
+{
+  "ticker": "EQIX",
+  "sector": "Real Estate",
+  "index": "1.0",
+  "signal": "Hold",
+  "provider": "glm-5.3",
+  "elapsed": 541.981024980545,
+  "generated_at": "2026-09-08T19:23:26.624746+00:00"
+}

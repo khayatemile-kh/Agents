@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: DLR exhibits a severe technical downtrend (24.5% decline from January highs, price $4.07 below the 10 EMA, trading near lower Bollinger Band at $136.13) combined with deteriorating fundamentals that justify a trimming action rather than a hold. While the research plan acknowledges the intact secular AI/hyperscaler demand thesis, the investment committee's consensus underweight reflects three concrete headwinds the technical setup has already priced in: (1) extreme forward P/E of 65.54x and PEG of 12.17x leaving zero margin for error; (2) material refinancing risk as billions in legacy 2.5–3.5% debt rolls into a 6.2–6.8% environment, compressing real estate cap rate spreads; and (3) a weak current ratio of 0.89 signaling liquidity stress. The bearish technical backdrop (RSI at 38, negative MACD histogram, weak oversold bounces despite touches below 40) confirms that institutional de-risking is underway. A tactical 20–30% trim on this weakness is appropriate before technicals deteriorate further or Q1 earnings disappoint on FFO growth guidance.
+
+**Position Sizing**: Trim existing position by 20–30%; do not re-enter until FFO multiple compresses toward mid-15x range (peer level) or net debt/EBITDA trends toward 4.0x with confirmed lower refinancing spreads.
+
+FINAL TRANSACTION PROPOSAL: **SELL**

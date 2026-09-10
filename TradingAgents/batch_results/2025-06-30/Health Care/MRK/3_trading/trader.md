@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: The research plan's underweight recommendation is reinforced by deteriorating fundamentals: the bear thesis dismantled the bull's "normalized 13-14x P/E" as methodologically unsound (forward P/E closer to 40-45x vs. sector 15-20x), capital returns exceed annualized free cash flow ($13.6B vs. $10B), and cash on hand fell ~39% YoY—indicating balance-sheet funded shareholder returns rather than organic generation. While technical indicators (MACD crossover, RSI 51, double-bottom support at $70-73) suggest short-term recovery potential, these patterns are easily invalidated by weak earnings given the demonstrated earnings quality issues (TTM 116x vs. normalized estimates). The current position at $76.60, marginally above the 50 SMA ($75.91) with price trapped in a $73–$79 consolidation band, offers a near-term exit opportunity into modest technical strength before the next earnings catalyst resolves the cash-sustainability and valuation concerns in the bear's favor.
+
+**Position Sizing**: Trim 20–30% of existing MRK holdings into any near-term bounce toward $80–$87 resistance; liquidate rather than add on technical setups.
+
+FINAL TRANSACTION PROPOSAL: **SELL**

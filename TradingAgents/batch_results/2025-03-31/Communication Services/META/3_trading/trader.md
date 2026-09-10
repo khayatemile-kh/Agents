@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: META is at a critical inflection point. The technical structure shows accelerating downside momentum (widening negative MACD histogram at -0.43, RSI at 36.84 in sustained weakness), with price now at the 200-day SMA ($573.12)—a key pivot. However, the research plan correctly emphasizes this is a trim/de-risk call, not an exit, given solid absolute fundamentals (29.8% net margin, PEG 0.82, fortress balance sheet). The failed March 25-27 bounce and renewed breakdown suggest further downside toward the Bollinger lower band (~$561.30) is plausible, but extreme oversold readings have not yet emerged (RSI never reached below 31), leaving room for stabilization. Current holders should trim 15-25% into any strength near $620-624 resistance rather than add; new buyers should await confirmation of a technical bottom (MACD histogram narrowing, RSI basing above 40, price reclaiming 200-day SMA on volume) before deploying capital. This posture respects both the near-term momentum deterioration and the long-term business quality.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

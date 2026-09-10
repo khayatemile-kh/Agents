@@ -1,0 +1,9 @@
+{
+  "ticker": "BKR",
+  "sector": "Energy",
+  "index": "1.0",
+  "signal": "Underweight",
+  "provider": "claude-sonnet-5 (fallback)",
+  "elapsed": 986.408194065094,
+  "generated_at": "2026-09-08T19:30:51.048949+00:00"
+}

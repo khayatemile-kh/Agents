@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: EXE is trading at a critical technical inflection point ($99.98 vs. 200 SMA $100.27, upper Bollinger Band $100.20) with the research plan explicitly recommending Hold due to offsetting bullish and bearish evidence. The bull case rests on attractive trailing valuation (8.6x P/E, 9.1% EBITDA yield) and technical breakout potential; the bear case highlights severe sequential deterioration—revenue down 32.7%, EBITDA down 36.4%, free cash flow down 79.9% Q1-to-Q2 2026—with FCF/EBITDA conversion of only ~22% undermining headline yield credibility. Technically, RSI is elevated at 67.52 (not yet overbought) and MACD momentum is plateauing, positioning the stock as a "wait for confirmation" setup. A decisive close above $100.50 with volume would validate the bull; rejection and fall below the 50 SMA ($91.63) would validate bear concerns. Until either trigger resolves the ambiguity, maintaining position neutrality respects the genuine uncertainty in both fundamental cash-flow trends and technical directional conviction.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

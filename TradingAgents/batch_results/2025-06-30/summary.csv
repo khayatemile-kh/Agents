@@ -1,0 +1,104 @@
+Sector,Ticker,Index,Signal,ElapsedSeconds,Status
+Consumer Staples,CVS,1.0,Underweight,255,ok
+Energy,HAL,1.0,Underweight,264,ok
+Energy,BKR,1.0,Hold,266,ok
+Consumer Staples,TGT,1.0,Underweight,269,ok
+Consumer Discretionary,AMZN,1.0,Overweight,280,ok
+Consumer Staples,WMT,1.0,Overweight,281,ok
+Financials,JPM,1.0,Underweight,285,ok
+Communication Services,META,1.0,Overweight,289,ok
+Financials,MCO,1.0,Overweight,275,ok
+Financials,HOOD,1.0,Underweight,285,ok
+Health Care,MDT,1.0,Overweight,273,ok
+Health Care,IQV,1.0,Underweight,269,ok
+Health Care,PFE,1.0,Underweight,272,ok
+Industrials,UBER,1.0,Overweight,271,ok
+Financials,AXP,1.0,Hold,308,ok
+Industrials,LMT,1.0,Underweight,299,ok
+Industrials,DE,1.0,Underweight,258,ok
+Information Technology,NVDA,1.0,Overweight,264,ok
+Industrials,VRSK,1.0,Hold,272,ok
+Information Technology,PLTR,1.0,Hold,265,ok
+Information Technology,IBM,1.0,Underweight,275,ok
+Materials,IFF,1.0,Underweight,259,ok
+Information Technology,CRWD,1.0,Underweight,279,ok
+Materials,AVY,1.0,Underweight,255,ok
+Real Estate,EQIX,1.0,Underweight,280,ok
+Real Estate,CBRE,1.0,Underweight,273,ok
+Real Estate,DLR,1.0,Hold,283,ok
+Consumer Discretionary,BKNG,1.0,Overweight,269,ok
+Utilities,AES,1.0,Underweight,277,ok
+Financials,MA,1.0,Overweight,274,ok
+Financials,V,1.0,Hold,272,ok
+Financials,BX,1.0,Underweight,270,ok
+Health Care,LLY,1.0,Overweight,278,ok
+Industrials,ADP,1.0,Underweight,264,ok
+Industrials,BR,1.0,Overweight,274,ok
+Industrials,LDOS,1.0,Overweight,281,ok
+Information Technology,MSFT,1.0,Hold,273,ok
+Communication Services,VZ,1.0,Underweight,267,ok
+Communication Services,GOOG,1.0,Overweight,276,ok
+Communication Services,NFLX,1.0,Underweight,281,ok
+Consumer Discretionary,EBAY,1.0,Underweight,274,ok
+Consumer Discretionary,DASH,1.0,Underweight,273,ok
+Consumer Discretionary,EXPE,1.0,Underweight,278,ok
+Consumer Discretionary,ABNB,1.0,Underweight,279,ok
+Consumer Discretionary,HD,1.0,Underweight,264,ok
+Consumer Discretionary,APTV,1.0,Underweight,276,ok
+Consumer Discretionary,TSLA,1.0,Underweight,298,ok
+Consumer Discretionary,GM,1.0,Hold,299,ok
+Consumer Staples,KHC,1.0,Underweight,257,ok
+Consumer Staples,CL,1.0,Hold,267,ok
+Consumer Staples,PEP,1.0,Hold,268,ok
+Consumer Staples,EL,1.0,Underweight,268,ok
+Consumer Staples,PG,1.0,Underweight,284,ok
+Health Care,JNJ,1.0,ERROR,10,[Errno 2] No such file or directory: '/Users/emile/.tradingagents/memory/trading_memory.tmp' -> '/Users/emile/.tradingagents/memory/trading_memory.md'
+Energy,CVX,1.0,Overweight,259,ok
+Energy,SLB,1.0,Underweight,260,ok
+Financials,COIN,1.0,Underweight,272,ok
+Financials,XYZ,1.0,Hold,274,ok
+Financials,MSCI,1.0,Overweight,275,ok
+Financials,NDAQ,1.0,Underweight,276,ok
+Health Care,GEHC,1.0,Underweight,284,ok
+Energy,XOM,1.0,Underweight,285,ok
+Financials,FDS,1.0,Overweight,287,ok
+Health Care,MRNA,1.0,Underweight,290,ok
+Health Care,BMY,1.0,Underweight,282,ok
+Financials,FIS,1.0,Overweight,299,ok
+Health Care,UNH,1.0,Underweight,302,ok
+Financials,PYPL,1.0,Underweight,315,ok
+Financials,SPGI,1.0,REVIEW,323,ok
+Health Care,TMO,1.0,Hold,257,ok
+Health Care,MRK,1.0,Underweight,275,ok
+Industrials,CHRW,1.0,Underweight,268,ok
+Industrials,ROK,1.0,Underweight,278,ok
+Industrials,JCI,1.0,Hold,280,ok
+Health Care,CI,1.0,Hold,284,ok
+Industrials,EFX,1.0,Underweight,276,ok
+Industrials,AXON,1.0,Underweight,295,ok
+Industrials,RTX,1.0,Underweight,281,ok
+Industrials,HON,1.0,Underweight,290,ok
+Industrials,CAT,1.0,Underweight,290,ok
+Information Technology,NOW,1.0,Hold,283,ok
+Information Technology,CRM,1.0,Hold,291,ok
+Information Technology,ADBE,1.0,Hold,281,ok
+Information Technology,PANW,1.0,Underweight,277,ok
+Information Technology,CSCO,1.0,Underweight,276,ok
+Information Technology,ACN,1.0,Overweight,276,ok
+Materials,ECL,1.0,Overweight,264,ok
+Information Technology,AMD,1.0,Underweight,273,ok
+Information Technology,INTC,1.0,Underweight,276,ok
+Materials,LIN,1.0,Hold,271,ok
+Materials,CRH,1.0,Underweight,270,ok
+Materials,DOW,1.0,Underweight,277,ok
+Real Estate,CSGP,1.0,Underweight,267,ok
+Real Estate,WELL,1.0,Underweight,263,ok
+Information Technology,CDNS,1.0,REVIEW,306,ok
+Real Estate,IRM,1.0,Underweight,290,ok
+Real Estate,AMT,1.0,Hold,283,ok
+Utilities,DUK,1.0,Hold,279,ok
+Utilities,PCG,1.0,Underweight,275,ok
+Utilities,EXC,1.0,Underweight,269,ok
+Utilities,ETR,1.0,Hold,279,ok
+Utilities,NEE,1.0,Hold,284,ok
+Utilities,NRG,1.0,Underweight,292,ok

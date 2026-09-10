@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: The technical report reveals GDDY at a critical juncture with deteriorating momentum despite price recovery. RSI at 57.92 is neutral, but the MACD histogram has shrunk 71% (from 0.63 to 0.18), signaling momentum exhaustion—a classic divergence warning as price rises while oscillators flatten. Volume has declined materially on the recovery (+37.5% from $73.10 lows on weak conviction), and the 200-day SMA remains in downtrend (down from $104.97 to $96.75), acting as decaying resistance. The investment plan explicitly identifies asymmetric downside risks: refinancing cliff risk ($60–120M incremental interest expense), unproven forward EPS growth disconnected from 7% YoY revenue trends, and unresolved litigation overhang that the bull case inadequately addresses. Current price at $100.55 sits between the 50-day ($91.60) and 200-day ($96.75) moving averages—a transition zone vulnerable to mean reversion. The research plan recommends trimming 25–35% of position immediately to de-risk leverage and litigation exposure; this technical deterioration reinforces that case.
+
+**Position Sizing**: Trim 25–35% of existing position; do not add
+
+FINAL TRANSACTION PROPOSAL: **SELL**

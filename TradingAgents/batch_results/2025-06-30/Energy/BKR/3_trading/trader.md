@@ -1,0 +1,7 @@
+**Action**: Hold
+
+**Reasoning**: BKR presents a balanced risk-reward that does not justify directional commitment. The fundamental case is mixed: genuine operational improvement (net income +$3.58B from 2022 trough, EBITDA nearly tripled, ROE 16.46%) is offset by elevated forward P/E of 19.1x on only 4.4% forward EPS growth—a valuation premium not historically justified by the cyclical nature of oil & gas equipment services. Technically, the MACD has crossed below its signal line (bearish reversal signal), RSI has retreated from 64 to 52 despite the 13.8% recovery from April lows, and price remains 4.4% below the 200-day SMA ($39.27), confirming a longer-term downtrend. The short-term rally has exhausted its momentum without breaking above resistance, while volatility compression and the VWMA divergence suggest institutional buyers are positioned higher than current price, creating a tug-of-war. The research plan correctly identifies this as neither a conviction bull nor a forced-capitulation bear scenario—the responsible action is to maintain current position without adding meaningfully into momentum fade or aggressively trimming into support.
+
+**Position Sizing**: Maintain current size; no add above $38.79 or aggressive trim below $36.68 unless technical structure breaks cleanly.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

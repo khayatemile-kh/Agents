@@ -1,0 +1,9 @@
+{
+  "ticker": "HOOD",
+  "sector": "Financials",
+  "index": "1.0",
+  "signal": "Hold",
+  "provider": "claude-sonnet-5 (fallback)",
+  "elapsed": 1033.4079730510712,
+  "generated_at": "2026-09-08T19:31:38.049031+00:00"
+}

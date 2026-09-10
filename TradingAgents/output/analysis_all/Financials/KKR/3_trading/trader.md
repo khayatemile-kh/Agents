@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: KKR displays a confluence of deteriorating technical and fundamental signals warranting a tactical reduction. The rapid RSI collapse from 71.71 to 50.51 in a single session, confirmed bearish MACD crossover with negative histogram (-0.57), and price trading $3.94 below the volume-weighted moving average ($110.35) all indicate broken momentum and weak institutional conviction. The investment plan correctly identifies that forward valuation (34x trailing P/E) rests entirely on unproven 136% EPS growth driven by lumpy, macro-sensitive carried interest—evidenced by quarterly EPS swings of 1.84x. The $250M DOJ penalty (largest premerger penalty in history) adds regulatory overhang that threatens deal clearance velocity and the carried-interest engine itself. With price currently at $106.41 consolidating in the lower half of Bollinger Bands ($101.79–$114.72) and the 10 EMA now above price, the near-term path of least resistance is downside. The plan's recommendation to trim 15–25% into current strength aligns with technicals showing exhausted uptrend and diminishing follow-through on volume.
+
+**Position Sizing**: Reduce existing exposure by 15–25% of current KKR position
+
+FINAL TRANSACTION PROPOSAL: **SELL**

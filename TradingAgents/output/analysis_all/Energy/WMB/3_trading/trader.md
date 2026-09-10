@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: WMB presents a balanced risk/reward profile that does not justify aggressive positioning at this juncture. While technicals are constructive (price $75.23 above both 50 SMA at $73.51 and 200 SMA at $69.26, positive MACD crossover at +0.34 with widening histogram, RSI at 57.74 showing room for upside), the fundamental friction remains unresolved: operating cash flow of $5.96B is insufficient to cover capex of $7.48B and dividends of $2.57B, generating -$1.52B free cash flow funded by debt at 4.35x net debt/EBITDA. The bull thesis hinges on capex-cycle inflection in 12–24 months, but no contracted volume or earnings guidance has materialized to validate this timeline. Maintain current position, set explicit checkpoints (FCF ratio trending toward 1.0x, net debt/EBITDA stability, and disclosed volume/contract wins) for re-rating, and revisit after next 1–2 quarterly reports.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

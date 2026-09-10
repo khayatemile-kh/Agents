@@ -1,0 +1,10 @@
+Sector,Ticker,Industry,Index,Weight
+Information Technology,MSFT,Systems Software,93.9,18
+Consumer Discretionary,AMZN,Broadline Retail,98.8,15
+Financials,JPM,Diversified Banks,79.1,12
+Health Care,UNH,Managed Health Care,78.2,10
+Communication Services,GOOG,Interactive Media,97.4,10
+Industrials,CAT,Construction Machinery,76.7,10
+Consumer Staples,PG,Household Products,73.8,9
+Energy,XOM,Integrated Oil & Gas,62,8
+Energy,CVX,Integrated Oil & Gas,76.1,8

@@ -1,0 +1,7 @@
+**Action**: Hold
+
+**Reasoning**: ON is trading at $72.65 in a confirmed downtrend (21.4% decline in one month, price 15.6% below 50 SMA, below all key moving averages). However, RSI at 37.55 signals deep oversold conditions, MACD histogram has turned positive (early momentum recovery signal), and ATR is contracting—classically setting up a mean-reversion bounce toward the $77-80 zone (200 SMA at $77.95, Bollinger middle band at $77.25). The research plan is explicitly cautious ("Underweight"), reflecting unproven automotive recovery (one quarter of data), speculative AI revenue doubling (only 12-16% of revenue mix, uncontracted guidance), and integration risk from the $7B Synaptics acquisition. The prudent tactical stance is Hold: do not add exposure at current uncertainty, but wait for either (1) a confirmed multi-quarter automotive recovery with quantified AI data-center margin guidance, or (2) a technical bounce to the $77-80 resistance zone to trim existing positions on strength, as the research plan recommends. Capitulation selling (VWMA above price) and oversold technicals suggest a bounce is near-term likely, but the fundamental case remains unvalidated and does not justify new long exposure.
+
+**Stop Loss**: 71.93
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

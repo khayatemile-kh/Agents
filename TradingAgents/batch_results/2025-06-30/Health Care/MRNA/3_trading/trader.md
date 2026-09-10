@@ -1,0 +1,7 @@
+**Action**: Hold
+
+**Reasoning**: MRNA is in early-stage recovery (MACD crossover, 8.6% bounce from June 18 low) with support forming near $25.40, but remains 29% below its 200 SMA amid a severe fundamental deterioration: COVID revenue down 97%, R&D burning ~500%+ of quarterly revenue, and only ~1.4 years of cash runway at current burn rates despite $5.1B liquidity. The investment plan calls for underweight positioning and trimming exposure 20–30%, aligned with waiting for concrete catalysts (flu Phase 3 data, RSV/flu uptake acceleration, stabilizing cash burn) rather than adding. Tactically, the stock shows neutral-to-bullish technicals ($27.59 at 10 EMA/$26.89 support, RSI 55, Bollinger mid-band near $26.89), but the research plan explicitly rejects treating the current price as a "screaming buy" until pipeline and cash-burn risk materially improve. Hold rather than Sell respects pipeline optionality (Merck cancer vaccine Phase 2b, flu Phase 3); rather than Buy respects the need to trim and avoid new accumulation until proof points emerge.
+
+**Position Sizing**: Reduce by 20–30% if currently holding; residual position sized as high-risk/high-optionality allocation only (~2–3% of portfolio max), not a core holding.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

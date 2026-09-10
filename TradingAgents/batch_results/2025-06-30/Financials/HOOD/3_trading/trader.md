@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: HOOD presents a conflicted technical-fundamental setup. Technicals are aggressively bullish (RSI 79.15, price $93.63 above upper Bollinger Band $88.65, MACD positive, all moving averages aligned uptrend) with massive volume (101.9M shares on June 30) confirming momentum. However, the research plan identifies critical flaws: normalized FCF is ~$2B annualized (not $14B headline), leverage is ~4x net-debt/FCF (not 2.4x), and TTM PE of 50.7x is stretched versus fintech comps (25-35x). The 41.8% six-week rally combined with extreme overbought readings suggests late-stage euphoria vulnerable to mean reversion, especially if the cash-flow narrative deteriorates under scrutiny. For existing positions, the recommendation is to trim 25-40% into this strength; for new positions, avoid initiation until either (a) RSI normalizes into 40-60 range with consolidation above moving averages, or (b) forward PE compresses toward 20-25x on real earnings growth.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

@@ -1,0 +1,31 @@
+Sector,Ticker,Index,Signal,Provider,ElapsedSeconds,Status
+Health Care,MDT,1.0,ERROR,glm-5.3,16,[Errno 2] No such file or directory: '/Users/emile/.tradingagents/memory/trading_memory.tmp' -> '/Users/emile/.tradingagents/memory/trading_memory.md'
+Health Care,PFE,1.0,ERROR,glm-5.3,16,[Errno 2] No such file or directory: '/Users/emile/.tradingagents/memory/trading_memory.tmp' -> '/Users/emile/.tradingagents/memory/trading_memory.md'
+Financials,MA,1.0,Hold,glm-5.3,378,ok
+Materials,AVY,1.0,Hold,glm-5.3,478,ok
+Consumer Discretionary,BKNG,1.0,Hold,glm-5.3,482,ok
+Financials,JPM,1.0,Hold,glm-5.3,504,ok
+Real Estate,EQIX,1.0,Hold,glm-5.3,542,ok
+Information Technology,CRWD,1.0,Hold,glm-5.3,548,ok
+Communication Services,META,1.0,Hold,glm-5.3,567,ok
+Real Estate,CBRE,1.0,Hold,glm-5.3,571,ok
+Health Care,IQV,1.0,Hold,glm-5.3,580,ok
+Consumer Staples,CVS,1.0,Hold,glm-5.3,597,ok
+Information Technology,IBM,1.0,Hold,glm-5.3,608,ok
+Industrials,VRSK,1.0,Hold,glm-5.3,614,ok
+Materials,IFF,1.0,Hold,glm-5.3,623,ok
+Real Estate,DLR,1.0,Hold,glm-5.3,629,ok
+Information Technology,NVDA,1.0,Hold,glm-5.3,635,ok
+Information Technology,PLTR,1.0,Hold,glm-5.3,693,ok
+Consumer Staples,WMT,1.0,Overweight,glm-5.3,710,ok
+Financials,MCO,1.0,Hold,glm-5.3,754,ok
+Energy,HAL,1.0,Underweight,claude-sonnet-5 (fallback),845,ok
+Consumer Discretionary,AMZN,1.0,Hold,claude-sonnet-5 (fallback),874,ok
+Industrials,UBER,1.0,Overweight,claude-sonnet-5 (fallback),917,ok
+Financials,AXP,1.0,Hold,glm-5.3,920,ok
+Utilities,AES,1.0,Underweight,claude-sonnet-5 (fallback),931,ok
+Consumer Staples,TGT,1.0,Underweight,claude-sonnet-5 (fallback),946,ok
+Industrials,DE,1.0,Underweight,claude-sonnet-5 (fallback),962,ok
+Energy,BKR,1.0,Underweight,claude-sonnet-5 (fallback),986,ok
+Industrials,LMT,1.0,Underweight,claude-sonnet-5 (fallback),1023,ok
+Financials,HOOD,1.0,Hold,claude-sonnet-5 (fallback),1033,ok

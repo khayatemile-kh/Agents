@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: CPT is in a pronounced downtrend with MACD deeply negative (-1.45) and RSI at 37.68, approaching oversold but with room for further decline. Critically, the research plan identifies material cash-flow deterioration (OCF contracted from $251M to ~$148-150M), cash reserves collapsed ($130.3M to $40.7M in one quarter), and a dangerously elevated FCF-based dividend payout ratio (~212%), pointing to genuine dividend-cut and deleveraging risk. Technical support at the 200 SMA ($105.85) is within $0.11 of current price, leaving limited downside cushion. The forward P/E of 96.83x reflects consensus pricing in 73% EPS compression, and while management executed the SoCal sale, the proceeds appear deployed defensively (debt reduction/liquidity plugging) rather than accretively, validating the bear thesis. A tactical reduction here avoids catching further weakness below the 200 SMA while locking in data-supported evidence of deterioration.
+
+**Position Sizing**: Trim 25–35% of existing position on any rallies toward $110–$113 resistance; do not initiate new long exposure until OCF stabilizes and FCF payout ratio improves below 100%.
+
+FINAL TRANSACTION PROPOSAL: **SELL**

@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: LMT is consolidating at a critical support zone formed by the convergence of its 50-day and 200-day SMAs ($548.26–$548.41), following a sharp 10% pullback from its August 14 peak of $604.94. While MACD has turned decisively bearish (-6.39 histogram on Sep 1) and momentum has deteriorated, RSI at 40.74 remains in neutral rather than oversold territory, leaving room for either further downside or stabilization. The research plan reflects balanced uncertainty: Q2's 23.4% net income growth and interceptor contract awards support the bull case, but margin sustainability and leverage positioning (1.5–1.6x net debt/EBITDA) remain unconfirmed. Maintain current exposure without aggressive adds or trims; await Q3/Q4 earnings confirmation and segment-level margin disclosure to resolve whether the acceleration is durable or lumpy contract timing.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

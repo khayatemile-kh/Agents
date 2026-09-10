@@ -1,0 +1,26 @@
+**Recommendation**: Hold
+
+**Rationale**: Both sides land real punches, and the honest conclusion is that the evidence is genuinely mixed rather than lopsided enough to justify a directional call at this valuation.
+
+The bull's core structural argument is sound: AI-driven hyperscaler capex is real, data center capacity in tier-1 markets is tight, and long-duration leases with investment-grade tenants give DLR unusually visible revenue. Geographic diversification (Northern Virginia, Dallas, Phoenix, Frankfurt, Singapore, Tokyo) is a legitimate mitigant against any single state's regulatory moratorium, and higher-for-longer rates cutting both ways (higher DLR funding costs but also higher barriers to new competing supply) is a fair point.
+
+But the bear's rebuttal on the numbers is hard to dismiss. Three things stand out as decisive:
+1. Earnings quality is genuinely poor once you strip the $931.8M one-time securities gain — normalized net income flips to a loss, which undercuts the bull's implicit argument that the elevated P/E reflects "accelerating" fundamental earnings power rather than an accounting one-off.
+2. The FCF story is weaker than the bull's framing suggests. On a simple quarterly basis, operating cash flow ($641.2M) minus capex ($704.3M) is negative, and the TTM $3.77B FCF figure the bull leans on is inflated by the same one-time gain that distorts earnings. Growth capex funded increasingly by fresh debt and equity issuance (not organic FCF) is a real capital-structure conclusion, not a nitpick.
+3. Leverage trajectory is moving the wrong way in the near term: gross debt +$1.45B in a single quarter, net debt/EBITDA ticking up to 4.64x, and interest coverage that looks much less comfortable (~2.9x by the bear's calc) than the bull's cited 5.8x once you exclude one-time EBITDA benefits. If the bear's coverage math is even roughly right, that's uncomfortably close to investment-grade covenant risk in a "62% odds of another hike" macro backdrop, and a downgrade would directly compress the equity return story the bull is selling.
+
+Neither side has fully discredited the other. The bull is right that the long-term secular demand backdrop is intact and that supply scarcity gives DLR real pricing power on renewals — this isn't a broken business. The bear is right that the stock is pricing in near-perfect execution while the balance sheet is levering up faster than EBITDA and true (ex-one-time) cash generation is thinner than advertised. Given a 90x+ P/E multiple that leaves very little room for execution missteps, and leverage/coverage metrics moving in the wrong direction, I don't think this is the moment to add to the position or press the bull case. But the structural demand tailwind and diversified footprint argue against outright selling a name with a durable long-term growth runway. The prudent stance is to hold what you have, harvest the dividend, and wait for either (a) valuation compression that improves the risk/reward, or (b) a couple of quarters of clean, non-one-time-inflated cash flow and leverage data to confirm which side of this debate is right.
+
+**Strategic Actions**: 1. Maintain current DLR position size — do not add and do not exit. This is a balanced-evidence Hold, not a conviction call in either direction.
+
+2. Do NOT chase the AI-infrastructure narrative into the stock at a 90x+ headline P/E; wait for normalized (ex-one-time-gain) earnings and free cash flow to actually show sustainable coverage of the ~$2.8-3.1B annual capex run rate before adding exposure.
+
+3. Set a watch-list trigger to revisit toward Overweight if: (a) net debt/EBITDA stabilizes or declines below ~4.5x for two consecutive quarters, (b) interest coverage (calculated on run-rate EBITDA excluding one-time gains) holds above 3.0x, and (c) quarterly operating cash flow begins to cover capex without incremental debt/equity funding.
+
+4. Set a trigger to revisit toward Underweight/Sell if: (a) a credit rating agency flags/executes a downgrade from the current BBB+ tier, (b) net debt continues growing faster than EBITDA for another quarter (confirming the bear's leverage trajectory), or (c) normalized EPS (excluding one-time gains) remains negative/deteriorating for consecutive quarters.
+
+5. Continue collecting the ~3.5% dividend while in Hold — the income component is a reasonable carry while awaiting clarity, but avoid reinvesting dividends into fresh DLR shares until the leverage/coverage picture stabilizes.
+
+6. Monitor the state data-center moratorium developments (72% probability by Dec 2025 per prediction markets) as a secondary catalyst — a moratorium in a key market would be a modest incremental negative for growth capex deployment, even if existing leases are unaffected; track how much of DLR's forward development pipeline sits in the affected jurisdictions.
+
+7. Size any future incremental allocation conservatively (no more than a small trim-to-hold band) until at least one more quarter of "clean" (non-one-time-adjusted) financials is available, given how much of the current earnings/cash-flow debate hinges on a single non-recurring gain.

@@ -1,0 +1,9 @@
+{
+  "ticker": "MCO",
+  "sector": "Financials",
+  "index": "1.0",
+  "signal": "Hold",
+  "provider": "glm-5.3",
+  "elapsed": 754.0922920703888,
+  "generated_at": "2026-09-08T19:26:58.733443+00:00"
+}

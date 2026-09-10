@@ -1,0 +1,9 @@
+{
+  "ticker": "AMZN",
+  "sector": "Consumer Discretionary",
+  "index": "1.0",
+  "signal": "Hold",
+  "provider": "claude-sonnet-5 (fallback)",
+  "elapsed": 873.7470781803131,
+  "generated_at": "2026-09-08T19:28:58.387335+00:00"
+}

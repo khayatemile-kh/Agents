@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: ACN presents a mixed technical and fundamental picture that warrants a disciplined hold. While the stock is oversold (RSI 36, price 11.7% below 50-day SMA) with early MACD stabilization and positive divergence suggesting potential for a tactical bounce toward $310–$320, the bear case remains credible: MACD is still deeply negative (–13.15), leverage is elevated (D/E ~25x, well above IT services peers), and there is no recent earnings or guidance update to confirm the market's 16.95% forward EPS growth assumption that justified the February highs. The 27% drawdown in eight weeks reflects legitimate repricing, not panic in a vacuum. Holding preserves exposure to the secular AI tailwind and 3.49% dividend yield while waiting for confirmation—either (a) a retest and hold above $282 with volume, (b) next earnings confirming growth trajectory, or (c) clarity on balance-sheet refinancing risk. Avoid adding aggressively until fundamental catalysts clarify, or trimming into bounces toward $340–$350 absent confirmation of reversal.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

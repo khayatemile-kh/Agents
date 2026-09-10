@@ -1,0 +1,9 @@
+{
+  "ticker": "DLR",
+  "sector": "Real Estate",
+  "index": "1.0",
+  "signal": "Hold",
+  "provider": "glm-5.3",
+  "elapsed": 628.8564357757568,
+  "generated_at": "2026-09-08T19:24:53.499732+00:00"
+}

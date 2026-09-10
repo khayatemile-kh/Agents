@@ -1,0 +1,17 @@
+**Rating**: Underweight
+
+**Executive Summary**: Trim existing ZBH exposure by 15-25% into current strength (~$99-101.5) rather than adding on the technical bounce; do not chase the bull's forward P/E case. Use a hard stop-loss trigger around $104.5 for the trimmed tranche, and set a re-evaluation gate at Q3/Q4 earnings requiring EBITDA margins to stabilize above 27-28% for two consecutive quarters with special charges below $20M/quarter before considering re-adding. Time horizon: 1-2 quarters, revisit at Q3 2026 earnings (~mid-October).
+
+**Investment Thesis**: The bull case is a valuation call resting almost entirely on a forward EPS of $9.07 vs. TTM $4.12 (120% growth), a number with zero support in the trailing quarterly cadence: net income fell from $238M (Q1 2026) to $198M (Q2 2026), and EBITDA margins swung from 30.6% to 20.2% across adjacent quarters, driven by recurring "one-time" restructuring charges ($22M, $48M, $128M — ~$198M over three quarters) that both the Aggressive and Conservative analysts independently flag as structural, not noise. The Aggressive analyst's key point stands unrebutted: a company genuinely on a 120% EPS growth trajectory should show accelerating momentum now, not sequential net income decline.
+
+Leverage is the second pillar of concern. Current net debt/EBITDA of ~2.93-2.94x looks manageable, but both bear-side analysts stress-test this to 3.4-4.2x under plausible margin reversion scenarios, and this sits atop a deeply negative tangible book value (-$1.757B) — meaning the balance sheet's equity cushion is entirely goodwill/intangibles, a real vulnerability flagged consistently across the debate with no credible bull rebuttal on this specific point.
+
+The Neutral analyst's pushback is worth weighing: Q2 net income ($198M) is still above Q4 2025 ($139M), raising the possibility Q2 was a cyclical trough rather than a new floor, and $448M of Q2 operating cash flow shows the business still generates real cash. This is a legitimate mitigating data point and is why I am not moving to outright Sell — there is a plausible, if unconfirmed, stabilization path. However, the Neutral analyst's own preferred framework still concludes with the same directional action: trim now (either fully or in stages) rather than hold or add, and only fully commits to holding the remainder through Q3 earnings, which is consistent with — not contradictory to — an Underweight stance.
+
+Technically, the 10.2% rally happened against a backdrop of zero ZBH-specific news, which both bear analysts characterize as a momentum-driven move disconnected from fundamentals; RSI cooling to 55 and a negative MACD histogram support trimming into strength rather than chasing further upside. The dividend yield (~1%) offers a small carry for any residual position, but sizing should stay conservative absent confirmatory catalysts (earnings beat, disclosed buyback acceleration with clear FCF coverage, or visible delevering).
+
+Net: risk/reward does not support holding full size or adding, but the cash generation, 1.69x current ratio, and today's still-moderate leverage argue against a full Sell. Underweight, with a defined re-evaluation gate, is the most defensible synthesis of this debate.
+
+**Price Target**: 92.0
+
+**Time Horizon**: 1-2 quarters (re-evaluate at Q3/Q4 2026 earnings)

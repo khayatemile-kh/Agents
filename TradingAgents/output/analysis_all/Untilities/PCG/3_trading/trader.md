@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: PCG has suffered a catastrophic 23.9% collapse from $18.36 to $14.06 on massive volume (154M shares on Aug 31, 144.6M on Sept 1), signaling a regime change rather than a simple oversold bounce. The technical breakdown is severe and confirmed: price has broken both the 50-SMA ($17.27) and 200-SMA ($16.74), MACD has turned sharply negative (-0.48), and RSI at 29.80, while extreme, is persisting on elevated volume—a pattern consistent with continued downside in fundamentally deteriorating names. The research plan correctly emphasizes that PCG's 189% debt-to-equity ratio ($65B debt / $34B equity) leaves no margin for error on the unresolved wildfire liability framework, and the collapse of the Newsom-legislature deal removes a key floor under the stock. The bull case of an RSI-driven bounce is outweighed by the bear case: negative FCF, high leverage, and legislative headwinds now embedded in price action. Until regulatory clarity emerges or FCF turns sustainably positive, the risk/reward remains skewed to the downside.
+
+**Position Sizing**: Trim 25–40% of existing PCG exposure on any bounce toward $16–17 (prior support, broken 50-SMA zone); exit or reduce remaining position on breakdown below $13.27 (Aug 31 low). Do not initiate new positions until explicit legislative/regulatory clarity on wildfire liability caps and financing.
+
+FINAL TRANSACTION PROPOSAL: **SELL**

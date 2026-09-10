@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: ERIE presents a clear sell case anchored in three converging headwinds: (1) decelerating organic revenue growth (Q1 2026 -4.6%, Q2 2026 +1.7%) masks the headline 26.1% EPS growth, which is being driven by margin expansion and one-time items rather than sustainable business momentum—a classic red flag; (2) valuation is stretched at 18.4x forward P/E with a 2.67 PEG ratio versus 13-15x multiples and 1.0-1.5 PEG for peers with 3-5% revenue growth, while the 24.8% ROE is partly inflated by 2.56x leverage (normalized ROE closer to 16-18%), not sustainable operational excellence; (3) imminent Bloomberg 500 index removal on September 10, 2026 presents a quantifiable -3% to -8% mechanical selling catalyst as forced index-fund liquidations hit the market. Technically, MACD histogram has turned negative, RSI has eroded from 63 to 53, and price has pulled back from the August 24 high, confirming momentum deterioration. The research plan explicitly recommends trimming 25-35% into current strength ahead of the September 10 removal. Position-sizing should reflect the dividend safety thesis as a defensive anchor, but the primary action is to reduce exposure.
+
+**Position Sizing**: Trim existing position by 25–35% at current price ($256.09); retain 65–75% as core dividend-safety anchor sized to 2.28% yield.
+
+FINAL TRANSACTION PROPOSAL: **SELL**

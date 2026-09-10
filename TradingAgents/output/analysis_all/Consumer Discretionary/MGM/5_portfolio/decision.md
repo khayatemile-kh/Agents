@@ -1,0 +1,17 @@
+**Rating**: Underweight
+
+**Executive Summary**: Trim MGM exposure into strength rather than exit outright or hold full-size. Reduce in two tranches on any bounce toward the 10 EMA (~$42.70) and the 50-SMA (~$45.39), with a stop/re-entry trigger at $45.39; do not add on RSI-oversold alone. Time horizon: 4-8 weeks into Q3 earnings, watching specifically for MGM-specific (not just Strip-wide) revenue/margin data and net debt/EBITDA trend before reassessing toward Hold/Overweight.
+
+**Investment Thesis**: The debate converges on one decisive, unresolved fact: MGM fell 5.9% post-earnings despite Nevada Strip gaming revenue growing 3.64% YoY (vs. 2.07% state average) — a disconnect neither the Bull/Conservative analyst nor the Aggressive/Bear analyst fully resolved with company-specific data. The Conservative analyst's "macro rotation, not fundamentals" explanation is plausible but unproven; the Aggressive analyst's "guidance disappointed" explanation is equally unproven. Absent MGM-specific share/margin evidence, this disconnect must be treated as a warning, not dismissed as noise, per the Research Manager's verdict.
+
+Technically, the weight of confirmed evidence favors continued distribution over imminent reversal: price is 10.2% below the 50-SMA, MACD histogram has deteriorated from -0.30 (Aug 3) to -0.90 (Sept 1) with accelerating downside expansion, and September 1 marked a fresh 64-day low close. The Conservative and Neutral analysts' counter — that extreme MACD/RSI/Bollinger-band compression typically precedes upside reversal — is a legitimate statistical pattern, but it remains an unconfirmed interpretation until price actually reclaims and holds above the 50-SMA on rising volume. The Neutral analyst correctly notes both technical readings are ambiguous on direction and unambiguous only on "extremeness," which argues against high-conviction positioning in either direction.
+
+On leverage, the Conservative analyst's point that 12.2x net debt/EBITDA is structurally normal for asset-heavy casino operators is fair context, but it doesn't neutralize the Aggressive analyst's concern that elevated leverage amplifies downside in a slowing-rate-cut environment (only 10% probability of cuts by December) — this is a real, not resolved, risk multiplier.
+
+The valuation cushion the Bull leaned on in the original research debate (PEG 0.51 implying ~39% forward EPS growth) was never substantiated by either side here and remains the weakest pillar of any "buy the dip" case — this removes the rationale for adding or holding full size. Conversely, outright Sell is not justified: the company remains profitable (TTM net income $423.6M), maintains adequate liquidity (current ratio 1.34x, $2.55B cash), continues paying dividends, and the macro backdrop still shows a 59% soft-landing probability with only 8% recession odds — a real tailwind the Aggressive case doesn't fully rebut. This is a capital-efficiency and risk-reduction decision, not a solvency-driven exit.
+
+Net: reduce exposure into technical bounces to protect capital against confirmed downside momentum and an unresolved fundamental red flag, while retaining a residual position to preserve optionality should Q3 earnings show MGM-specific outperformance versus the Strip average, which would flip the thesis toward upgrade.
+
+**Price Target**: 42.7
+
+**Time Horizon**: 4-8 weeks (through Q3 earnings)

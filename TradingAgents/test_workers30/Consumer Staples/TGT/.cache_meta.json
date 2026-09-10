@@ -1,0 +1,9 @@
+{
+  "ticker": "TGT",
+  "sector": "Consumer Staples",
+  "index": "1.0",
+  "signal": "Underweight",
+  "provider": "claude-sonnet-5 (fallback)",
+  "elapsed": 946.310250043869,
+  "generated_at": "2026-09-08T19:30:10.950722+00:00"
+}

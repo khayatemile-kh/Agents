@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: EIX is technologically oversold (RSI 32.77, price near lower Bollinger Band at $59.40, MACD deeply negative at -2.34) following a 27% catastrophic collapse on wildfire liability fears. While the bull case acknowledges strong near-term technical setup for a relief bounce, the research plan's underweight recommendation is grounded in forward-looking fundamental deterioration: forward EPS down ~28% from TTM, interest coverage tight at ~1.0x, and unresolved California regulatory/political liability framework that threatens equity value despite enterprise survival. The wide valuation discount (6–8.5x P/E, ~6% yield) does not offset tail risk. Current price action suggests capitulation (24.6M share volume, extreme ATR 3.86), warranting tactical patience rather than aggressive selling, but core thesis argues for trimming—not accumulating—into any bounce. Hold pending clarity on revised CA liability legislation and stabilization of forward EPS estimates over 2–3 quarters.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

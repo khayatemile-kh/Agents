@@ -10,6 +10,9 @@ differ from the broker / TradingView / MT5 style symbols users often type:
     EURUSD            EURUSD=X          spot forex pairs take a ``=X`` suffix
     BTCUSD            BTC-USD           crypto pairs use a ``-`` separator
     SPX500, US500     ^GSPC             index CFDs map to Yahoo index symbols
+    BRK.B, BF.B       BRK-B, BF-B       share classes use a ``-``, not the
+                                        ``.`` that data vendors like the S&P
+                                        index files use
 
 Passing the raw broker symbol to Yahoo returns an empty result, which the
 agents previously received as free text and could hallucinate a price
@@ -72,6 +75,13 @@ _ALIASES = {
 # Yahoo symbols may contain letters, digits, and these structural characters.
 _YAHOO_SAFE = re.compile(r"^[A-Za-z0-9._\-\^=]+$")
 
+# US equity share classes: data vendors (S&P index files, some brokers) write
+# these with a dot (``BRK.B``, ``BF.B``); Yahoo only recognizes the dash form
+# (``BRK-B``, ``BF-B``) and returns zero rows for the dotted form. Matches a
+# 1-5 letter base ticker, a literal dot, and a single letter class suffix --
+# narrow enough that it can't misfire on anything else in this table.
+_SHARE_CLASS_RE = re.compile(r"^([A-Z]{1,5})\.([A-Z])$")
+
 
 # Crypto quote currencies that all map to Yahoo's USD pair. Yahoo lists only
 # ``<BASE>-USD`` (not the USDT/USDC stablecoin pairs), so a broker symbol quoted
@@ -105,11 +115,13 @@ def normalize_symbol(raw: str) -> str:
     """Map a user/broker symbol to its canonical Yahoo Finance symbol.
 
     Resolution order (first match wins):
-      1. Explicit alias table (metals, energy, index CFDs).
-      2. Crypto rule: a known crypto base quoted in USD/USDT/USDC (dashed or
+      1. Share-class rule: ``<TICKER>.<LETTER>`` -> ``<TICKER>-<LETTER>``
+         (e.g. ``BRK.B`` -> ``BRK-B``).
+      2. Explicit alias table (metals, energy, index CFDs).
+      3. Crypto rule: a known crypto base quoted in USD/USDT/USDC (dashed or
          not) -> ``BASE-USD``.
-      3. Forex rule: six letters that are two ISO currency codes -> ``PAIR=X``.
-      4. Otherwise the upper-cased symbol is returned unchanged (plain
+      4. Forex rule: six letters that are two ISO currency codes -> ``PAIR=X``.
+      5. Otherwise the upper-cased symbol is returned unchanged (plain
          equities, ETFs, Yahoo-native symbols like ``GC=F`` or ``^GSPC``).
 
     A trailing ``+`` (broker CFD marker, e.g. ``XAUUSD+``) is stripped before
@@ -123,8 +135,11 @@ def normalize_symbol(raw: str) -> str:
     # Broker CFD/qualifier suffixes Yahoo never uses.
     s = s.rstrip("+")
 
+    share_class = _SHARE_CLASS_RE.match(s)
     crypto = _normalize_crypto(s)
-    if s in _ALIASES:
+    if share_class is not None:
+        canonical = f"{share_class.group(1)}-{share_class.group(2)}"
+    elif s in _ALIASES:
         canonical = _ALIASES[s]
     elif crypto is not None:
         canonical = crypto

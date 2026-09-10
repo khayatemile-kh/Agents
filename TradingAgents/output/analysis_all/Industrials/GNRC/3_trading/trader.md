@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: GNRC technicals show deep oversold conditions (RSI 30.09, price 12.7% below 200 SMA, trading below lower Bollinger Band) with a bullish divergence forming, suggesting near-term bounce probability is elevated. However, the research plan correctly identifies unresolved fundamental risks: the $1.6B data-center backlog conversion timeline and durability of the 44.5% gross margin are unverified, and the 41.8x trailing P/E is premium despite the 32.6% pullback. The margin expansion appears partially driven by post-writedown trough recovery rather than structural improvement. Hold reflects the tension between attractive technical oversold conditions and insufficient validation of the bull case before adding exposure. Next earnings call is the critical checkpoint for backlog conversion data and realized margins.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

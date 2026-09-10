@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: AME is technically oversold (RSI 35.13, Bollinger bands compressed, MACD bearish crossover) after a 10.5% decline from the Aug 12 peak, which typically creates a bounce opportunity. However, the investment plan identifies a valuation overhang: AME's PEG of 2.67 is materially higher than direct peers (ROP ~1.8, XYL ~1.9), and the balance sheet carries structural fragility (negative tangible book value, $980M debt due within 12 months, 70% intangibles). While underlying EBITDA generation ($1.49B FCF, 30.7% EBITDA margin) is strong, the stock reflects priced-in perfection rather than a discount. Maintain current exposure to capture the technical bounce and benefit from quality fundamentals, but avoid aggressive accumulation into weakness given the peer-relative valuation gap and refinancing risks.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

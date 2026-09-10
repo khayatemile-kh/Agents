@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: CF is trading at a peak cyclical moment with extended technical positioning that conflicts with deteriorating fundamental durability. The stock has rallied +15.9% in one month to $135.60, now sitting above the upper Bollinger Band ($134.13) with RSI at 68.5 and price 8.3 points above the 10 EMA—textbook overbought and extended conditions. While Q2's 88% YoY net income growth and 51.5% gross margin are exceptional, the research plan correctly identifies these as cyclical peaks: CF's own historical record shows margins collapsed to 15-28% in prior downturns (2009, 2015, 2018), and current softening grain prices combined with normalization in China nitrogen controls and Middle East supply signal the pricing-spike cycle is turning. The $3.7-4B Blue Point One capex will hit just as earnings likely normalize, pushing net debt/EBITDA toward 1.0-1.3x+ from today's fortress 0.19x—a material leverage expansion precisely when margins revert. The underweight directive calls for trimming into strength rather than chasing; executing a sale now near peak technical extension captures the 15.9% rally upside and de-risks ahead of the margin-normalization inflection and capex funding cycle.
+
+**Position Sizing**: Trim/reduce existing position by 25–35%; do not initiate new positions at current overbought technicals
+
+FINAL TRANSACTION PROPOSAL: **SELL**

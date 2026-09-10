@@ -1,0 +1,9 @@
+{
+  "ticker": "MA",
+  "sector": "Financials",
+  "index": "1.0",
+  "signal": "Hold",
+  "provider": "glm-5.3",
+  "elapsed": 378.3487010002136,
+  "generated_at": "2026-09-08T19:20:42.992542+00:00"
+}

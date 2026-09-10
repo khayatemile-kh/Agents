@@ -1,0 +1,9 @@
+{
+  "ticker": "UBER",
+  "sector": "Industrials",
+  "index": "1.0",
+  "signal": "Overweight",
+  "provider": "claude-sonnet-5 (fallback)",
+  "elapsed": 916.7026801109314,
+  "generated_at": "2026-09-08T19:29:41.344691+00:00"
+}

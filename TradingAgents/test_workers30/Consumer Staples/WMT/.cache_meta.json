@@ -1,0 +1,9 @@
+{
+  "ticker": "WMT",
+  "sector": "Consumer Staples",
+  "index": "1.0",
+  "signal": "Overweight",
+  "provider": "glm-5.3",
+  "elapsed": 709.562422990799,
+  "generated_at": "2026-09-08T19:26:14.202839+00:00"
+}

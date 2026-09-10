@@ -1,0 +1,501 @@
+Sector,Ticker,Index,Signal,ElapsedSeconds,Status
+Communication Services,META,91.8,Underweight,275,ok
+Communication Services,VZ,60.2,Hold,294,ok
+Communication Services,GOOG,97.4,Underweight,303,ok
+Communication Services,TMUS,56.3,Overweight,311,ok
+Communication Services,TTD,50.5,Underweight,319,ok
+Communication Services,NFLX,59.6,Overweight,326,ok
+Communication Services,MTCH,49.5,Overweight,286,ok
+Communication Services,OMC,41.2,Underweight,269,ok
+Communication Services,T,49.0,Hold,294,ok
+Communication Services,NWS,29.7,Underweight,270,ok
+Communication Services,TKO,34.3,Hold,274,ok
+Communication Services,DIS,38.3,Hold,302,ok
+Communication Services,LYV,15.3,Underweight,264,ok
+Communication Services,WBD,27.0,Underweight,297,ok
+Communication Services,PSKY,23.4,Underweight,305,ok
+Communication Services,FOX,11.2,Hold,292,ok
+Communication Services,CHTR,19.7,Underweight,329,ok
+Communication Services,TTWO,8.7,Underweight,305,ok
+Consumer Discretionary,AMZN,98.8,Underweight,279,ok
+Consumer Discretionary,EBAY,86.7,Underweight,313,ok
+Consumer Discretionary,TSLA,78.1,Underweight,267,ok
+Consumer Discretionary,DASH,80.7,Underweight,310,ok
+Consumer Discretionary,EXPE,79.9,Overweight,307,ok
+Consumer Discretionary,GM,75.4,Underweight,317,ok
+Consumer Discretionary,ABNB,72.8,Underweight,307,ok
+Consumer Discretionary,BKNG,61.4,Hold,296,ok
+Consumer Discretionary,APTV,72.3,Underweight,324,ok
+Consumer Discretionary,HD,65.2,Underweight,317,ok
+Consumer Discretionary,HAS,60.9,Underweight,306,ok
+Consumer Discretionary,SBUX,60.9,Hold,321,ok
+Consumer Discretionary,YUM,58.6,Underweight,299,ok
+Consumer Discretionary,F,52.1,Underweight,272,ok
+Consumer Discretionary,LOW,55.3,Underweight,297,ok
+Consumer Discretionary,CVNA,51.4,Underweight,301,ok
+Consumer Discretionary,BBY,52.7,Underweight,306,ok
+Consumer Discretionary,NKE,49.4,Underweight,293,ok
+Consumer Discretionary,ULTA,49.2,Overweight,304,ok
+Consumer Discretionary,MAR,45.5,Underweight,298,ok
+Consumer Discretionary,TPR,47.2,Underweight,309,ok
+Consumer Discretionary,WSM,45.4,Underweight,299,ok
+Consumer Discretionary,RCL,45.1,Hold,300,ok
+Consumer Discretionary,MCD,44.2,Hold,301,ok
+Consumer Discretionary,DPZ,43.6,Underweight,291,ok
+Consumer Discretionary,HLT,43.4,Underweight,290,ok
+Consumer Discretionary,TSCO,41.4,Underweight,291,ok
+Consumer Discretionary,LULU,40.7,Underweight,303,ok
+Consumer Discretionary,LEN,43.1,Underweight,333,ok
+Consumer Discretionary,CMG,40.5,Underweight,293,ok
+Consumer Discretionary,CCL,35.6,Underweight,275,ok
+Consumer Discretionary,GPC,35.5,Underweight,307,ok
+Consumer Discretionary,RL,34.9,Underweight,298,ok
+Consumer Discretionary,GRMN,32.6,Underweight,305,ok
+Consumer Discretionary,MGM,31.5,Underweight,332,ok
+Consumer Discretionary,AZO,26.8,Hold,312,ok
+Consumer Discretionary,DECK,26.2,Hold,325,ok
+Consumer Discretionary,NCLH,26.0,Underweight,274,ok
+Consumer Discretionary,WYNN,25.1,Underweight,306,ok
+Consumer Discretionary,DRI,23.3,Underweight,323,ok
+Consumer Discretionary,PHM,20.8,Underweight,293,ok
+Consumer Discretionary,POOL,19.5,Underweight,291,ok
+Consumer Discretionary,TJX,11.2,Underweight,310,ok
+Consumer Discretionary,LVS,16.1,Underweight,334,ok
+Consumer Discretionary,ROST,9.9,Hold,300,ok
+Consumer Discretionary,ORLY,6.9,Underweight,271,ok
+Consumer Discretionary,NVR,4.3,Underweight,268,ok
+Consumer Discretionary,DHI,9.0,Hold,300,ok
+Consumer Staples,WMT,97.9,Underweight,303,ok
+Consumer Staples,TGT,77.6,Hold,297,ok
+Consumer Staples,PG,73.8,Underweight,298,ok
+Consumer Staples,PEP,73.1,Underweight,297,ok
+Consumer Staples,CVS,68.9,Underweight,307,ok
+Consumer Staples,EL,68.2,Underweight,303,ok
+Consumer Staples,KHC,65.3,Underweight,299,ok
+Consumer Staples,CL,59.8,Hold,298,ok
+Consumer Staples,KR,58.7,Underweight,298,ok
+Consumer Staples,KO,58.6,Underweight,302,ok
+Consumer Staples,COST,56.3,Underweight,320,ok
+Consumer Staples,KVUE,53.8,Underweight,301,ok
+Consumer Staples,PM,53.0,Hold,308,ok
+Consumer Staples,MDLZ,52.2,Underweight,320,ok
+Consumer Staples,GIS,49.6,Underweight,304,ok
+Consumer Staples,MKC,47.7,Underweight,274,ok
+Consumer Staples,SYY,47.0,Underweight,297,ok
+Consumer Staples,HSY,48.4,Underweight,332,ok
+Consumer Staples,KDP,44.5,Underweight,298,ok
+Consumer Staples,CAG,44.2,Underweight,305,ok
+Consumer Staples,KMB,43.7,Underweight,302,ok
+Consumer Staples,CHD,40.1,Underweight,277,ok
+Consumer Staples,CLX,41.8,Underweight,306,ok
+Consumer Staples,HRL,37.4,Underweight,310,ok
+Consumer Staples,TAP,36.5,Underweight,289,ok
+Consumer Staples,TSN,36.2,Underweight,305,ok
+Consumer Staples,SJM,32.0,Underweight,305,ok
+Consumer Staples,ADM,27.4,Underweight,298,ok
+Consumer Staples,DLTR,27.2,Underweight,305,ok
+Consumer Staples,LW,25.8,Underweight,311,ok
+Consumer Staples,DG,25.8,Underweight,301,ok
+Consumer Staples,CPB,24.6,Underweight,300,ok
+Consumer Staples,BG,22.8,Underweight,304,ok
+Consumer Staples,MO,14.8,Hold,305,ok
+Consumer Staples,STZ,12.6,Underweight,301,ok
+Consumer Staples,MNST,0.0,Underweight,299,ok
+Energy,SLB,99.4,Underweight,317,ok
+Energy,CVX,76.1,Hold,266,ok
+Energy,BKR,88.0,Underweight,307,ok
+Energy,HAL,81.9,Underweight,307,ok
+Energy,XOM,62.0,Hold,306,ok
+Energy,PSX,58.4,Underweight,308,ok
+Energy,DVN,52.8,Underweight,298,ok
+Energy,WMB,47.7,Hold,306,ok
+Energy,EQT,47.7,Hold,301,ok
+Energy,COP,49.1,Underweight,346,ok
+Energy,MPC,43.5,Underweight,305,ok
+Energy,TPL,40.5,Hold,298,ok
+Energy,EXE,36.2,Hold,312,ok
+Energy,OXY,35.2,Underweight,288,ok
+Energy,EOG,30.4,Underweight,288,ok
+Energy,KMI,25.9,Hold,304,ok
+Energy,FANG,29.4,Underweight,321,ok
+Energy,VLO,22.8,Underweight,326,ok
+Energy,APA,18.0,Underweight,318,ok
+Energy,OKE,17.7,Overweight,305,ok
+Energy,TRGP,8.1,Hold,320,ok
+Financials,MA,86.4,Overweight,299,ok
+Financials,XYZ,88.8,Underweight,313,ok
+Financials,V,84.5,Overweight,293,ok
+Financials,NDAQ,84.4,Hold,286,ok
+Financials,JPM,79.1,Overweight,303,ok
+Financials,COIN,70.1,Underweight,297,ok
+Financials,HOOD,69.3,Underweight,297,ok
+Financials,MSCI,69.6,Overweight,315,ok
+Financials,MCO,68.7,Hold,300,ok
+Financials,SPGI,68.5,Underweight,292,ok
+Financials,AXP,67.3,Overweight,298,ok
+Financials,FIS,67.2,Underweight,289,ok
+Financials,PYPL,66.9,Hold,281,ok
+Financials,FDS,66.8,Underweight,284,ok
+Financials,BX,65.6,Underweight,302,ok
+Financials,C,63.4,Hold,284,ok
+Financials,JKHY,61.9,Underweight,288,ok
+Financials,BLK,62.1,Overweight,302,ok
+Financials,MET,60.5,Hold,264,ok
+Financials,TFC,60.9,Underweight,302,ok
+Financials,MS,58.2,Hold,304,ok
+Financials,SYF,57.0,Overweight,260,ok
+Financials,COF,57.8,Hold,300,ok
+Financials,HIG,56.5,Overweight,306,ok
+Financials,NTRS,55.7,Overweight,296,ok
+Financials,MRSH,55.5,Underweight,270,ok
+Financials,FISV,56.3,Underweight,349,ok
+Financials,BAC,55.5,Underweight,297,ok
+Financials,BEN,53.8,Sell,318,ok
+Financials,PFG,51.6,Hold,269,ok
+Financials,GS,52.4,Overweight,298,ok
+Financials,ICE,53.0,Hold,327,ok
+Financials,TRV,51.0,Underweight,308,ok
+Financials,ALL,50.0,Hold,317,ok
+Financials,AON,50.0,Underweight,320,ok
+Financials,PRU,49.4,Overweight,266,ok
+Financials,STT,49.9,Overweight,302,ok
+Financials,WTW,49.4,Underweight,298,ok
+Financials,AIG,49.0,Overweight,275,ok
+Financials,USB,48.3,Underweight,300,ok
+Financials,APO,47.8,Underweight,298,ok
+Financials,AIZ,46.7,Overweight,267,ok
+Financials,WFC,47.6,Hold,297,ok
+Financials,CFG,45.2,Hold,300,ok
+Financials,SCHW,43.9,Underweight,295,ok
+Financials,IBKR,43.5,Overweight,299,ok
+Financials,CB,41.6,Overweight,284,ok
+Financials,PNC,43.1,Hold,300,ok
+Financials,KEY,41.0,Underweight,294,ok
+Financials,RJF,38.6,Underweight,280,ok
+Financials,FITB,40.5,Hold,302,ok
+Financials,TROW,38.2,Hold,284,ok
+Financials,AJG,38.0,Underweight,290,ok
+Financials,GPN,37.5,Underweight,301,ok
+Financials,HBAN,37.5,Underweight,326,ok
+Financials,CME,37.0,Underweight,309,ok
+Financials,IVZ,36.2,Underweight,320,ok
+Financials,ARES,34.3,Underweight,289,ok
+Financials,KKR,34.0,Underweight,304,ok
+Financials,CPAY,32.9,Underweight,306,ok
+Financials,PGR,32.6,Buy,288,ok
+Financials,MTB,31.2,Underweight,302,ok
+Financials,RF,31.0,Underweight,306,ok
+Financials,AMP,27.9,Hold,285,ok
+Financials,BRO,27.9,Hold,294,ok
+Financials,AFL,25.1,Underweight,280,ok
+Financials,CBOE,27.6,Hold,314,ok
+Financials,ACGL,22.3,Overweight,274,ok
+Financials,CINF,24.1,Underweight,321,ok
+Financials,L,17.3,Underweight,276,ok
+Financials,WRB,21.9,Underweight,323,ok
+Financials,GL,16.4,Underweight,267,ok
+Financials,ERIE,15.9,Underweight,265,ok
+Financials,EG,9.5,Underweight,298,ok
+Health Care,JNJ,87.3,Underweight,289,ok
+Health Care,MDT,81.3,Underweight,300,ok
+Health Care,IQV,80.7,Hold,297,ok
+Health Care,GEHC,84.3,Underweight,318,ok
+Health Care,UNH,78.2,Underweight,314,ok
+Health Care,MRNA,77.2,Underweight,318,ok
+Health Care,PFE,74.7,Underweight,312,ok
+Health Care,BMY,73.9,Hold,294,ok
+Health Care,TMO,70.7,Underweight,297,ok
+Health Care,LLY,69.9,Hold,308,ok
+Health Care,MRK,67.4,Underweight,307,ok
+Health Care,ISRG,65.5,Hold,295,ok
+Health Care,CI,66.9,Underweight,315,ok
+Health Care,MCK,64.1,Hold,302,ok
+Health Care,ELV,63.3,Underweight,299,ok
+Health Care,AMGN,64.6,Underweight,326,ok
+Health Care,BSX,62.1,Underweight,301,ok
+Health Care,LH,62.1,Underweight,301,ok
+Health Care,DXCM,59.5,Hold,298,ok
+Health Care,RMD,54.0,Overweight,269,ok
+Health Care,DHR,57.7,Underweight,291,ok
+Health Care,RVTY,55.1,Underweight,282,ok
+Health Care,DGX,54.0,Hold,287,ok
+Health Care,ZBH,53.2,Underweight,264,ok
+Health Care,ZTS,53.8,Underweight,300,ok
+Health Care,IDXX,53.1,Underweight,264,ok
+Health Care,HUM,53.2,Underweight,299,ok
+Health Care,SYK,52.5,Overweight,310,ok
+Health Care,ALGN,52.3,Hold,293,ok
+Health Care,A,52.2,Underweight,309,ok
+Health Care,SOLV,50.7,Underweight,300,ok
+Health Care,DVA,46.0,Underweight,295,ok
+Health Care,PODD,44.8,Underweight,306,ok
+Health Care,BDX,42.5,Underweight,301,ok
+Health Care,CAH,40.5,Underweight,297,ok
+Health Care,CRL,40.3,Underweight,298,ok
+Health Care,CNC,40.3,Overweight,296,ok
+Health Care,ABT,37.6,Hold,302,ok
+Health Care,BIIB,37.4,Underweight,305,ok
+Health Care,ABBV,37.2,Underweight,304,ok
+Health Care,VRTX,37.0,Overweight,312,ok
+Health Care,COR,33.2,Underweight,270,ok
+Health Care,GILD,36.2,Underweight,290,ok
+Health Care,TECH,32.3,Underweight,291,ok
+Health Care,HSIC,32.2,Underweight,285,ok
+Health Care,BAX,29.9,Hold,290,ok
+Health Care,COO,29.1,Underweight,272,ok
+Health Care,EW,29.5,Underweight,294,ok
+Health Care,HCA,28.2,Underweight,283,ok
+Health Care,REGN,27.9,Hold,293,ok
+Health Care,UHS,25.1,Hold,292,ok
+Health Care,MTD,24.9,Hold,274,ok
+Health Care,WAT,24.7,Underweight,298,ok
+Health Care,INCY,23.8,Hold,314,ok
+Health Care,MOH,21.5,Underweight,314,ok
+Health Care,WST,17.8,Hold,302,ok
+Health Care,STE,2.3,Underweight,274,ok
+Health Care,VTRS,7.1,Underweight,311,ok
+Industrials,AXON,95.0,Underweight,311,ok
+Industrials,UBER,85.3,Underweight,281,ok
+Industrials,ROK,86.7,Underweight,315,ok
+Industrials,JCI,84.1,Hold,261,ok
+Industrials,LMT,83.4,Hold,307,ok
+Industrials,LDOS,82.9,Underweight,302,ok
+Industrials,BR,81.7,Hold,269,ok
+Industrials,ADP,81.6,Underweight,289,ok
+Industrials,DE,81.3,Hold,299,ok
+Industrials,CHRW,79.6,Underweight,299,ok
+Industrials,HON,77.4,Hold,297,ok
+Industrials,CAT,76.7,Underweight,304,ok
+Industrials,VRSK,74.9,Underweight,295,ok
+Industrials,EFX,76.6,Underweight,335,ok
+Industrials,RTX,71.0,Overweight,320,ok
+Industrials,UPS,69.3,Underweight,326,ok
+Industrials,PAYX,68.6,Underweight,297,ok
+Industrials,FDX,68.2,Underweight,301,ok
+Industrials,FTV,67.7,Underweight,270,ok
+Industrials,TT,67.6,Underweight,307,ok
+Industrials,EMR,67.0,Hold,298,ok
+Industrials,BA,66.3,Underweight,275,ok
+Industrials,NOC,65.7,Hold,307,ok
+Industrials,LHX,65.0,Hold,297,ok
+Industrials,XYL,63.1,Underweight,292,ok
+Industrials,GEV,62.8,Underweight,292,ok
+Industrials,J,60.6,Underweight,327,ok
+Industrials,GD,60.3,Overweight,295,ok
+Industrials,MMM,58.5,Underweight,295,ok
+Industrials,OTIS,56.8,Underweight,269,ok
+Industrials,DAL,56.8,Underweight,306,ok
+Industrials,HII,56.8,Underweight,285,ok
+Industrials,CMI,55.9,Underweight,307,ok
+Industrials,PAYC,55.3,Underweight,250,ok
+Industrials,PCAR,55.0,Hold,301,ok
+Industrials,ETN,54.3,Underweight,312,ok
+Industrials,GE,53.7,Underweight,302,ok
+Industrials,CARR,52.5,Underweight,288,ok
+Industrials,UAL,51.9,Underweight,329,ok
+Industrials,NSC,51.4,Hold,331,ok
+Industrials,GWW,51.0,Underweight,293,ok
+Industrials,LII,48.6,Underweight,263,ok
+Industrials,WAB,48.6,Hold,297,ok
+Industrials,WM,49.2,Underweight,325,ok
+Industrials,ALLE,47.7,Underweight,303,ok
+Industrials,LUV,46.3,Underweight,314,ok
+Industrials,TXT,45.7,Underweight,299,ok
+Industrials,JBHT,43.0,Underweight,272,ok
+Industrials,GNRC,45.4,Hold,307,ok
+Industrials,BLDR,42.2,Underweight,304,ok
+Industrials,AME,41.3,Hold,266,ok
+Industrials,UNP,41.2,Underweight,305,ok
+Industrials,SWK,38.6,Hold,289,ok
+Industrials,IR,34.3,Underweight,265,ok
+Industrials,HUBB,34.8,Underweight,304,ok
+Industrials,PH,36.7,Underweight,330,ok
+Industrials,NDSN,34.3,Underweight,291,ok
+Industrials,URI,33.0,Hold,294,ok
+Industrials,VLTO,32.9,Underweight,293,ok
+Industrials,DOV,32.4,Underweight,267,ok
+Industrials,CSX,31.3,Hold,302,ok
+Industrials,RSG,32.0,Underweight,316,ok
+Industrials,PNR,30.8,Underweight,322,ok
+Industrials,FAST,29.4,Underweight,289,ok
+Industrials,CTAS,27.6,Hold,295,ok
+Industrials,CPRT,29.1,Hold,335,ok
+Industrials,IEX,26.0,Underweight,275,ok
+Industrials,EXPD,26.1,Underweight,298,ok
+Industrials,AOS,24.0,Hold,269,ok
+Industrials,ODFL,21.9,Overweight,311,ok
+Industrials,TDG,21.2,Overweight,295,ok
+Industrials,HWM,20.6,Hold,296,ok
+Industrials,MAS,19.9,Underweight,300,ok
+Industrials,PWR,20.3,Hold,330,ok
+Industrials,ROL,19.6,Underweight,274,ok
+Industrials,FIX,17.9,Underweight,311,ok
+Industrials,SNA,17.9,Hold,290,ok
+Industrials,ITW,17.1,Overweight,287,ok
+Industrials,EME,4.6,Hold,301,ok
+Information Technology,MSFT,93.9,Hold,285,ok
+Information Technology,CRM,88.7,Underweight,276,ok
+Information Technology,NOW,84.8,Underweight,295,ok
+Information Technology,PANW,82.4,Underweight,261,ok
+Information Technology,ADBE,83.4,Underweight,306,ok
+Information Technology,CSCO,80.4,Hold,279,ok
+Information Technology,IBM,78.6,Underweight,310,ok
+Information Technology,NVDA,78.6,Underweight,282,ok
+Information Technology,PLTR,77.3,Underweight,260,ok
+Information Technology,ACN,77.6,Overweight,299,ok
+Information Technology,INTC,75.8,Underweight,317,ok
+Information Technology,AMD,75.3,Overweight,275,ok
+Information Technology,CRWD,75.3,Underweight,301,ok
+Information Technology,CDNS,72.3,Hold,291,ok
+Information Technology,DDOG,69.7,Underweight,296,ok
+Information Technology,QCOM,71.9,Underweight,336,ok
+Information Technology,INTU,69.6,Hold,309,ok
+Information Technology,WDAY,69.5,Hold,300,ok
+Information Technology,MU,68.3,Overweight,267,ok
+Information Technology,ANET,68.0,Overweight,302,ok
+Information Technology,ORCL,66.5,Underweight,265,ok
+Information Technology,HPE,65.8,Underweight,254,ok
+Information Technology,CTSH,67.5,Underweight,306,ok
+Information Technology,NTAP,63.3,Underweight,294,ok
+Information Technology,SNPS,62.9,Hold,333,ok
+Information Technology,ADSK,62.1,Underweight,303,ok
+Information Technology,DELL,61.7,Underweight,307,ok
+Information Technology,GEN,60.9,Hold,289,ok
+Information Technology,FTNT,61.0,Underweight,303,ok
+Information Technology,AMAT,57.1,Hold,302,ok
+Information Technology,HPQ,56.7,Underweight,305,ok
+Information Technology,GDDY,56.9,Underweight,330,ok
+Information Technology,AAPL,55.3,Hold,252,ok
+Information Technology,FFIV,56.6,Underweight,294,ok
+Information Technology,EPAM,55.2,Underweight,295,ok
+Information Technology,MSI,54.8,Underweight,288,ok
+Information Technology,ZBRA,53.5,Underweight,289,ok
+Information Technology,AKAM,54.2,Underweight,301,ok
+Information Technology,AVGO,53.0,Overweight,255,ok
+Information Technology,WDC,52.8,Hold,298,ok
+Information Technology,PTC,52.6,Underweight,297,ok
+Information Technology,APP,49.0,Overweight,336,ok
+Information Technology,TRMB,47.8,Hold,261,ok
+Information Technology,NXPI,48.0,Underweight,302,ok
+Information Technology,ADI,47.1,Underweight,305,ok
+Information Technology,JBL,46.1,Underweight,290,ok
+Information Technology,TER,46.0,Underweight,329,ok
+Information Technology,STX,44.6,Underweight,305,ok
+Information Technology,SNDK,45.3,Underweight,344,ok
+Information Technology,MCHP,44.1,Hold,311,ok
+Information Technology,CDW,41.6,Hold,297,ok
+Information Technology,LRCX,40.4,Overweight,317,ok
+Information Technology,KEYS,39.8,Hold,294,ok
+Information Technology,FICO,39.6,Underweight,298,ok
+Information Technology,ON,37.3,Underweight,312,ok
+Information Technology,IT,35.9,Underweight,293,ok
+Information Technology,SMCI,34.8,Underweight,285,ok
+Information Technology,KLAC,34.8,Hold,294,ok
+Information Technology,TEL,33.6,Underweight,298,ok
+Information Technology,TXN,31.7,Underweight,324,ok
+Information Technology,GLW,29.2,Underweight,309,ok
+Information Technology,Q,28.2,Hold,303,ok
+Information Technology,TYL,27.8,Underweight,305,ok
+Information Technology,SWKS,26.4,Underweight,291,ok
+Information Technology,ROP,22.1,Underweight,298,ok
+Information Technology,TDY,13.5,Hold,291,ok
+Information Technology,VRSN,7.5,Underweight,275,ok
+Information Technology,MPWR,12.8,Underweight,304,ok
+Information Technology,APH,5.9,Hold,292,ok
+Information Technology,FSLR,5.4,Underweight,299,ok
+Maerials,ECL,93.1,Underweight,313,ok
+Maerials,IFF,76.6,Underweight,274,ok
+Maerials,DOW,81.7,Hold,290,ok
+Maerials,LIN,75.3,Hold,299,ok
+Maerials,AVY,73.0,Underweight,274,ok
+Maerials,CRH,68.0,Underweight,310,ok
+Maerials,DD,65.0,Hold,277,ok
+Maerials,FCX,64.4,Underweight,296,ok
+Maerials,CTVA,63.8,Underweight,305,ok
+Maerials,PPG,52.8,Underweight,300,ok
+Maerials,ALB,50.3,Underweight,303,ok
+Maerials,SW,46.1,Underweight,273,ok
+Maerials,LYB,41.6,Hold,316,ok
+Maerials,AMCR,38.8,Underweight,273,ok
+Maerials,APD,36.3,Underweight,298,ok
+Maerials,NEM,35.7,Underweight,318,ok
+Maerials,NUE,34.7,Underweight,296,ok
+Maerials,VMC,32.8,Underweight,293,ok
+Maerials,MOS,28.8,Underweight,303,ok
+Maerials,SHW,27.3,Underweight,296,ok
+Maerials,BALL,24.9,Underweight,263,ok
+Maerials,MLM,21.6,Underweight,307,ok
+Maerials,IP,21.0,Underweight,304,ok
+Maerials,STLD,18.1,Hold,300,ok
+Maerials,CF,12.8,Underweight,300,ok
+Maerials,PKG,5.3,Underweight,273,ok
+Real Estate,EQIX,95.9,Underweight,304,ok
+Real Estate,IRM,89.5,Underweight,294,ok
+Real Estate,DLR,93.5,Overweight,301,ok
+Real Estate,CBRE,79.9,Underweight,298,ok
+Real Estate,CSGP,72.9,Underweight,289,ok
+Real Estate,WELL,64.9,Underweight,296,ok
+Real Estate,AMT,63.4,Underweight,308,ok
+Real Estate,PSA,62.6,Underweight,290,ok
+Real Estate,PLD,58.7,Underweight,296,ok
+Real Estate,HST,50.5,Underweight,282,ok
+Real Estate,DOC,50.4,Underweight,275,ok
+Real Estate,O,50.4,Underweight,308,ok
+Real Estate,AVB,49.7,Underweight,271,ok
+Real Estate,INVH,49.4,Underweight,267,ok
+Real Estate,KIM,40.5,Underweight,268,ok
+Real Estate,CPT,39.3,Underweight,279,ok
+Real Estate,EXR,36.4,Underweight,274,ok
+Real Estate,WY,33.6,Underweight,269,ok
+Real Estate,CCI,33.1,Underweight,308,ok
+Real Estate,SBAC,32.4,Hold,264,ok
+Real Estate,UDR,32.2,Underweight,269,ok
+Real Estate,BXP,32.0,Underweight,303,ok
+Real Estate,VTR,31.1,Underweight,303,ok
+Real Estate,REG,30.9,Underweight,298,ok
+Real Estate,ESS,30.0,Underweight,264,ok
+Real Estate,ARE,30.6,Underweight,301,ok
+Real Estate,SPG,28.8,Underweight,298,ok
+Real Estate,FRT,25.7,Underweight,295,ok
+Real Estate,MAA,24.5,Underweight,289,ok
+Untilities,AES,95.4,Underweight,267,ok
+Real Estate,VICI,3.1,Underweight,328,ok
+Untilities,DUK,82.5,Hold,302,ok
+Untilities,PCG,77.4,Underweight,313,ok
+Untilities,EXC,72.9,Underweight,288,ok
+Untilities,ETR,71.3,Underweight,320,ok
+Untilities,NEE,68.2,Underweight,303,ok
+Untilities,NRG,67.2,Underweight,337,ok
+Untilities,CEG,61.7,Underweight,321,ok
+Untilities,AEE,59.5,Underweight,325,ok
+Untilities,XEL,59.1,Underweight,293,ok
+Untilities,PPL,58.1,Underweight,289,ok
+Untilities,CMS,50.9,Underweight,304,ok
+Untilities,EIX,47.5,Underweight,277,ok
+Untilities,CNP,47.4,Underweight,274,ok
+Untilities,AEP,47.3,Underweight,305,ok
+Untilities,ED,47.1,Underweight,308,ok
+Untilities,SO,44.1,Underweight,307,ok
+Untilities,ES,43.6,Underweight,297,ok
+Untilities,NI,40.1,Underweight,261,ok
+Untilities,D,43.1,Underweight,306,ok
+Untilities,DTE,36.7,Underweight,266,ok
+Untilities,LNT,36.1,Hold,260,ok
+Untilities,PEG,31.4,Underweight,274,ok
+Untilities,SRE,34.3,Hold,316,ok
+Untilities,EVRG,29.9,Underweight,296,ok
+Untilities,VST,32.7,Overweight,330,ok
+Untilities,FE,29.2,Underweight,298,ok
+Untilities,PNW,27.2,Underweight,305,ok
+Untilities,WEC,20.6,Underweight,293,ok
+Untilities,AWK,16.6,Underweight,308,ok
+Untilities,ATO,5.9,Hold,300,ok
+Communication Services,EA,52.1,ERROR,2,Error code: 403 - {'error': {'message': 'Key limit exceeded (monthly limit). Manage it using https://openrouter.ai/workspaces/default/keys/396720ffefb452126d7a145bb8bc912c91f58bb2f56dbb378044907ca67f9
+Financials,BK,69.4,ERROR,2,Error code: 403 - {'error': {'message': 'Key limit exceeded (monthly limit). Manage it using https://openrouter.ai/workspaces/default/keys/396720ffefb452126d7a145bb8bc912c91f58bb2f56dbb378044907ca67f9
+Consumer Staples,BF.B,13.5,ERROR,2,Error code: 403 - {'error': {'message': 'Key limit exceeded (monthly limit). Manage it using https://openrouter.ai/workspaces/default/keys/396720ffefb452126d7a145bb8bc912c91f58bb2f56dbb378044907ca67f9
+Communication Services,CMCSA,28.8,ERROR,2,Error code: 403 - {'error': {'message': 'Key limit exceeded (monthly limit). Manage it using https://openrouter.ai/workspaces/default/keys/396720ffefb452126d7a145bb8bc912c91f58bb2f56dbb378044907ca67f9
+Energy,CTRA,27.0,ERROR,2,Error code: 403 - {'error': {'message': 'Key limit exceeded (monthly limit). Manage it using https://openrouter.ai/workspaces/default/keys/396720ffefb452126d7a145bb8bc912c91f58bb2f56dbb378044907ca67f9
+Real Estate,EQR,36.2,ERROR,1,Error code: 403 - {'error': {'message': 'Key limit exceeded (monthly limit). Manage it using https://openrouter.ai/workspaces/default/keys/396720ffefb452126d7a145bb8bc912c91f58bb2f56dbb378044907ca67f9
+Financials,BRK.B,52.4,ERROR,1,Error code: 403 - {'error': {'message': 'Key limit exceeded (monthly limit). Manage it using https://openrouter.ai/workspaces/default/keys/396720ffefb452126d7a145bb8bc912c91f58bb2f56dbb378044907ca67f9
+Health Care,HOLX,46.9,ERROR,1,Error code: 403 - {'error': {'message': 'Key limit exceeded (monthly limit). Manage it using https://openrouter.ai/workspaces/default/keys/396720ffefb452126d7a145bb8bc912c91f58bb2f56dbb378044907ca67f9
+Industrials,DAY,70.0,ERROR,1,Error code: 403 - {'error': {'message': 'Key limit exceeded (monthly limit). Manage it using https://openrouter.ai/workspaces/default/keys/396720ffefb452126d7a145bb8bc912c91f58bb2f56dbb378044907ca67f9

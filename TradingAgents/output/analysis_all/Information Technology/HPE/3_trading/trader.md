@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: HPE is in a critical downward reversal after a 15.1% pullback from the August 13 peak of $59.82. Technical deterioration is severe: MACD has performed a bearish crossover (line at 0.72 below signal line at 1.46), RSI has collapsed 28 points from overbought extremes (73.83 to 45.56), and the 10 EMA ($53.10) now acts as overhead resistance. Fundamental concerns from the research plan reinforce this: earnings quality is suspect (Q2 2026 CFO/NI ratio of 14.1x signals working-capital-driven cash flow, not durable margin expansion), gross margin expansion is decelerating (60bps vs. 240bps prior quarter), and net income actually dipped sequentially despite revenue growth. The 84x debt-to-equity and 2.84x net debt/EBITDA leverage profile is materially elevated versus AI/software peers, creating risk in a cyclical downturn. The investment plan explicitly recommends trimming existing HPE exposure by 20-30% into rallies and avoiding new positions on the forward PE multiple-expansion thesis. Current price of $50.87 has retested near the Bollinger lower band ($49.47) and 50 SMA support ($49.73), making it a logical exit point for existing holders.
+
+**Position Sizing**: Trim 20–30% of existing HPE exposure
+
+FINAL TRANSACTION PROPOSAL: **SELL**

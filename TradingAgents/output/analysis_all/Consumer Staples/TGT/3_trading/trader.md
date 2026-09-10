@@ -1,0 +1,7 @@
+**Action**: Hold
+
+**Reasoning**: TGT shows a powerful uptrend with golden cross alignment and an accelerating 50 SMA ($144.07), supporting higher prices. However, several critical factors argue against aggressive entry: (1) MACD histogram has collapsed to 0.06 from a peak of 6.75, signaling momentum divergence and potential exhaustion; (2) near-term price ($163.75) is tightly compressed against the 10 EMA ($161.56), suggesting consolidation risk; (3) volume on 9/1 collapsed to 3.98M vs. 6M+ on recent rallies, indicating diminished conviction; and (4) the investment plan correctly identifies operating margin compression (Q2 2026: 4.5% vs. Q2 2025: 6.2%), SG&A deceleration risk, and a sharp 35.6% cash drawdown—red flags on balance-sheet strength despite valuation appeal. The stock has already rallied 70% YTD, and the bull case (guidance raise, ROE of 26.41%, Beauty Studios upside) is not yet confirmed by operating leverage. Support at the 50 SMA ($144.07) provides downside protection; resistance at the upper Bollinger band ($171.03) caps upside in a consolidation phase. Hold existing positions; do not add on current momentum.
+
+**Stop Loss**: 144.07
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

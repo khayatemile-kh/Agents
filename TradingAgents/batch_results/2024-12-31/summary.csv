@@ -1,0 +1,104 @@
+Sector,Ticker,Index,Signal,ElapsedSeconds,Status
+Health Care,PFE,1.0,Underweight,265,ok
+Financials,AXP,1.0,Underweight,272,ok
+Consumer Staples,CVS,1.0,Underweight,274,ok
+Consumer Staples,WMT,1.0,Underweight,276,ok
+Energy,HAL,1.0,Hold,280,ok
+Health Care,MDT,1.0,Hold,283,ok
+Industrials,UBER,1.0,Overweight,284,ok
+Consumer Discretionary,AMZN,1.0,Overweight,286,ok
+Health Care,IQV,1.0,Underweight,291,ok
+Communication Services,META,1.0,Overweight,293,ok
+Financials,HOOD,1.0,Underweight,297,ok
+Consumer Staples,TGT,1.0,Underweight,300,ok
+Industrials,LMT,1.0,Underweight,296,ok
+Financials,MCO,1.0,Hold,303,ok
+Financials,JPM,1.0,Underweight,320,ok
+Industrials,DE,1.0,Underweight,283,ok
+Information Technology,NVDA,1.0,Overweight,275,ok
+Information Technology,PLTR,1.0,Underweight,278,ok
+Information Technology,IBM,1.0,Underweight,290,ok
+Real Estate,CBRE,1.0,Underweight,288,ok
+Real Estate,EQIX,1.0,Underweight,294,ok
+Financials,MA,1.0,Overweight,284,ok
+Real Estate,DLR,1.0,Underweight,295,ok
+Materials,AVY,1.0,Underweight,303,ok
+Information Technology,CRWD,1.0,Underweight,308,ok
+Financials,V,1.0,Overweight,277,ok
+Materials,IFF,1.0,Underweight,317,ok
+Industrials,VRSK,1.0,Overweight,331,ok
+Utilities,AES,1.0,Underweight,315,ok
+Consumer Discretionary,BKNG,1.0,Overweight,317,ok
+Financials,BX,1.0,Underweight,278,ok
+Industrials,LDOS,1.0,Underweight,280,ok
+Industrials,BR,1.0,Overweight,272,ok
+Industrials,ADP,1.0,Underweight,275,ok
+Health Care,LLY,1.0,Overweight,312,ok
+Communication Services,VZ,1.0,Hold,274,ok
+Information Technology,MSFT,1.0,Overweight,283,ok
+Consumer Discretionary,TSLA,1.0,Underweight,271,ok
+Consumer Discretionary,EXPE,1.0,Underweight,277,ok
+Communication Services,NFLX,1.0,Hold,294,ok
+Communication Services,GOOG,1.0,Overweight,300,ok
+Consumer Discretionary,EBAY,1.0,Underweight,298,ok
+Consumer Discretionary,ABNB,1.0,Overweight,281,ok
+Consumer Discretionary,GM,1.0,Hold,291,ok
+Consumer Discretionary,DASH,1.0,Underweight,309,ok
+Consumer Discretionary,APTV,1.0,Underweight,285,ok
+Consumer Discretionary,HD,1.0,Underweight,283,ok
+Consumer Staples,EL,1.0,Underweight,274,ok
+Consumer Staples,PEP,1.0,Underweight,277,ok
+Consumer Staples,PG,1.0,Hold,305,ok
+Consumer Staples,KHC,1.0,Underweight,283,ok
+Consumer Staples,CL,1.0,Hold,282,ok
+Energy,SLB,1.0,Underweight,294,ok
+Financials,NDAQ,1.0,Hold,279,ok
+Energy,XOM,1.0,Hold,293,ok
+Financials,XYZ,1.0,Underweight,291,ok
+Energy,CVX,1.0,Underweight,305,ok
+Financials,COIN,1.0,Underweight,297,ok
+Financials,MSCI,1.0,Underweight,311,ok
+Financials,SPGI,1.0,Hold,322,ok
+Financials,PYPL,1.0,Hold,262,ok
+Financials,FIS,1.0,Underweight,286,ok
+Health Care,GEHC,1.0,Underweight,281,ok
+Financials,FDS,1.0,Hold,301,ok
+Health Care,JNJ,1.0,Underweight,301,ok
+Health Care,BMY,1.0,Underweight,274,ok
+Health Care,MRK,1.0,Underweight,271,ok
+Health Care,MRNA,1.0,Underweight,298,ok
+Health Care,TMO,1.0,Underweight,291,ok
+Health Care,UNH,1.0,Underweight,322,ok
+Health Care,CI,1.0,Underweight,299,ok
+Industrials,ROK,1.0,Underweight,299,ok
+Industrials,JCI,1.0,Hold,281,ok
+Industrials,CHRW,1.0,Hold,275,ok
+Industrials,AXON,1.0,Underweight,326,ok
+Industrials,CAT,1.0,Hold,276,ok
+Industrials,HON,1.0,Hold,295,ok
+Information Technology,CRM,1.0,Hold,268,ok
+Information Technology,NOW,1.0,Underweight,281,ok
+Information Technology,PANW,1.0,Underweight,279,ok
+Industrials,RTX,1.0,Overweight,299,ok
+Industrials,EFX,1.0,Underweight,325,ok
+Information Technology,ACN,1.0,Overweight,292,ok
+Information Technology,ADBE,1.0,Hold,312,ok
+Information Technology,CSCO,1.0,Hold,308,ok
+Information Technology,INTC,1.0,Underweight,289,ok
+Materials,ECL,1.0,Overweight,275,ok
+Information Technology,CDNS,1.0,Underweight,282,ok
+Materials,DOW,1.0,Underweight,274,ok
+Information Technology,AMD,1.0,Underweight,301,ok
+Materials,LIN,1.0,Underweight,272,ok
+Materials,CRH,1.0,Underweight,268,ok
+Real Estate,IRM,1.0,Underweight,271,ok
+Utilities,DUK,1.0,Underweight,7212,ok
+Real Estate,WELL,1.0,Underweight,7217,ok
+Utilities,ETR,1.0,Underweight,7217,ok
+Utilities,PCG,1.0,Overweight,7219,ok
+Utilities,EXC,1.0,Underweight,7222,ok
+Energy,BKR,1.0,Underweight,7224,ok
+Real Estate,AMT,1.0,Underweight,7226,ok
+Real Estate,CSGP,1.0,Underweight,7246,ok
+Utilities,NRG,1.0,Underweight,248,ok
+Utilities,NEE,1.0,Underweight,271,ok

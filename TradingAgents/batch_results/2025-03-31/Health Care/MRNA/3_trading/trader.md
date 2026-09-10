@@ -1,0 +1,7 @@
+**Action**: Sell
+
+**Reasoning**: MRNA has broken decisively below its 200-day MA ($63.36) and all major moving averages, closing at $28.35 (123.7% below the 200 SMA). The technical deterioration is severe: RSI is deeply oversold at 34.35, MACD is actively deteriorating to -1.01 with a widening negative histogram (no bullish divergence forming), and price is just $1.17 above the Bollinger Lower Band support. The March 31 close represents an 8.9% single-day collapse on record volume (20.46M shares), signaling capitulation selling. The research plan confirms this technical breakdown aligns with fundamental weakness: non-COVID revenue is decelerating faster than guided, RSV faces intense competition with realistic Moderna peak penetration of 25-35% (not billions in upside), and the multi-year Phase 2 stagnation in flu/CMV undermines the pipeline optionality case. The $4B annual cash burn against a $7B cushion creates medium-term runway pressure. At current valuations (17.5x EV/Revenue), the stock trades rich versus profitable diversified peers (Merck 4-5x, Regeneron 6-8x) without de-risked revenue visibility.
+
+**Position Sizing**: Trim 33–50% of existing position; do not add or average down
+
+FINAL TRANSACTION PROPOSAL: **SELL**

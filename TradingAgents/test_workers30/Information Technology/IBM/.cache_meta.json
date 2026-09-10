@@ -1,0 +1,9 @@
+{
+  "ticker": "IBM",
+  "sector": "Information Technology",
+  "index": "1.0",
+  "signal": "Hold",
+  "provider": "glm-5.3",
+  "elapsed": 607.5398797988892,
+  "generated_at": "2026-09-08T19:24:32.182569+00:00"
+}

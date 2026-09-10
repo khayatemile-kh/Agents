@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: TRGP exhibits a bullish technical structure—price trading 26.6% above the 200 SMA, MACD positive with crossover intact, and RSI moderating from overbought at 60.17—confirming institutional accumulation into the late-August recovery rally. However, the research plan's fundamental analysis exposes a material cash-conversion gap: TTM EBITDA of $5.5B versus TTM FCF of only $65.8M, with structural capex intensity (~49% of EBITDA) that persists beyond near-term growth projects. While the new ExxonMobil fee-based agreement de-risks revenue, it lacks disclosed take-or-pay volume commitments, and Permian production growth is decelerating. Absent concrete project milestones and FCF inflection evidence in the next 1–2 quarterly reports, the current 11.4x EV/EBITDA valuation does not justify new entry despite positive technicals. Maintain position; do not add or trim into strength until cash-conversion trends clarify.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

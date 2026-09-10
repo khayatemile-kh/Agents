@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: ADBE is in a confirmed downtrend with price $5.34 below the 50-day SMA ($392.22) and MACD deeply negative (-4.76), yet RSI has recovered to neutral (43.67) from oversold (34.64 on June 20), signaling stabilization. The research plan balances strong fundamentals (10.5% revenue growth, 89.4% gross margins, ~9x forward P/E, $9.2B FCF) against legitimate structural concerns (current ratio 0.751, equity shrinkage from buybacks, Figma competitive threat). With no fresh earnings miss or guidance cut to explain the 7.3% June drawdown, the selloff appears flow-driven rather than fundamental. The technical setup (oversold recovery, bounce off $376.92 low) and valuation warrant holding the current position while awaiting confirmation of recovery above $392 or evidence of AI monetization before adding.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**

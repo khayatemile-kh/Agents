@@ -1,0 +1,9 @@
+{
+  "ticker": "CBRE",
+  "sector": "Real Estate",
+  "index": "1.0",
+  "signal": "Hold",
+  "provider": "glm-5.3",
+  "elapsed": 571.4856090545654,
+  "generated_at": "2026-09-08T19:23:56.129059+00:00"
+}

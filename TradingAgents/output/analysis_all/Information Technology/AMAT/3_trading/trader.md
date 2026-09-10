@@ -1,0 +1,5 @@
+**Action**: Hold
+
+**Reasoning**: The technical setup shows AMAT in deep bearish momentum (40% decline, RSI 34.34, price below all major EMAs) but with emerging signs of exhaustion—RSI near oversold, MACD histogram narrowing, price touching lower Bollinger Band at $447.10, and ATR declining. The research plan's Hold recommendation is reinforced by unresolved fundamental tensions: while revenue and margin fundamentals are strong (25%+ YoY growth, 41% EPS growth, 30%+ operating margins), the FCF collapse in Q2 (2.7% margin vs. 15-28% historical) and decelerating sequential growth (15.3% → 13%) create earnings-quality uncertainty that cannot be resolved without Q4 2026 actual data. Current valuation (~$442) already reflects substantial risk repricing; maintenance of position rather than aggressive entry or exit is appropriate pending confirmation of FCF normalization and sequential revenue reacceleration.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**
