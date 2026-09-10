@@ -1,7 +1,5 @@
 Sector,Ticker,Index,Signal,ElapsedSeconds,Status
 Health Care,MDT,1.0,Underweight,305,ok
-Real Estate,CBRE,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Utilities,AES,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
 Consumer Discretionary,BKNG,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
 Financials,MA,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
 Financials,V,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
@@ -102,3 +100,5 @@ Materials,IFF,1.0,Underweight,262,ok
 Materials,AVY,1.0,Underweight,266,ok
 Real Estate,EQIX,1.0,Underweight,264,ok
 Real Estate,DLR,1.0,Underweight,279,ok
+Real Estate,CBRE,1.0,Hold,295,ok
+Utilities,AES,1.0,Underweight,267,ok
