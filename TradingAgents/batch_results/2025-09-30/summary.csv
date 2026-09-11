@@ -1,54 +1,5 @@
 Sector,Ticker,Index,Signal,ElapsedSeconds,Status
 Health Care,MDT,1.0,Underweight,305,ok
-Consumer Discretionary,BKNG,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Financials,MA,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Financials,V,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Financials,BX,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Health Care,LLY,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Industrials,LDOS,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Industrials,BR,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Industrials,ADP,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Information Technology,MSFT,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Communication Services,GOOG,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Communication Services,NFLX,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Consumer Discretionary,EBAY,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Consumer Discretionary,DASH,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Consumer Discretionary,TSLA,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Consumer Discretionary,EXPE,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Consumer Discretionary,GM,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Consumer Discretionary,ABNB,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Consumer Discretionary,APTV,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Consumer Discretionary,HD,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Consumer Staples,PEP,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Consumer Staples,PG,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Consumer Staples,EL,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Consumer Staples,KHC,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Consumer Staples,CL,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Energy,SLB,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Energy,XOM,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Energy,CVX,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Financials,XYZ,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Financials,NDAQ,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Financials,COIN,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Financials,MSCI,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Financials,SPGI,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Financials,FIS,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Financials,PYPL,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Financials,FDS,1.0,ERROR,1,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Health Care,GEHC,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Health Care,UNH,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Health Care,JNJ,1.0,ERROR,1,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Health Care,BMY,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Health Care,TMO,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Health Care,MRK,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Health Care,CI,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Industrials,AXON,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Industrials,ROK,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Industrials,CHRW,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Industrials,JCI,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Industrials,HON,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Industrials,CAT,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
-Communication Services,VZ,1.0,ERROR,5,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
 Industrials,EFX,1.0,ERROR,1,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
 Industrials,RTX,1.0,ERROR,1,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
 Information Technology,CRM,1.0,ERROR,0,"Error code: 402 - {'error': {'message': 'This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.', 'code': 402, '"
@@ -102,3 +53,52 @@ Real Estate,EQIX,1.0,Underweight,264,ok
 Real Estate,DLR,1.0,Underweight,279,ok
 Real Estate,CBRE,1.0,Hold,295,ok
 Utilities,AES,1.0,Underweight,267,ok
+Consumer Discretionary,BKNG,1.0,Underweight,267,ok
+Financials,MA,1.0,Overweight,260,ok
+Financials,V,1.0,Hold,261,ok
+Financials,BX,1.0,Underweight,272,ok
+Health Care,LLY,1.0,Hold,284,ok
+Industrials,LDOS,1.0,Underweight,265,ok
+Industrials,BR,1.0,Underweight,255,ok
+Industrials,ADP,1.0,Hold,290,ok
+Information Technology,MSFT,1.0,Underweight,274,ok
+Communication Services,GOOG,1.0,Overweight,286,ok
+Communication Services,VZ,1.0,Underweight,263,ok
+Communication Services,NFLX,1.0,Underweight,264,ok
+Consumer Discretionary,EBAY,1.0,Underweight,277,ok
+Consumer Discretionary,DASH,1.0,ERROR,682,Connection error.
+Consumer Discretionary,EXPE,1.0,ERROR,2,Connection error.
+Consumer Discretionary,TSLA,1.0,ERROR,2,Connection error.
+Consumer Discretionary,GM,1.0,ERROR,1,Connection error.
+Consumer Discretionary,ABNB,1.0,ERROR,1,Connection error.
+Consumer Discretionary,APTV,1.0,ERROR,1,Connection error.
+Consumer Discretionary,HD,1.0,ERROR,2,Connection error.
+Consumer Staples,PG,1.0,ERROR,2,Connection error.
+Consumer Staples,PEP,1.0,ERROR,2,Connection error.
+Consumer Staples,EL,1.0,ERROR,2,Connection error.
+Consumer Staples,KHC,1.0,ERROR,2,Connection error.
+Consumer Staples,CL,1.0,ERROR,2,Connection error.
+Energy,SLB,1.0,ERROR,2,Connection error.
+Energy,CVX,1.0,ERROR,2,Connection error.
+Energy,XOM,1.0,ERROR,2,Connection error.
+Financials,XYZ,1.0,ERROR,2,Connection error.
+Financials,NDAQ,1.0,ERROR,1,Connection error.
+Financials,COIN,1.0,ERROR,2,Connection error.
+Financials,MSCI,1.0,ERROR,2,Connection error.
+Financials,SPGI,1.0,ERROR,2,Connection error.
+Financials,FIS,1.0,ERROR,1,Connection error.
+Financials,PYPL,1.0,ERROR,1,Connection error.
+Financials,FDS,1.0,ERROR,2,Connection error.
+Health Care,JNJ,1.0,ERROR,2,Connection error.
+Health Care,GEHC,1.0,ERROR,12,Connection error.
+Health Care,UNH,1.0,ERROR,2,Connection error.
+Health Care,BMY,1.0,ERROR,2,Connection error.
+Health Care,TMO,1.0,ERROR,2,Connection error.
+Health Care,MRK,1.0,ERROR,2,Connection error.
+Health Care,CI,1.0,ERROR,2,Connection error.
+Industrials,AXON,1.0,ERROR,2,Connection error.
+Industrials,ROK,1.0,ERROR,1,Connection error.
+Industrials,JCI,1.0,ERROR,1,Connection error.
+Industrials,CHRW,1.0,ERROR,2,Connection error.
+Industrials,HON,1.0,ERROR,2,Connection error.
+Industrials,CAT,1.0,ERROR,2,Connection error.

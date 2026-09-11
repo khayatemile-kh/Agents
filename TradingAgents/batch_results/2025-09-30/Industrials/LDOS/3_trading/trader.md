@@ -1,0 +1,7 @@
+**Action**: Hold
+
+**Reasoning**: LDOS is at a tactical inflection point: technical momentum remains solid (21% 3-month gain, 50-SMA at $175.58, 200-SMA at $151.78 below price), but the investment plan identifies a fundamental revaluation risk. The bull case's core pillars—exceptional FCF margin (15.2%) and valuation discount to peers—are undermined by normalized working-capital analysis showing ~3-4% FCF yield rather than 7.1%, and by structural leverage/scale differences that justify a persistent valuation discount. MACD has declined 40% from August peaks (5.39 to 2.73) with a negative histogram (-0.17), signaling momentum deceleration and divergence risk despite RSI at 65.62. Price near Bollinger upper band ($189.35) and 1% below it leaves limited upside before near-term exhaustion. The plan explicitly recommends *trimming* 15-25% into strength in the $185-190 zone and avoiding new buys, not adding or holding for gains.
+
+**Position Sizing**: Trim existing exposure by 15–25% into current strength ($185–190 zone); hold residual for debt paydown and backlog visibility; avoid new initiation until Q4 earnings confirm durable FCF or price retraces to $165–175 support.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**
