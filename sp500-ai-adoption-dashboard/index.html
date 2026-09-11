@@ -1,0 +1,972 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found]){display:none!important}</style></head><body>
+<title>S&amp;P 500 AI Adoption Index</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+<style>
+  :root{
+    --paper:#F6F3EC; --surface:#FFFFFF; --surface-2:#FBF9F4;
+    --ink:#1E2A2E; --ink-muted:#647178; --border:#E1DBCB; --border-soft:#EAE5D9;
+    --accent:#2F6F63; --accent-ink:#F6F3EC;
+    --pos:#1F7A4C; --pos-bg:#E4F1E8;
+    --neu:#96731E; --neu-bg:#F2EAD3;
+    --neg:#AE4B2C; --neg-bg:#F5E4DB;
+    --crit:#9C2B2B; --crit-bg:#F3DEDE;
+    --shadow: 0 8px 28px -12px rgba(30,42,46,0.25);
+  }
+  :root:not([data-theme="light"]){
+    @media (prefers-color-scheme: dark){
+      --paper:#14181A; --surface:#1B2124; --surface-2:#20272A;
+      --ink:#E9E4D8; --ink-muted:#98A0A0; --border:#2A3134; --border-soft:#242B2E;
+      --accent:#59B39F; --accent-ink:#0E1416;
+      --pos:#4FAE79; --pos-bg:#173324;
+      --neu:#C79B3E; --neu-bg:#332B14;
+      --neg:#D97C55; --neg-bg:#3A2318;
+      --crit:#E06767; --crit-bg:#3A1B1B;
+      --shadow: 0 8px 32px -12px rgba(0,0,0,0.55);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#14181A; --surface:#1B2124; --surface-2:#20272A;
+    --ink:#E9E4D8; --ink-muted:#98A0A0; --border:#2A3134; --border-soft:#242B2E;
+    --accent:#59B39F; --accent-ink:#0E1416;
+    --pos:#4FAE79; --pos-bg:#173324;
+    --neu:#C79B3E; --neu-bg:#332B14;
+    --neg:#D97C55; --neg-bg:#3A2318;
+    --crit:#E06767; --crit-bg:#3A1B1B;
+    --shadow: 0 8px 32px -12px rgba(0,0,0,0.55);
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"IBM Plex Sans", system-ui, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{ background:var(--accent); color:var(--accent-ink); }
+
+  .wrap{ max-width:1180px; margin:0 auto; padding:36px 28px 80px; }
+
+  header.masthead{
+    display:flex; align-items:flex-end; justify-content:space-between; gap:24px;
+    padding-bottom:22px; border-bottom:1px solid var(--border); margin-bottom:26px;
+    flex-wrap:wrap;
+  }
+  .masthead-title h1{
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:600; font-size:clamp(28px,4vw,40px);
+    letter-spacing:-0.01em; margin:0 0 6px 0; text-wrap:balance;
+  }
+  .masthead-title p{
+    margin:0; color:var(--ink-muted); font-size:14.5px; max-width:64ch; line-height:1.55;
+  }
+  .masthead-title p b{ color:var(--ink); font-weight:600; }
+  .masthead-title p a{ color:var(--accent); font-weight:600; text-decoration:underline; text-underline-offset:2px; }
+  .masthead-title p a:hover{ text-decoration-thickness:2px; }
+  .masthead-side{ display:flex; flex-direction:column; align-items:flex-end; gap:10px; }
+  .theme-toggle{
+    width:30px; height:30px; border-radius:50%; border:1px solid var(--border);
+    background:var(--surface); color:var(--ink-muted); cursor:pointer;
+    display:flex; align-items:center; justify-content:center; font-size:14px; line-height:1;
+    transition:background .15s,color .15s,border-color .15s;
+  }
+  .theme-toggle:hover{ color:var(--ink); border-color:var(--accent); }
+  .masthead-meta{
+    text-align:right; font-family:"IBM Plex Mono", monospace; font-size:12.5px;
+    color:var(--ink-muted); line-height:1.7; white-space:nowrap;
+  }
+  .masthead-meta b{ color:var(--ink); font-weight:600; }
+
+  .stat-strip{
+    display:grid; grid-template-columns:repeat(5,1fr); gap:1px;
+    background:var(--border); border:1px solid var(--border);
+    border-radius:10px; overflow:hidden; margin-bottom:22px;
+  }
+  .stat-tile{
+    background:var(--surface); padding:16px 18px; display:flex; flex-direction:column; gap:4px;
+  }
+  .stat-tile .n{
+    font-family:"IBM Plex Mono", monospace; font-variant-numeric:tabular-nums;
+    font-size:26px; font-weight:600; line-height:1;
+  }
+  .stat-tile .l{ font-size:12px; color:var(--ink-muted); text-transform:uppercase; letter-spacing:.06em; }
+  .stat-tile.pos .n{ color:var(--pos); }
+  .stat-tile.neu .n{ color:var(--neu); }
+  .stat-tile.neg .n{ color:var(--neg); }
+  .stat-tile.crit .n{ color:var(--crit); }
+  .stat-tile.tb .n{ color:var(--accent); }
+
+  .controls{
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+    margin-bottom:16px; position:sticky; top:0; padding:12px 0;
+    background:var(--paper); z-index:5; border-bottom:1px solid var(--border-soft);
+  }
+  .search{
+    flex:1 1 220px; position:relative;
+  }
+  .search input{
+    width:100%; padding:9px 12px 9px 32px; border-radius:8px; border:1px solid var(--border);
+    background:var(--surface); color:var(--ink); font-family:inherit; font-size:14px;
+  }
+  .search input:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .search svg{ position:absolute; left:10px; top:50%; transform:translateY(-50%); opacity:.5; }
+  select{
+    padding:9px 30px 9px 12px; border-radius:8px; border:1px solid var(--border);
+    background:var(--surface); color:var(--ink); font-family:inherit; font-size:13.5px;
+    appearance:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23647178' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat:no-repeat; background-position:right 12px center;
+  }
+  .chip-row{ display:flex; gap:6px; }
+  .chip{
+    font-family:"IBM Plex Mono", monospace; font-size:12.5px; padding:7px 11px;
+    border-radius:999px; border:1px solid var(--border); background:var(--surface);
+    color:var(--ink-muted); cursor:pointer; user-select:none;
+  }
+  .chip:hover{ color:var(--ink); }
+  .chip.active{ border-color:transparent; color:var(--accent-ink); background:var(--accent); }
+  .chip-tb{ border-color:var(--accent); color:var(--accent); font-weight:600; }
+  .chip-tb.active{ background:var(--accent); color:var(--accent-ink); border-color:transparent; }
+  .controls-divider{ width:1px; align-self:stretch; background:var(--border); margin:0 2px; }
+
+  .count-row{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:10px; }
+  .count-line{ font-size:12.5px; color:var(--ink-muted); font-family:"IBM Plex Mono",monospace;}
+  .copy-btn{
+    font-family:"IBM Plex Mono", monospace; font-size:12px; padding:6px 12px; flex-shrink:0;
+    border-radius:6px; border:1px solid var(--border); background:var(--surface);
+    color:var(--ink-muted); cursor:pointer; transition:background .15s,color .15s,border-color .15s;
+  }
+  .copy-btn:hover{ color:var(--ink); border-color:var(--accent); }
+  .copy-btn.copied{ color:var(--accent-ink); background:var(--accent); border-color:transparent; }
+
+  .sector-summary{
+    display:flex; gap:22px; flex-wrap:wrap; align-items:center;
+    background:var(--surface-2); border:1px solid var(--border-soft); border-radius:8px;
+    padding:11px 16px; margin-bottom:12px; font-size:12.5px; color:var(--ink-muted);
+  }
+  .sector-summary b{ color:var(--ink); font-family:"IBM Plex Mono",monospace; font-weight:600; }
+  .sector-summary .ss-signals{ display:flex; gap:14px; font-family:"IBM Plex Mono",monospace; font-size:12px; }
+
+  table{ width:100%; border-collapse:collapse; }
+  thead th{
+    text-align:left; font-size:11.5px; text-transform:uppercase; letter-spacing:.06em;
+    color:var(--ink-muted); font-weight:600; padding:8px 12px; border-bottom:1px solid var(--border);
+    cursor:pointer; white-space:nowrap;
+  }
+  thead th .arrow{ opacity:.4; font-size:10px; margin-left:3px; }
+  thead th.active .arrow{ opacity:1; color:var(--accent); }
+  tbody tr{ cursor:pointer; border-bottom:1px solid var(--border-soft); }
+  tbody tr:hover{ background:var(--surface-2); }
+  tbody tr.error-row{ opacity:.72; }
+  tbody td{ padding:10px 12px; font-size:14px; vertical-align:middle; }
+  td.ticker{ font-family:"IBM Plex Mono", monospace; font-weight:600; letter-spacing:.01em; white-space:nowrap; }
+  td.ticker .co-name{ display:block; font-family:"IBM Plex Sans", system-ui, sans-serif; font-weight:400; color:var(--ink-muted); font-size:11.5px; letter-spacing:0; white-space:normal; margin-top:1px; }
+  td.sector{ color:var(--ink-muted); font-size:13px; }
+  td.index-cell{ width:150px; }
+  .index-wrap{ display:flex; align-items:center; gap:8px; }
+  .index-num{ font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums; font-size:13px; width:34px; text-align:right; }
+  .index-bar{ flex:1; height:5px; border-radius:3px; background:var(--border-soft); overflow:hidden; }
+  .index-bar > span{ display:block; height:100%; background:var(--accent); border-radius:3px; }
+  .pill{
+    display:inline-block; font-family:"IBM Plex Mono", monospace; font-size:11.5px; font-weight:600;
+    padding:3px 9px; border-radius:6px; letter-spacing:.02em;
+  }
+  .pill.Buy{ color:var(--pos); background:var(--pos-bg); }
+  .pill.Overweight{ color:var(--pos); background:var(--pos-bg); }
+  .pill.Hold{ color:var(--neu); background:var(--neu-bg); }
+  .pill.Underweight{ color:var(--neg); background:var(--neg-bg); }
+  .pill.Sell{ color:var(--neg); background:var(--neg-bg); }
+  .pill.ERROR{ color:var(--crit); background:var(--crit-bg); }
+  .tb-star{ color:var(--accent); font-size:12px; margin-left:5px; cursor:help; }
+  td.elapsed{ font-family:"IBM Plex Mono",monospace; color:var(--ink-muted); font-size:12.5px; font-variant-numeric:tabular-nums; text-align:right; }
+
+  .empty{ padding:40px 10px; text-align:center; color:var(--ink-muted); font-size:14px; }
+
+  /* Detail drawer */
+  .scrim{
+    position:fixed; inset:0; background:rgba(20,24,26,0.45); backdrop-filter:blur(1px);
+    opacity:0; pointer-events:none; transition:opacity .18s ease; z-index:20;
+  }
+  .scrim.open{ opacity:1; pointer-events:auto; }
+  .drawer{
+    position:fixed; top:0; right:0; height:100%; width:min(720px,92vw);
+    background:var(--surface); box-shadow:var(--shadow); border-left:1px solid var(--border);
+    transform:translateX(100%); transition:transform .22s ease, width .18s ease; z-index:21;
+    display:flex; flex-direction:column;
+  }
+  .drawer.open{ transform:translateX(0); }
+  .drawer.expanded{ width:100vw; }
+  .drawer-head{
+    padding:20px 24px 16px; border-bottom:1px solid var(--border); flex-shrink:0;
+  }
+  .drawer-head-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+  .drawer-head h2{
+    font-family:"Fraunces", Georgia, serif; font-weight:600; font-size:26px; margin:0 0 2px;
+  }
+  .drawer-head .sub{ color:var(--ink-muted); font-size:13px; font-family:"IBM Plex Mono",monospace; }
+  .drawer-head-actions{ display:flex; gap:8px; flex-shrink:0; }
+  .drawer-expand, .drawer-close{
+    background:none; border:1px solid var(--border); color:var(--ink-muted); width:30px; height:30px;
+    border-radius:7px; cursor:pointer; flex-shrink:0; display:flex; align-items:center; justify-content:center;
+    font-size:15px;
+  }
+  .drawer-expand:hover, .drawer-close:hover{ color:var(--ink); border-color:var(--ink-muted); }
+  .drawer.expanded .drawer-expand{ color:var(--accent); border-color:var(--accent); }
+  .drawer.expanded .drawer-body{ max-width:min(1180px,88vw); margin:0 auto; }
+  .drawer-stats{ display:flex; gap:18px; margin-top:12px; flex-wrap:wrap; }
+  .drawer-stats .item{ font-size:12.5px; color:var(--ink-muted); }
+  .drawer-stats .item b{ display:block; color:var(--ink); font-family:"IBM Plex Mono",monospace; font-size:14px; margin-top:2px; }
+  .drawer-body{ padding:22px 26px 60px; overflow-y:auto; flex:1; }
+  .drawer-body h2{ font-family:"Fraunces",serif; font-size:20px; margin:26px 0 10px; padding-top:16px; border-top:1px solid var(--border-soft); }
+  .drawer-body h2:first-child{ margin-top:0; border-top:none; padding-top:0; }
+  .drawer-body h3{ font-size:15.5px; margin:18px 0 8px; color:var(--accent); }
+  .drawer-body p{ line-height:1.65; font-size:14.5px; margin:0 0 12px; }
+  .drawer-body ul, .drawer-body ol{ line-height:1.65; font-size:14.5px; padding-left:20px; }
+  .drawer-body strong{ color:var(--ink); }
+  .drawer-body table{ margin:10px 0 16px; font-size:13px; }
+  .drawer-body th, .drawer-body td{ border:1px solid var(--border); padding:6px 9px; text-align:left; }
+  .drawer-body table-wrap{ overflow-x:auto; }
+  .drawer-body hr{ border:none; border-top:1px solid var(--border-soft); margin:20px 0; }
+  .drawer-error{ color:var(--crit); background:var(--crit-bg); padding:14px 16px; border-radius:8px; font-size:14px; margin-top:20px; }
+  .drawer-loading{ color:var(--ink-muted); font-size:14px; padding:14px 0; font-family:"IBM Plex Mono",monospace; }
+
+  /* Chat */
+  .chat-fab{
+    position:fixed; right:24px; bottom:24px; width:52px; height:52px; border-radius:50%;
+    background:var(--accent); color:var(--accent-ink); border:none; cursor:pointer;
+    display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow); z-index:22;
+    transition:transform .15s ease;
+  }
+  .chat-fab:hover{ transform:scale(1.06); }
+  .chat-fab[hidden]{ display:none !important; }
+  .chat-scrim{
+    position:fixed; inset:0; background:rgba(20,24,26,0.45); backdrop-filter:blur(1px);
+    opacity:0; pointer-events:none; transition:opacity .18s ease; z-index:22;
+  }
+  .chat-scrim.open{ opacity:1; pointer-events:auto; }
+  .chat-panel{
+    position:fixed; right:24px; bottom:24px; width:min(400px, calc(100vw - 32px));
+    height:min(600px, calc(100vh - 48px));
+    background:var(--surface); border:1px solid var(--border); border-radius:16px;
+    box-shadow:var(--shadow); z-index:23; display:flex; flex-direction:column; overflow:hidden;
+    transform:translateY(16px) scale(.98); opacity:0; pointer-events:none;
+    transition:transform .16s ease, opacity .16s ease;
+  }
+  .chat-panel.open{ transform:translateY(0) scale(1); opacity:1; pointer-events:auto; }
+  .chat-head{
+    display:flex; align-items:flex-start; justify-content:space-between; gap:10px;
+    padding:16px 18px; border-bottom:1px solid var(--border); flex-shrink:0;
+  }
+  .chat-head h2{ font-family:"Fraunces",Georgia,serif; font-size:18px; font-weight:600; margin:0 0 2px; }
+  .chat-head .sub{ color:var(--ink-muted); font-size:12px; }
+  .chat-head-actions{ display:flex; gap:6px; flex-shrink:0; }
+  .chat-icon-btn{
+    background:none; border:1px solid var(--border); color:var(--ink-muted); width:28px; height:28px;
+    border-radius:7px; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:14px;
+  }
+  .chat-icon-btn:hover{ color:var(--ink); border-color:var(--ink-muted); }
+  .chat-body{ flex:1; overflow-y:auto; padding:16px 18px; display:flex; flex-direction:column; gap:12px; }
+  .chat-empty p{ color:var(--ink-muted); font-size:13.5px; line-height:1.5; margin:0 0 12px; }
+  .chat-suggestions{ display:flex; flex-direction:column; gap:6px; }
+  .chat-suggestion{
+    text-align:left; font-size:12.5px; padding:8px 11px; border-radius:8px; border:1px solid var(--border);
+    background:var(--surface-2); color:var(--ink); cursor:pointer;
+  }
+  .chat-suggestion:hover{ border-color:var(--accent); }
+  .chat-msg{ max-width:88%; font-size:13.5px; line-height:1.5; padding:9px 12px; border-radius:12px; }
+  .chat-msg.user{ align-self:flex-end; background:var(--accent); color:var(--accent-ink); border-bottom-right-radius:3px; }
+  .chat-msg.assistant{ align-self:flex-start; background:var(--surface-2); color:var(--ink); border-bottom-left-radius:3px; }
+  .chat-msg.assistant p{ margin:0 0 8px; }
+  .chat-msg.assistant p:last-child{ margin-bottom:0; }
+  .chat-msg.assistant ul, .chat-msg.assistant ol{ margin:0 0 8px; padding-left:18px; }
+  .chat-msg.assistant code{ font-family:"IBM Plex Mono",monospace; font-size:12.5px; background:var(--surface); padding:1px 4px; border-radius:4px; }
+  .chat-msg.thinking{ color:var(--ink-muted); font-family:"IBM Plex Mono",monospace; font-size:12px; }
+  .chat-msg.error{ align-self:flex-start; background:var(--crit-bg); color:var(--crit); }
+  .chat-input-row{ display:flex; gap:8px; padding:12px 14px; border-top:1px solid var(--border); flex-shrink:0; align-items:flex-end; }
+  .chat-input-row textarea{
+    flex:1; padding:9px 12px; border-radius:18px; border:1px solid var(--border);
+    background:var(--surface); color:var(--ink); font-family:inherit; font-size:13.5px;
+    resize:none; max-height:110px; overflow-y:auto; line-height:1.35; box-sizing:border-box;
+  }
+  .chat-input-row textarea:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  .chat-input-row button{
+    width:36px; height:36px; border-radius:50%; border:none; background:var(--accent); color:var(--accent-ink);
+    cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0;
+  }
+  .chat-input-row button:disabled{ opacity:.5; cursor:default; }
+  @media (max-width:480px){
+    .chat-panel{ right:16px; bottom:16px; }
+    .chat-fab{ right:16px; bottom:16px; }
+  }
+
+  @media (max-width:720px){
+    .stat-strip{ grid-template-columns:repeat(2,1fr); }
+    td.sector{ display:none; }
+    thead th.sector-h{ display:none; }
+  }
+
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="masthead-title">
+      <h1>S&amp;P 500 AI Adoption Index</h1>
+      <p>Every S&amp;P&nbsp;500 company, scored for real AI adoption and run through a full AI trading-analyst pipeline &mdash; as of <b>September&nbsp;1,&nbsp;2026</b>, using <a href="https://github.com/TauricResearch/TradingAgents" target="_blank" rel="noopener">TradingAgents</a>, an open-source multi-agent framework. The top 20% per sector are the <b>103&nbsp;AI&nbsp;Trailblazers</b>, marked <span class="tb-star">&#9733;</span> and filterable below.</p>
+    </div>
+    <div class="masthead-side">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light/dark theme" title="Toggle light/dark theme">
+        <span id="themeIcon">&#9789;</span>
+      </button>
+      <div class="masthead-meta" id="metaBlock"></div>
+    </div>
+  </header>
+
+  <div class="stat-strip" id="statStrip"></div>
+
+  <div class="controls">
+    <div class="search">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.4"/><path d="M9.6 9.6L13 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      <input id="searchInput" type="text" placeholder="Search ticker, company, or sector…" autocomplete="off">
+    </div>
+    <select id="sectorSelect"><option value="">All sectors</option></select>
+    <button class="chip chip-tb" id="tbToggle" type="button" title="Show only the 103 AI Trailblazers — top 20% AIDE Index per sector">&#9733; Trailblazers</button>
+    <div class="controls-divider"></div>
+    <div class="chip-row" id="signalChips"></div>
+  </div>
+
+  <div class="sector-summary" id="sectorSummary" style="display:none;"></div>
+
+  <div class="count-row">
+    <div class="count-line" id="countLine"></div>
+    <button class="copy-btn" id="copyBtn" type="button">Copy tickers</button>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th data-key="ticker">Ticker <span class="arrow">&#9650;</span></th>
+          <th data-key="sector" class="sector-h">Sector <span class="arrow">&#9650;</span></th>
+          <th data-key="index">AIDE Index <span class="arrow">&#9650;</span></th>
+          <th data-key="signal">Signal <span class="arrow">&#9650;</span></th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+  <div class="empty" id="emptyState" style="display:none;">No tickers match those filters.</div>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="drawer-head">
+    <div class="drawer-head-top">
+      <div>
+        <h2 id="drawerTicker">—</h2>
+        <div class="sub" id="drawerSub">—</div>
+      </div>
+      <div class="drawer-head-actions">
+        <button class="drawer-expand" id="drawerExpand" aria-label="Expand to full screen" title="Expand to full screen">&#8599;</button>
+        <button class="drawer-close" id="drawerClose" aria-label="Close">&#10005;</button>
+      </div>
+    </div>
+    <div class="drawer-stats" id="drawerStats"></div>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+</div>
+
+<button class="chat-fab" id="chatFab" type="button" aria-label="Ask a question about this data" title="Ask a question about this data" hidden>
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 5.5C4 4.67 4.67 4 5.5 4h13c.83 0 1.5.67 1.5 1.5v10c0 .83-.67 1.5-1.5 1.5H9l-4 3.5v-3.5h-.5C4.67 16.5 4 15.83 4 15v-9.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+</button>
+
+<div class="chat-scrim" id="chatScrim"></div>
+<div class="chat-panel" id="chatPanel" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Ask about this data">
+  <div class="chat-head">
+    <div>
+      <h2>Ask AIDE</h2>
+      <div class="sub">Claude, grounded in this table &amp; the full reports</div>
+    </div>
+    <div class="chat-head-actions">
+      <button class="chat-icon-btn" id="chatClearBtn" aria-label="New chat" title="New chat">&#8635;</button>
+      <button class="chat-icon-btn" id="chatCloseBtn" aria-label="Close">&#10005;</button>
+    </div>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="chat-empty" id="chatEmpty">
+      <p>Ask about ratings, sectors, or any company below &mdash; answers are grounded in the live table and full analyst reports.</p>
+      <div class="chat-suggestions">
+        <button class="chat-suggestion" type="button">Summarize the AI Trailblazers overall</button>
+        <button class="chat-suggestion" type="button">Which sectors look most bullish right now?</button>
+        <button class="chat-suggestion" type="button">What's the bull case for NVDA?</button>
+        <button class="chat-suggestion" type="button">List Trailblazers rated Sell or Underweight</button>
+      </div>
+    </div>
+  </div>
+  <form class="chat-input-row" id="chatForm">
+    <textarea id="chatInput" rows="1" placeholder="Ask a question…"></textarea>
+    <button type="submit" id="chatSend" aria-label="Send">&#8593;</button>
+  </form>
+</div>
+
+<script>
+const DATA = [{"sector": "Communication Services", "ticker": "EA", "name": "Electronic Arts Inc", "index": 52.1, "signal": "ERROR", "elapsed": 4, "status": "No market data for 'EA': latest row is 2026-08-10, 22 days before the requested 2026-09-01 (stale) \u2014 refusing to use it", "tb": false}, {"sector": "Communication Services", "ticker": "META", "name": "Meta Platforms Ord A", "index": 91.8, "signal": "Underweight", "elapsed": 275, "status": "ok", "tb": true}, {"sector": "Communication Services", "ticker": "VZ", "name": "Verizon Communications Ord", "index": 60.2, "signal": "Hold", "elapsed": 294, "status": "ok", "tb": true}, {"sector": "Communication Services", "ticker": "GOOG", "name": "Alphabet Inc", "index": 97.4, "signal": "Underweight", "elapsed": 303, "status": "ok", "tb": true}, {"sector": "Communication Services", "ticker": "TMUS", "name": "T-Mobile Us Inc", "index": 56.3, "signal": "Overweight", "elapsed": 311, "status": "ok", "tb": false}, {"sector": "Communication Services", "ticker": "TTD", "name": "The Trade Desk Ord Shs", "index": 50.5, "signal": "Underweight", "elapsed": 319, "status": "ok", "tb": false}, {"sector": "Communication Services", "ticker": "NFLX", "name": "Netflix Ord", "index": 59.6, "signal": "Overweight", "elapsed": 326, "status": "ok", "tb": true}, {"sector": "Communication Services", "ticker": "MTCH", "name": "Match Group Ord Shs", "index": 49.5, "signal": "Overweight", "elapsed": 286, "status": "ok", "tb": false}, {"sector": "Communication Services", "ticker": "CMCSA", "name": "Comcast Ord", "index": 28.8, "signal": "ERROR", "elapsed": 6, "status": "No market data for 'CMCSA': Yahoo Finance returned no rows", "tb": false}, {"sector": "Communication Services", "ticker": "OMC", "name": "Omnicom Ord", "index": 41.2, "signal": "Underweight", "elapsed": 269, "status": "ok", "tb": false}, {"sector": "Communication Services", "ticker": "T", "name": "At&T Ord", "index": 49.0, "signal": "Hold", "elapsed": 294, "status": "ok", "tb": false}, {"sector": "Communication Services", "ticker": "NWS", "name": "News Corp B", "index": 29.7, "signal": "Underweight", "elapsed": 270, "status": "ok", "tb": false}, {"sector": "Communication Services", "ticker": "TKO", "name": "Tko Group Holdings Inc Ord", "index": 34.3, "signal": "Hold", "elapsed": 274, "status": "ok", "tb": false}, {"sector": "Communication Services", "ticker": "DIS", "name": "Walt Disney Ord", "index": 38.3, "signal": "Hold", "elapsed": 302, "status": "ok", "tb": false}, {"sector": "Communication Services", "ticker": "LYV", "name": "Live Nation Ord", "index": 15.3, "signal": "Underweight", "elapsed": 264, "status": "ok", "tb": false}, {"sector": "Communication Services", "ticker": "WBD", "name": "Warner Bros. Discovery Ord", "index": 27.0, "signal": "Underweight", "elapsed": 297, "status": "ok", "tb": false}, {"sector": "Communication Services", "ticker": "PSKY", "name": "Paramount Skydance Corp Class B Ord", "index": 23.4, "signal": "Underweight", "elapsed": 305, "status": "ok", "tb": false}, {"sector": "Communication Services", "ticker": "FOX", "name": "Fox Corp Class B Ord", "index": 11.2, "signal": "Hold", "elapsed": 292, "status": "ok", "tb": false}, {"sector": "Communication Services", "ticker": "CHTR", "name": "Charter Communications Inc(New)", "index": 19.7, "signal": "Underweight", "elapsed": 329, "status": "ok", "tb": false}, {"sector": "Communication Services", "ticker": "TTWO", "name": "Take Two Ord", "index": 8.7, "signal": "Underweight", "elapsed": 305, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "AMZN", "name": "Amazon.Com Inc Ord", "index": 98.8, "signal": "Underweight", "elapsed": 279, "status": "ok", "tb": true}, {"sector": "Consumer Discretionary", "ticker": "EBAY", "name": "Ebay Ord", "index": 86.7, "signal": "Underweight", "elapsed": 313, "status": "ok", "tb": true}, {"sector": "Consumer Discretionary", "ticker": "TSLA", "name": "Tesla Ord", "index": 78.1, "signal": "Underweight", "elapsed": 267, "status": "ok", "tb": true}, {"sector": "Consumer Discretionary", "ticker": "DASH", "name": "Doordash Ord Shs Class A", "index": 80.7, "signal": "Underweight", "elapsed": 310, "status": "ok", "tb": true}, {"sector": "Consumer Discretionary", "ticker": "EXPE", "name": "Expedia Group Inc Ord", "index": 79.9, "signal": "Overweight", "elapsed": 307, "status": "ok", "tb": true}, {"sector": "Consumer Discretionary", "ticker": "GM", "name": "General Motors Ord", "index": 75.4, "signal": "Underweight", "elapsed": 317, "status": "ok", "tb": true}, {"sector": "Consumer Discretionary", "ticker": "ABNB", "name": "Airbnb Ord Shs Class A", "index": 72.8, "signal": "Underweight", "elapsed": 307, "status": "ok", "tb": true}, {"sector": "Consumer Discretionary", "ticker": "BKNG", "name": "Booking Holdings Ord", "index": 61.4, "signal": "Hold", "elapsed": 296, "status": "ok", "tb": true}, {"sector": "Consumer Discretionary", "ticker": "APTV", "name": "Aptiv Holdings Ltd Ord", "index": 72.3, "signal": "Underweight", "elapsed": 324, "status": "ok", "tb": true}, {"sector": "Consumer Discretionary", "ticker": "HD", "name": "Home Depot Ord", "index": 65.2, "signal": "Underweight", "elapsed": 317, "status": "ok", "tb": true}, {"sector": "Consumer Discretionary", "ticker": "HAS", "name": "Hasbro Ord", "index": 60.9, "signal": "Underweight", "elapsed": 306, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "SBUX", "name": "Starbucks-T Ord", "index": 60.9, "signal": "Hold", "elapsed": 321, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "YUM", "name": "Yum Brands Ord", "index": 58.6, "signal": "Underweight", "elapsed": 299, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "F", "name": "Ford Motor Ord", "index": 52.1, "signal": "Underweight", "elapsed": 272, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "LOW", "name": "Lowe'S Cos Inc Ord", "index": 55.3, "signal": "Underweight", "elapsed": 297, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "CVNA", "name": "Carvana Co.-A", "index": 51.4, "signal": "Underweight", "elapsed": 301, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "BBY", "name": "Best Buy Ord", "index": 52.7, "signal": "Underweight", "elapsed": 306, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "NKE", "name": "Nike Inc -Cl B Ord", "index": 49.4, "signal": "Underweight", "elapsed": 293, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "ULTA", "name": "Ulta Beauty Ord", "index": 49.2, "signal": "Overweight", "elapsed": 304, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "MAR", "name": "Marriott Intl A Ord", "index": 45.5, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "TPR", "name": "Tapestry Inc Ord", "index": 47.2, "signal": "Underweight", "elapsed": 309, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "WSM", "name": "Williams Sonoma Ord", "index": 45.4, "signal": "Underweight", "elapsed": 299, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "RCL", "name": "Royal Caribbean Group Ord", "index": 45.1, "signal": "Hold", "elapsed": 300, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "MCD", "name": "Mcdonald'S Ord", "index": 44.2, "signal": "Hold", "elapsed": 301, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "DPZ", "name": "Dominos Pizza Ord", "index": 43.6, "signal": "Underweight", "elapsed": 291, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "HLT", "name": "Hilton Inc Ord", "index": 43.4, "signal": "Underweight", "elapsed": 290, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "TSCO", "name": "Tractor Supply Ord", "index": 41.4, "signal": "Underweight", "elapsed": 291, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "LULU", "name": "Lululemon Athletica Ord", "index": 40.7, "signal": "Underweight", "elapsed": 303, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "LEN", "name": "Lennar Corporation Cls A Ord", "index": 43.1, "signal": "Underweight", "elapsed": 333, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "CMG", "name": "Chipotle Mexican Grill Ord", "index": 40.5, "signal": "Underweight", "elapsed": 293, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "CCL", "name": "Carnival Ord", "index": 35.6, "signal": "Underweight", "elapsed": 275, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "GPC", "name": "Genuine Parts Ord", "index": 35.5, "signal": "Underweight", "elapsed": 307, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "RL", "name": "Ralph Lauren Cl A Ord", "index": 34.9, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "GRMN", "name": "Garmin Ord", "index": 32.6, "signal": "Underweight", "elapsed": 305, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "MGM", "name": "Mgm Resorts Ord", "index": 31.5, "signal": "Underweight", "elapsed": 332, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "AZO", "name": "Autozone Ord", "index": 26.8, "signal": "Hold", "elapsed": 312, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "DECK", "name": "Deckers Outdoor Ord", "index": 26.2, "signal": "Hold", "elapsed": 325, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "NCLH", "name": "Norwegian Cruise Line Holdings Ltd (Ordinary) - Consolidated Issue Listed", "index": 26.0, "signal": "Underweight", "elapsed": 274, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "WYNN", "name": "Wynn Resorts Ord", "index": 25.1, "signal": "Underweight", "elapsed": 306, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "DRI", "name": "Darden Restaurants Ord", "index": 23.3, "signal": "Underweight", "elapsed": 323, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "PHM", "name": "Pultegroup Ord", "index": 20.8, "signal": "Underweight", "elapsed": 293, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "POOL", "name": "Pool Ord", "index": 19.5, "signal": "Underweight", "elapsed": 291, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "TJX", "name": "Tjx Ord", "index": 11.2, "signal": "Underweight", "elapsed": 310, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "LVS", "name": "Las Vegas Snds Ord", "index": 16.1, "signal": "Underweight", "elapsed": 334, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "ROST", "name": "Ross Stores Ord", "index": 9.9, "signal": "Hold", "elapsed": 300, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "ORLY", "name": "O'Reilly Automotive Ord", "index": 6.9, "signal": "Underweight", "elapsed": 271, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "NVR", "name": "Nvr Ord", "index": 4.3, "signal": "Underweight", "elapsed": 268, "status": "ok", "tb": false}, {"sector": "Consumer Discretionary", "ticker": "DHI", "name": "D R Horton Ord", "index": 9.0, "signal": "Hold", "elapsed": 300, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "WMT", "name": "Walmart Inc Ord", "index": 97.9, "signal": "Underweight", "elapsed": 303, "status": "ok", "tb": true}, {"sector": "Consumer Staples", "ticker": "TGT", "name": "Target Ord", "index": 77.6, "signal": "Hold", "elapsed": 297, "status": "ok", "tb": true}, {"sector": "Consumer Staples", "ticker": "PG", "name": "Proctergamble Ord", "index": 73.8, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": true}, {"sector": "Consumer Staples", "ticker": "PEP", "name": "Pepsico U Ord", "index": 73.1, "signal": "Underweight", "elapsed": 297, "status": "ok", "tb": true}, {"sector": "Consumer Staples", "ticker": "CVS", "name": "Cvs Health Corp", "index": 68.9, "signal": "Underweight", "elapsed": 307, "status": "ok", "tb": true}, {"sector": "Consumer Staples", "ticker": "EL", "name": "Estee Lauder Cl A Ord", "index": 68.2, "signal": "Underweight", "elapsed": 303, "status": "ok", "tb": true}, {"sector": "Consumer Staples", "ticker": "KHC", "name": "The Kraft Heinz Company", "index": 65.3, "signal": "Underweight", "elapsed": 299, "status": "ok", "tb": true}, {"sector": "Consumer Staples", "ticker": "CL", "name": "Colgate-Palmolive Co Ord", "index": 59.8, "signal": "Hold", "elapsed": 298, "status": "ok", "tb": true}, {"sector": "Consumer Staples", "ticker": "KR", "name": "Kroger Ord", "index": 58.7, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "KO", "name": "Coca-Cola Ord", "index": 58.6, "signal": "Underweight", "elapsed": 302, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "COST", "name": "Costco Wholesale Ord", "index": 56.3, "signal": "Underweight", "elapsed": 320, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "KVUE", "name": "Kenvue Inc Ord", "index": 53.8, "signal": "Underweight", "elapsed": 301, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "PM", "name": "Phillip Morris Ord", "index": 53.0, "signal": "Hold", "elapsed": 308, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "MDLZ", "name": "Mondelez International Inc", "index": 52.2, "signal": "Underweight", "elapsed": 320, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "GIS", "name": "General Mills Ord", "index": 49.6, "signal": "Underweight", "elapsed": 304, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "MKC", "name": "Mccormick Ord", "index": 47.7, "signal": "Underweight", "elapsed": 274, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "SYY", "name": "Sysco Ord", "index": 47.0, "signal": "Underweight", "elapsed": 297, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "HSY", "name": "Hershey Foods Ord", "index": 48.4, "signal": "Underweight", "elapsed": 332, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "KDP", "name": "Keurig Dr Pepper Inc Ord", "index": 44.5, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "CAG", "name": "Conagra Brands Inc Ord", "index": 44.2, "signal": "Underweight", "elapsed": 305, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "KMB", "name": "Kimberly Clark Ord", "index": 43.7, "signal": "Underweight", "elapsed": 302, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "CHD", "name": "Church And Dwight Ord", "index": 40.1, "signal": "Underweight", "elapsed": 277, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "CLX", "name": "Clorox Ord", "index": 41.8, "signal": "Underweight", "elapsed": 306, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "HRL", "name": "Hormel Foods Ord", "index": 37.4, "signal": "Underweight", "elapsed": 310, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "TAP", "name": "Molson Coors Brewing Nonvtg Cl B Ord", "index": 36.5, "signal": "Underweight", "elapsed": 289, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "TSN", "name": "Tyson Foods Ord", "index": 36.2, "signal": "Underweight", "elapsed": 305, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "SJM", "name": "Jm Smucker Ord", "index": 32.0, "signal": "Underweight", "elapsed": 305, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "ADM", "name": "Archer Daniels Ord", "index": 27.4, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "DLTR", "name": "Dollar Tree Ord", "index": 27.2, "signal": "Underweight", "elapsed": 305, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "BF.B", "name": "Brown-Forman Corp", "index": 13.5, "signal": "ERROR", "elapsed": 2, "status": "No market data for 'BF.B': Yahoo Finance returned no rows", "tb": false}, {"sector": "Consumer Staples", "ticker": "LW", "name": "Lamb Weston Holdings", "index": 25.8, "signal": "Underweight", "elapsed": 311, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "DG", "name": "Dollar General Ord", "index": 25.8, "signal": "Underweight", "elapsed": 301, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "CPB", "name": "The Campbells Company Ord", "index": 24.6, "signal": "Underweight", "elapsed": 300, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "BG", "name": "Bunge Global Sa Ord", "index": 22.8, "signal": "Underweight", "elapsed": 304, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "MO", "name": "Altria Group Ord", "index": 14.8, "signal": "Hold", "elapsed": 305, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "STZ", "name": "Constellation Brands Cl A Ord", "index": 12.6, "signal": "Underweight", "elapsed": 301, "status": "ok", "tb": false}, {"sector": "Consumer Staples", "ticker": "MNST", "name": "Monster Beverage Ord", "index": 0.0, "signal": "Underweight", "elapsed": 299, "status": "ok", "tb": false}, {"sector": "Energy", "ticker": "SLB", "name": "Schlumberger Ord", "index": 99.4, "signal": "Underweight", "elapsed": 317, "status": "ok", "tb": true}, {"sector": "Energy", "ticker": "CVX", "name": "Chevron Texaco Ord", "index": 76.1, "signal": "Hold", "elapsed": 266, "status": "ok", "tb": true}, {"sector": "Energy", "ticker": "BKR", "name": "Baker Hughes Ord A", "index": 88.0, "signal": "Underweight", "elapsed": 307, "status": "ok", "tb": true}, {"sector": "Energy", "ticker": "HAL", "name": "Halliburton Ord", "index": 81.9, "signal": "Underweight", "elapsed": 307, "status": "ok", "tb": true}, {"sector": "Energy", "ticker": "XOM", "name": "Exxon Ord", "index": 62.0, "signal": "Hold", "elapsed": 306, "status": "ok", "tb": true}, {"sector": "Energy", "ticker": "PSX", "name": "Phillips 66 Ord", "index": 58.4, "signal": "Underweight", "elapsed": 308, "status": "ok", "tb": false}, {"sector": "Energy", "ticker": "DVN", "name": "Devon Energy Ord", "index": 52.8, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Energy", "ticker": "WMB", "name": "Williams Ord", "index": 47.7, "signal": "Hold", "elapsed": 306, "status": "ok", "tb": false}, {"sector": "Energy", "ticker": "EQT", "name": "Eqt Ord", "index": 47.7, "signal": "Hold", "elapsed": 301, "status": "ok", "tb": false}, {"sector": "Energy", "ticker": "COP", "name": "Conocophillips Ord", "index": 49.1, "signal": "Underweight", "elapsed": 346, "status": "ok", "tb": false}, {"sector": "Energy", "ticker": "MPC", "name": "Marathon Petroleum Ord", "index": 43.5, "signal": "Underweight", "elapsed": 305, "status": "ok", "tb": false}, {"sector": "Energy", "ticker": "CTRA", "name": "Coterra Energy Inc", "index": 27.0, "signal": "ERROR", "elapsed": 3, "status": "No market data for 'CTRA': Yahoo Finance returned no rows", "tb": false}, {"sector": "Energy", "ticker": "TPL", "name": "Texas Pacific Land Corp Ord", "index": 40.5, "signal": "Hold", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Energy", "ticker": "EXE", "name": "Expand Energy Corporation Ord", "index": 36.2, "signal": "Hold", "elapsed": 312, "status": "ok", "tb": false}, {"sector": "Energy", "ticker": "OXY", "name": "Occidental U Ord", "index": 35.2, "signal": "Underweight", "elapsed": 288, "status": "ok", "tb": false}, {"sector": "Energy", "ticker": "EOG", "name": "Eog Resources Ord", "index": 30.4, "signal": "Underweight", "elapsed": 288, "status": "ok", "tb": false}, {"sector": "Energy", "ticker": "KMI", "name": "Kinder Morgan Ord", "index": 25.9, "signal": "Hold", "elapsed": 304, "status": "ok", "tb": false}, {"sector": "Energy", "ticker": "FANG", "name": "Diamondback Energy Ord Shs", "index": 29.4, "signal": "Underweight", "elapsed": 321, "status": "ok", "tb": false}, {"sector": "Energy", "ticker": "VLO", "name": "Valero Energy Ord", "index": 22.8, "signal": "Underweight", "elapsed": 326, "status": "ok", "tb": false}, {"sector": "Energy", "ticker": "APA", "name": "Apa Corporation Ord", "index": 18.0, "signal": "Underweight", "elapsed": 318, "status": "ok", "tb": false}, {"sector": "Energy", "ticker": "OKE", "name": "Oneok Ord", "index": 17.7, "signal": "Overweight", "elapsed": 305, "status": "ok", "tb": false}, {"sector": "Energy", "ticker": "TRGP", "name": "Targa Resourcs", "index": 8.1, "signal": "Hold", "elapsed": 320, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "MA", "name": "Mastercard Ord", "index": 86.4, "signal": "Overweight", "elapsed": 299, "status": "ok", "tb": true}, {"sector": "Financials", "ticker": "XYZ", "name": "Block Inc Ord", "index": 88.8, "signal": "Underweight", "elapsed": 313, "status": "ok", "tb": true}, {"sector": "Financials", "ticker": "BK", "name": "Bank Of New York Mellon Corp", "index": 69.4, "signal": "ERROR", "elapsed": 3, "status": "No market data for 'BK': Yahoo Finance returned no rows", "tb": false}, {"sector": "Financials", "ticker": "V", "name": "Visa Incorporation Ord", "index": 84.5, "signal": "Overweight", "elapsed": 293, "status": "ok", "tb": true}, {"sector": "Financials", "ticker": "NDAQ", "name": "Nasdaq Inc Ord", "index": 84.4, "signal": "Hold", "elapsed": 286, "status": "ok", "tb": true}, {"sector": "Financials", "ticker": "JPM", "name": "Jpmorgan Chase Ord", "index": 79.1, "signal": "Overweight", "elapsed": 303, "status": "ok", "tb": true}, {"sector": "Financials", "ticker": "COIN", "name": "Coinbase Global Ord Shs Class A", "index": 70.1, "signal": "Underweight", "elapsed": 297, "status": "ok", "tb": true}, {"sector": "Financials", "ticker": "HOOD", "name": "Robinhood Markets Ord Shs Class A", "index": 69.3, "signal": "Underweight", "elapsed": 297, "status": "ok", "tb": true}, {"sector": "Financials", "ticker": "MSCI", "name": "Msci Ord", "index": 69.6, "signal": "Overweight", "elapsed": 315, "status": "ok", "tb": true}, {"sector": "Financials", "ticker": "MCO", "name": "Moodys Ord", "index": 68.7, "signal": "Hold", "elapsed": 300, "status": "ok", "tb": true}, {"sector": "Financials", "ticker": "SPGI", "name": "S&P Global Inc Ord", "index": 68.5, "signal": "Underweight", "elapsed": 292, "status": "ok", "tb": true}, {"sector": "Financials", "ticker": "AXP", "name": "American Express Ord", "index": 67.3, "signal": "Overweight", "elapsed": 298, "status": "ok", "tb": true}, {"sector": "Financials", "ticker": "FIS", "name": "Fidelity National Informatn Svcs Ord", "index": 67.2, "signal": "Underweight", "elapsed": 289, "status": "ok", "tb": true}, {"sector": "Financials", "ticker": "PYPL", "name": "Paypal Holdings Ord Shs When Issued", "index": 66.9, "signal": "Hold", "elapsed": 281, "status": "ok", "tb": true}, {"sector": "Financials", "ticker": "FDS", "name": "Factset Research Systems Ord", "index": 66.8, "signal": "Underweight", "elapsed": 284, "status": "ok", "tb": true}, {"sector": "Financials", "ticker": "BX", "name": "Blackstone Group Class A Ord", "index": 65.6, "signal": "Underweight", "elapsed": 302, "status": "ok", "tb": true}, {"sector": "Financials", "ticker": "C", "name": "Citigroup Ord", "index": 63.4, "signal": "Hold", "elapsed": 284, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "JKHY", "name": "Jack Henry And Associates Ord", "index": 61.9, "signal": "Underweight", "elapsed": 288, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "BLK", "name": "Blackrock Ord", "index": 62.1, "signal": "Overweight", "elapsed": 302, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "MET", "name": "Metlife Ord", "index": 60.5, "signal": "Hold", "elapsed": 264, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "TFC", "name": "Truist Financial Corp Ord", "index": 60.9, "signal": "Underweight", "elapsed": 302, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "MS", "name": "Morgan Stanley Ord", "index": 58.2, "signal": "Hold", "elapsed": 304, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "SYF", "name": "Synchrony Financial Ord Shs", "index": 57.0, "signal": "Overweight", "elapsed": 260, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "COF", "name": "Capital One Financial Ord", "index": 57.8, "signal": "Hold", "elapsed": 300, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "HIG", "name": "The Hartford Insurance Group Inc Ord", "index": 56.5, "signal": "Overweight", "elapsed": 306, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "NTRS", "name": "Northern Trust Ord", "index": 55.7, "signal": "Overweight", "elapsed": 296, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "MRSH", "name": "Marsh And Mclennan Ord", "index": 55.5, "signal": "Underweight", "elapsed": 270, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "FISV", "name": "Fiserv Ord", "index": 56.3, "signal": "Underweight", "elapsed": 349, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "BRK.B", "name": "Berkshire Hathaway Inc", "index": 52.4, "signal": "ERROR", "elapsed": 3, "status": "No market data for 'BRK.B': Yahoo Finance returned no rows", "tb": false}, {"sector": "Financials", "ticker": "BAC", "name": "Bk Of America Co Ord", "index": 55.5, "signal": "Underweight", "elapsed": 297, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "BEN", "name": "Franklin Rsc Ord", "index": 53.8, "signal": "Sell", "elapsed": 318, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "PFG", "name": "Principal Finl Ord", "index": 51.6, "signal": "Hold", "elapsed": 269, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "GS", "name": "The Goldman Sachs Group Ord", "index": 52.4, "signal": "Overweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "ICE", "name": "Intercontinental Exchange Inc", "index": 53.0, "signal": "Hold", "elapsed": 327, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "TRV", "name": "Travelers Cos Inc/The Ord", "index": 51.0, "signal": "Underweight", "elapsed": 308, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "ALL", "name": "Allstate Ord", "index": 50.0, "signal": "Hold", "elapsed": 317, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "AON", "name": "Aon Ord", "index": 50.0, "signal": "Underweight", "elapsed": 320, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "PRU", "name": "Prudential Finl Ord", "index": 49.4, "signal": "Overweight", "elapsed": 266, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "STT", "name": "State Street Ord", "index": 49.9, "signal": "Overweight", "elapsed": 302, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "WTW", "name": "Willis Towers Watson Ord", "index": 49.4, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "AIG", "name": "American International Group Ord", "index": 49.0, "signal": "Overweight", "elapsed": 275, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "USB", "name": "Us Ord", "index": 48.3, "signal": "Underweight", "elapsed": 300, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "APO", "name": "Apollo Global Mgmt Inc Ord", "index": 47.8, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "AIZ", "name": "Assurant Ord", "index": 46.7, "signal": "Overweight", "elapsed": 267, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "WFC", "name": "Wells Fargo Ord", "index": 47.6, "signal": "Hold", "elapsed": 297, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "CFG", "name": "Citizens Financial Group Ord Shs", "index": 45.2, "signal": "Hold", "elapsed": 300, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "SCHW", "name": "Charles Schwab Ord", "index": 43.9, "signal": "Underweight", "elapsed": 295, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "IBKR", "name": "Interactive Brokers Group Ord", "index": 43.5, "signal": "Overweight", "elapsed": 299, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "CB", "name": "Chubb Ltd", "index": 41.6, "signal": "Overweight", "elapsed": 284, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "PNC", "name": "Pnc Finl Svc Ord", "index": 43.1, "signal": "Hold", "elapsed": 300, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "KEY", "name": "Keycorp Ord", "index": 41.0, "signal": "Underweight", "elapsed": 294, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "RJF", "name": "Raymond James Ord", "index": 38.6, "signal": "Underweight", "elapsed": 280, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "FITB", "name": "Fifth Third Bancorp Ord", "index": 40.5, "signal": "Hold", "elapsed": 302, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "TROW", "name": "T Rowe Price Ord", "index": 38.2, "signal": "Hold", "elapsed": 284, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "AJG", "name": "Arthur J Gallagher Ord", "index": 38.0, "signal": "Underweight", "elapsed": 290, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "GPN", "name": "Globl Paymnts", "index": 37.5, "signal": "Underweight", "elapsed": 301, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "HBAN", "name": "Huntington Bancshares Ord", "index": 37.5, "signal": "Underweight", "elapsed": 326, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "CME", "name": "Cme Group Cl A Ord", "index": 37.0, "signal": "Underweight", "elapsed": 309, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "IVZ", "name": "Invesco Ord", "index": 36.2, "signal": "Underweight", "elapsed": 320, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "ARES", "name": "Ares Management Corp", "index": 34.3, "signal": "Underweight", "elapsed": 289, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "KKR", "name": "Kkr & Co Inc", "index": 34.0, "signal": "Underweight", "elapsed": 304, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "CPAY", "name": "Corpay Inc Ord", "index": 32.9, "signal": "Underweight", "elapsed": 306, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "PGR", "name": "Progressive Ord", "index": 32.6, "signal": "Buy", "elapsed": 288, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "MTB", "name": "M&T Bank Ord", "index": 31.2, "signal": "Underweight", "elapsed": 302, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "RF", "name": "Regions Financl Ord", "index": 31.0, "signal": "Underweight", "elapsed": 306, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "AMP", "name": "Ameriprise Finance Ord", "index": 27.9, "signal": "Hold", "elapsed": 285, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "BRO", "name": "Brown & Brown Ord", "index": 27.9, "signal": "Hold", "elapsed": 294, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "AFL", "name": "Aflac Ord", "index": 25.1, "signal": "Underweight", "elapsed": 280, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "CBOE", "name": "Cboe Global Markets Inc Ord", "index": 27.6, "signal": "Hold", "elapsed": 314, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "ACGL", "name": "Arch Capital Group Ord", "index": 22.3, "signal": "Overweight", "elapsed": 274, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "CINF", "name": "Cincinnati Financial Ord", "index": 24.1, "signal": "Underweight", "elapsed": 321, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "L", "name": "Loews Ord", "index": 17.3, "signal": "Underweight", "elapsed": 276, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "WRB", "name": "Wr Berkley Ord", "index": 21.9, "signal": "Underweight", "elapsed": 323, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "GL", "name": "Globe Life Ord", "index": 16.4, "signal": "Underweight", "elapsed": 267, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "ERIE", "name": "Erie Indemnity Cl A Ord", "index": 15.9, "signal": "Underweight", "elapsed": 265, "status": "ok", "tb": false}, {"sector": "Financials", "ticker": "EG", "name": "Everest Group Ltd Ord", "index": 9.5, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "JNJ", "name": "Johnson&Johnson Ord", "index": 87.3, "signal": "Underweight", "elapsed": 289, "status": "ok", "tb": true}, {"sector": "Health Care", "ticker": "MDT", "name": "Medtronic Plc", "index": 81.3, "signal": "Underweight", "elapsed": 300, "status": "ok", "tb": true}, {"sector": "Health Care", "ticker": "IQV", "name": "Iqvia Holdings Inc Ord", "index": 80.7, "signal": "Hold", "elapsed": 297, "status": "ok", "tb": true}, {"sector": "Health Care", "ticker": "GEHC", "name": "Ge Healthcare Technologies Ord", "index": 84.3, "signal": "Underweight", "elapsed": 318, "status": "ok", "tb": true}, {"sector": "Health Care", "ticker": "UNH", "name": "Unitedhealth Grp Ord", "index": 78.2, "signal": "Underweight", "elapsed": 314, "status": "ok", "tb": true}, {"sector": "Health Care", "ticker": "MRNA", "name": "Moderna Inc Ord", "index": 77.2, "signal": "Underweight", "elapsed": 318, "status": "ok", "tb": true}, {"sector": "Health Care", "ticker": "PFE", "name": "Pfizer Ord", "index": 74.7, "signal": "Underweight", "elapsed": 312, "status": "ok", "tb": true}, {"sector": "Health Care", "ticker": "BMY", "name": "Bristol-Myers Squibb Ord", "index": 73.9, "signal": "Hold", "elapsed": 294, "status": "ok", "tb": true}, {"sector": "Health Care", "ticker": "TMO", "name": "Thermo Fisher Scientific Ord", "index": 70.7, "signal": "Underweight", "elapsed": 297, "status": "ok", "tb": true}, {"sector": "Health Care", "ticker": "LLY", "name": "Lilly Ord", "index": 69.9, "signal": "Hold", "elapsed": 308, "status": "ok", "tb": true}, {"sector": "Health Care", "ticker": "MRK", "name": "Merck & Co Inc Ord", "index": 67.4, "signal": "Underweight", "elapsed": 307, "status": "ok", "tb": true}, {"sector": "Health Care", "ticker": "ISRG", "name": "Intuitive Surgical Ord", "index": 65.5, "signal": "Hold", "elapsed": 295, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "CI", "name": "The Cigna Group Ord", "index": 66.9, "signal": "Underweight", "elapsed": 315, "status": "ok", "tb": true}, {"sector": "Health Care", "ticker": "MCK", "name": "Mckesson Ord", "index": 64.1, "signal": "Hold", "elapsed": 302, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "ELV", "name": "Elevance Health Inc", "index": 63.3, "signal": "Underweight", "elapsed": 299, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "AMGN", "name": "Amgen-T Ord", "index": 64.6, "signal": "Underweight", "elapsed": 326, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "BSX", "name": "Boston Scientific Ord", "index": 62.1, "signal": "Underweight", "elapsed": 301, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "LH", "name": "Labcorp Holdings Inc Ord", "index": 62.1, "signal": "Underweight", "elapsed": 301, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "DXCM", "name": "Dexcom Ord", "index": 59.5, "signal": "Hold", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "RMD", "name": "Resmed Ord", "index": 54.0, "signal": "Overweight", "elapsed": 269, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "DHR", "name": "Danaher Ord", "index": 57.7, "signal": "Underweight", "elapsed": 291, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "RVTY", "name": "Revvity Ord", "index": 55.1, "signal": "Underweight", "elapsed": 282, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "DGX", "name": "Quest Diagnostics Ord", "index": 54.0, "signal": "Hold", "elapsed": 287, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "ZBH", "name": "Zimmer Biomet Holdings Inc Ord", "index": 53.2, "signal": "Underweight", "elapsed": 264, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "ZTS", "name": "Zoetis Inc", "index": 53.8, "signal": "Underweight", "elapsed": 300, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "IDXX", "name": "Idexx Laboratories Ord", "index": 53.1, "signal": "Underweight", "elapsed": 264, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "HOLX", "name": "Hologic Inc", "index": 46.9, "signal": "ERROR", "elapsed": 2, "status": "No market data for 'HOLX': Yahoo Finance returned no rows", "tb": false}, {"sector": "Health Care", "ticker": "HUM", "name": "Humana Ord", "index": 53.2, "signal": "Underweight", "elapsed": 299, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "SYK", "name": "Stryker Ord", "index": 52.5, "signal": "Overweight", "elapsed": 310, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "ALGN", "name": "Align Technology Ord", "index": 52.3, "signal": "Hold", "elapsed": 293, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "A", "name": "Agilent Technologies Ord", "index": 52.2, "signal": "Underweight", "elapsed": 309, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "SOLV", "name": "Solventum Ord", "index": 50.7, "signal": "Underweight", "elapsed": 300, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "DVA", "name": "Davita Inc Ord", "index": 46.0, "signal": "Underweight", "elapsed": 295, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "PODD", "name": "Insulet Ord", "index": 44.8, "signal": "Underweight", "elapsed": 306, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "BDX", "name": "Becton Dickinson And Co Ord", "index": 42.5, "signal": "Underweight", "elapsed": 301, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "CAH", "name": "Cardinal Health Ord", "index": 40.5, "signal": "Underweight", "elapsed": 297, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "CRL", "name": "Chrls River Labs Ord", "index": 40.3, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "CNC", "name": "Centene Ord", "index": 40.3, "signal": "Overweight", "elapsed": 296, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "ABT", "name": "Abbott Labs Ord", "index": 37.6, "signal": "Hold", "elapsed": 302, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "BIIB", "name": "Biogen Inc", "index": 37.4, "signal": "Underweight", "elapsed": 305, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "ABBV", "name": "Abbvie Ord Shs", "index": 37.2, "signal": "Underweight", "elapsed": 304, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "VRTX", "name": "Vertex Pharmaceuticals Ord", "index": 37.0, "signal": "Overweight", "elapsed": 312, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "COR", "name": "Cencora Inc Ord", "index": 33.2, "signal": "Underweight", "elapsed": 270, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "GILD", "name": "Gilead Sciences Ord", "index": 36.2, "signal": "Underweight", "elapsed": 290, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "TECH", "name": "Bio-Techne Corp", "index": 32.3, "signal": "Underweight", "elapsed": 291, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "HSIC", "name": "Henry Schein Ord", "index": 32.2, "signal": "Underweight", "elapsed": 285, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "BAX", "name": "Baxter Intl Ord", "index": 29.9, "signal": "Hold", "elapsed": 290, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "COO", "name": "Cooper Ord", "index": 29.1, "signal": "Underweight", "elapsed": 272, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "EW", "name": "Edwards Lifesciences Ord", "index": 29.5, "signal": "Underweight", "elapsed": 294, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "HCA", "name": "Hca Healthcare Ord", "index": 28.2, "signal": "Underweight", "elapsed": 283, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "REGN", "name": "Regeneron Pharmaceuticals Ord", "index": 27.9, "signal": "Hold", "elapsed": 293, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "UHS", "name": "Universal Health Services Cl B Ord", "index": 25.1, "signal": "Hold", "elapsed": 292, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "MTD", "name": "Mettler Toledo Ord", "index": 24.9, "signal": "Hold", "elapsed": 274, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "WAT", "name": "Waters Ord", "index": 24.7, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "INCY", "name": "Incyte Ord", "index": 23.8, "signal": "Hold", "elapsed": 314, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "MOH", "name": "Molina Hlthcre Ord", "index": 21.5, "signal": "Underweight", "elapsed": 314, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "WST", "name": "West Pharm Svcs Ord", "index": 17.8, "signal": "Hold", "elapsed": 302, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "STE", "name": "Steris Ord", "index": 2.3, "signal": "Underweight", "elapsed": 274, "status": "ok", "tb": false}, {"sector": "Health Care", "ticker": "VTRS", "name": "Viatris Inc Ord", "index": 7.1, "signal": "Underweight", "elapsed": 311, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "AXON", "name": "Axon Enterprise Inc Ord", "index": 95.0, "signal": "Underweight", "elapsed": 311, "status": "ok", "tb": true}, {"sector": "Industrials", "ticker": "UBER", "name": "Uber Technologies Inc Ord", "index": 85.3, "signal": "Underweight", "elapsed": 281, "status": "ok", "tb": true}, {"sector": "Industrials", "ticker": "ROK", "name": "Rockwell Automat Ord", "index": 86.7, "signal": "Underweight", "elapsed": 315, "status": "ok", "tb": true}, {"sector": "Industrials", "ticker": "JCI", "name": "Johnson Controls International Ord", "index": 84.1, "signal": "Hold", "elapsed": 261, "status": "ok", "tb": true}, {"sector": "Industrials", "ticker": "LMT", "name": "Lockheed Martin Ord", "index": 83.4, "signal": "Hold", "elapsed": 307, "status": "ok", "tb": true}, {"sector": "Industrials", "ticker": "LDOS", "name": "Leidos Holdings Inc", "index": 82.9, "signal": "Underweight", "elapsed": 302, "status": "ok", "tb": true}, {"sector": "Industrials", "ticker": "BR", "name": "Broadridge Financial Solutions Ord", "index": 81.7, "signal": "Hold", "elapsed": 269, "status": "ok", "tb": true}, {"sector": "Industrials", "ticker": "ADP", "name": "Automatic Data Processing Ord", "index": 81.6, "signal": "Underweight", "elapsed": 289, "status": "ok", "tb": true}, {"sector": "Industrials", "ticker": "DE", "name": "Deere Ord", "index": 81.3, "signal": "Hold", "elapsed": 299, "status": "ok", "tb": true}, {"sector": "Industrials", "ticker": "CHRW", "name": "Ch Robinson Ww Ord", "index": 79.6, "signal": "Underweight", "elapsed": 299, "status": "ok", "tb": true}, {"sector": "Industrials", "ticker": "DAY", "name": "Dayforce Inc", "index": 70.0, "signal": "ERROR", "elapsed": 5, "status": "No market data for 'DAY': Yahoo Finance returned no rows", "tb": false}, {"sector": "Industrials", "ticker": "HON", "name": "Honeywell Intl Ord", "index": 77.4, "signal": "Hold", "elapsed": 297, "status": "ok", "tb": true}, {"sector": "Industrials", "ticker": "CAT", "name": "Caterpillar Ord", "index": 76.7, "signal": "Underweight", "elapsed": 304, "status": "ok", "tb": true}, {"sector": "Industrials", "ticker": "VRSK", "name": "Verisk Analytics Ord", "index": 74.9, "signal": "Underweight", "elapsed": 295, "status": "ok", "tb": true}, {"sector": "Industrials", "ticker": "EFX", "name": "Equifax Ord", "index": 76.6, "signal": "Underweight", "elapsed": 335, "status": "ok", "tb": true}, {"sector": "Industrials", "ticker": "RTX", "name": "Raytheon Technologies Corpord", "index": 71.0, "signal": "Overweight", "elapsed": 320, "status": "ok", "tb": true}, {"sector": "Industrials", "ticker": "UPS", "name": "United Parcel Service-Cl B Ord", "index": 69.3, "signal": "Underweight", "elapsed": 326, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "PAYX", "name": "Paychex Ord", "index": 68.6, "signal": "Underweight", "elapsed": 297, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "FDX", "name": "Fedex Ord", "index": 68.2, "signal": "Underweight", "elapsed": 301, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "FTV", "name": "Fortive Corp Ord", "index": 67.7, "signal": "Underweight", "elapsed": 270, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "TT", "name": "Trane Technologies Plc Ord", "index": 67.6, "signal": "Underweight", "elapsed": 307, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "EMR", "name": "Emerson Electric Ord", "index": 67.0, "signal": "Hold", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "BA", "name": "Boeing U Ord", "index": 66.3, "signal": "Underweight", "elapsed": 275, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "NOC", "name": "Northrop Grumman Ord", "index": 65.7, "signal": "Hold", "elapsed": 307, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "LHX", "name": "L3 Harris Technologies Ord", "index": 65.0, "signal": "Hold", "elapsed": 297, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "XYL", "name": "Xylem Ord", "index": 63.1, "signal": "Underweight", "elapsed": 292, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "GEV", "name": "Ge Vernova Ord", "index": 62.8, "signal": "Underweight", "elapsed": 292, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "J", "name": "Jacobs Solutions Inc Ord", "index": 60.6, "signal": "Underweight", "elapsed": 327, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "GD", "name": "General Dynamics Ord", "index": 60.3, "signal": "Overweight", "elapsed": 295, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "MMM", "name": "3M Ord", "index": 58.5, "signal": "Underweight", "elapsed": 295, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "OTIS", "name": "Otis Worldwide Corp Ord", "index": 56.8, "signal": "Underweight", "elapsed": 269, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "DAL", "name": "Delta Air Lines Ord", "index": 56.8, "signal": "Underweight", "elapsed": 306, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "HII", "name": "Huntington Ingalls Industries Ord", "index": 56.8, "signal": "Underweight", "elapsed": 285, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "CMI", "name": "Cummins Ord", "index": 55.9, "signal": "Underweight", "elapsed": 307, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "PAYC", "name": "Paycom Software Ord Shs", "index": 55.3, "signal": "Underweight", "elapsed": 250, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "PCAR", "name": "Paccar Ord", "index": 55.0, "signal": "Hold", "elapsed": 301, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "ETN", "name": "Eaton Corp Plc", "index": 54.3, "signal": "Underweight", "elapsed": 312, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "GE", "name": "Ge Aerospace Ord", "index": 53.7, "signal": "Underweight", "elapsed": 302, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "CARR", "name": "Carrier Global Corp Ord", "index": 52.5, "signal": "Underweight", "elapsed": 288, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "UAL", "name": "United Airlines Holdings Ord", "index": 51.9, "signal": "Underweight", "elapsed": 329, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "NSC", "name": "Norfolk Southern Ord", "index": 51.4, "signal": "Hold", "elapsed": 331, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "GWW", "name": "Ww Grainger Ord", "index": 51.0, "signal": "Underweight", "elapsed": 293, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "LII", "name": "Lennox International Ord", "index": 48.6, "signal": "Underweight", "elapsed": 263, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "WAB", "name": "Wabtec Ord", "index": 48.6, "signal": "Hold", "elapsed": 297, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "WM", "name": "Waste Management Ord", "index": 49.2, "signal": "Underweight", "elapsed": 325, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "ALLE", "name": "Allegion Plc", "index": 47.7, "signal": "Underweight", "elapsed": 303, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "LUV", "name": "Southwest Airls Ord", "index": 46.3, "signal": "Underweight", "elapsed": 314, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "TXT", "name": "Textron Ord", "index": 45.7, "signal": "Underweight", "elapsed": 299, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "JBHT", "name": "Jb Hunt Transport Services Ord", "index": 43.0, "signal": "Underweight", "elapsed": 272, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "GNRC", "name": "Generac Holdings Ord", "index": 45.4, "signal": "Hold", "elapsed": 307, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "BLDR", "name": "Builders Firstsource Ord", "index": 42.2, "signal": "Underweight", "elapsed": 304, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "AME", "name": "Ametek Ord", "index": 41.3, "signal": "Hold", "elapsed": 266, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "UNP", "name": "Union Pacific U Ord", "index": 41.2, "signal": "Underweight", "elapsed": 305, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "SWK", "name": "Stanley Black And Decker Ord", "index": 38.6, "signal": "Hold", "elapsed": 289, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "IR", "name": "Ingersoll Rand Inc Ord", "index": 34.3, "signal": "Underweight", "elapsed": 265, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "HUBB", "name": "Hubbell Cl B Ord", "index": 34.8, "signal": "Underweight", "elapsed": 304, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "PH", "name": "Parker Hannifin Ord", "index": 36.7, "signal": "Underweight", "elapsed": 330, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "NDSN", "name": "Nordson Ord", "index": 34.3, "signal": "Underweight", "elapsed": 291, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "URI", "name": "United Rentals Ord", "index": 33.0, "signal": "Hold", "elapsed": 294, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "VLTO", "name": "Veralto Corp Ord", "index": 32.9, "signal": "Underweight", "elapsed": 293, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "DOV", "name": "Dover Ord", "index": 32.4, "signal": "Underweight", "elapsed": 267, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "CSX", "name": "Csx Ord", "index": 31.3, "signal": "Hold", "elapsed": 302, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "RSG", "name": "Republic Svcs Ord", "index": 32.0, "signal": "Underweight", "elapsed": 316, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "PNR", "name": "Pentair Plc", "index": 30.8, "signal": "Underweight", "elapsed": 322, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "FAST", "name": "Fastenal Ord", "index": 29.4, "signal": "Underweight", "elapsed": 289, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "CTAS", "name": "Cintas Ord", "index": 27.6, "signal": "Hold", "elapsed": 295, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "CPRT", "name": "Copart Ord", "index": 29.1, "signal": "Hold", "elapsed": 335, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "IEX", "name": "Idex Ord", "index": 26.0, "signal": "Underweight", "elapsed": 275, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "EXPD", "name": "Expeditors International Of Wasn Ord", "index": 26.1, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "AOS", "name": "A O Smith Ord", "index": 24.0, "signal": "Hold", "elapsed": 269, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "ODFL", "name": "Old Dominion Ord", "index": 21.9, "signal": "Overweight", "elapsed": 311, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "TDG", "name": "Transdigm Group Ord", "index": 21.2, "signal": "Overweight", "elapsed": 295, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "HWM", "name": "Howmet Aerospace Inc Ord", "index": 20.6, "signal": "Hold", "elapsed": 296, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "MAS", "name": "Masco Ord", "index": 19.9, "signal": "Underweight", "elapsed": 300, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "PWR", "name": "Quanta Services Ord", "index": 20.3, "signal": "Hold", "elapsed": 330, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "ROL", "name": "Rollins Ord", "index": 19.6, "signal": "Underweight", "elapsed": 274, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "FIX", "name": "Comfort Systems Usa Inc", "index": 17.9, "signal": "Underweight", "elapsed": 311, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "SNA", "name": "Snap On Ord", "index": 17.9, "signal": "Hold", "elapsed": 290, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "ITW", "name": "Illinois Tool Ord", "index": 17.1, "signal": "Overweight", "elapsed": 287, "status": "ok", "tb": false}, {"sector": "Industrials", "ticker": "EME", "name": "Emcor Group Ord", "index": 4.6, "signal": "Hold", "elapsed": 301, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "MSFT", "name": "Microsoft-T Ord", "index": 93.9, "signal": "Hold", "elapsed": 285, "status": "ok", "tb": true}, {"sector": "Information Technology", "ticker": "CRM", "name": "Salesforce Inc Ord", "index": 88.7, "signal": "Underweight", "elapsed": 276, "status": "ok", "tb": true}, {"sector": "Information Technology", "ticker": "NOW", "name": "Servicenow Ord", "index": 84.8, "signal": "Underweight", "elapsed": 295, "status": "ok", "tb": true}, {"sector": "Information Technology", "ticker": "PANW", "name": "Palo Alto Networks Ord", "index": 82.4, "signal": "Underweight", "elapsed": 261, "status": "ok", "tb": true}, {"sector": "Information Technology", "ticker": "ADBE", "name": "Adobe Inc Ord", "index": 83.4, "signal": "Underweight", "elapsed": 306, "status": "ok", "tb": true}, {"sector": "Information Technology", "ticker": "CSCO", "name": "Cisco-T Ord", "index": 80.4, "signal": "Hold", "elapsed": 279, "status": "ok", "tb": true}, {"sector": "Information Technology", "ticker": "IBM", "name": "Intl Business Machines Corp Ord", "index": 78.6, "signal": "Underweight", "elapsed": 310, "status": "ok", "tb": true}, {"sector": "Information Technology", "ticker": "NVDA", "name": "Nvidia Ord", "index": 78.6, "signal": "Underweight", "elapsed": 282, "status": "ok", "tb": true}, {"sector": "Information Technology", "ticker": "PLTR", "name": "Palantir Technologies Inc Ord", "index": 77.3, "signal": "Underweight", "elapsed": 260, "status": "ok", "tb": true}, {"sector": "Information Technology", "ticker": "ACN", "name": "Accenture Plc-A Ord", "index": 77.6, "signal": "Overweight", "elapsed": 299, "status": "ok", "tb": true}, {"sector": "Information Technology", "ticker": "INTC", "name": "Intel-T Ord", "index": 75.8, "signal": "Underweight", "elapsed": 317, "status": "ok", "tb": true}, {"sector": "Information Technology", "ticker": "AMD", "name": "Advanced Micro Devices Ord", "index": 75.3, "signal": "Overweight", "elapsed": 275, "status": "ok", "tb": true}, {"sector": "Information Technology", "ticker": "CRWD", "name": "Crowdstrike Holdings Inc Ord", "index": 75.3, "signal": "Underweight", "elapsed": 301, "status": "ok", "tb": true}, {"sector": "Information Technology", "ticker": "CDNS", "name": "Cadence Design Systems Ord", "index": 72.3, "signal": "Hold", "elapsed": 291, "status": "ok", "tb": true}, {"sector": "Information Technology", "ticker": "DDOG", "name": "Datadog Ord A", "index": 69.7, "signal": "Underweight", "elapsed": 296, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "QCOM", "name": "Qualcomm Ord", "index": 71.9, "signal": "Underweight", "elapsed": 336, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "INTU", "name": "Intuit Ord", "index": 69.6, "signal": "Hold", "elapsed": 309, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "WDAY", "name": "Workday Inc", "index": 69.5, "signal": "Hold", "elapsed": 300, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "MU", "name": "Micron Technology Ord", "index": 68.3, "signal": "Overweight", "elapsed": 267, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "ANET", "name": "Arista Networks", "index": 68.0, "signal": "Overweight", "elapsed": 302, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "ORCL", "name": "Oracle Sys Ord", "index": 66.5, "signal": "Underweight", "elapsed": 265, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "HPE", "name": "Hewlett Packard Enterprise Ord", "index": 65.8, "signal": "Underweight", "elapsed": 254, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "CTSH", "name": "Cognizant Technology Solutn Cl A Ord", "index": 67.5, "signal": "Underweight", "elapsed": 306, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "NTAP", "name": "Netapp Ord", "index": 63.3, "signal": "Underweight", "elapsed": 294, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "SNPS", "name": "Synopsys Ord", "index": 62.9, "signal": "Hold", "elapsed": 333, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "ADSK", "name": "Autodesk Ord", "index": 62.1, "signal": "Underweight", "elapsed": 303, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "DELL", "name": "Dell Technologies Inc Ord", "index": 61.7, "signal": "Underweight", "elapsed": 307, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "GEN", "name": "Gen Digital Inc Ord", "index": 60.9, "signal": "Hold", "elapsed": 289, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "FTNT", "name": "Fortinet Ord", "index": 61.0, "signal": "Underweight", "elapsed": 303, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "AMAT", "name": "Applied Material Ord", "index": 57.1, "signal": "Hold", "elapsed": 302, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "HPQ", "name": "Hp Ord", "index": 56.7, "signal": "Underweight", "elapsed": 305, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "GDDY", "name": "Godaddy Inc", "index": 56.9, "signal": "Underweight", "elapsed": 330, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "AAPL", "name": "Apple Ord", "index": 55.3, "signal": "Hold", "elapsed": 252, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "FFIV", "name": "F5 Inc Ord", "index": 56.6, "signal": "Underweight", "elapsed": 294, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "EPAM", "name": "Epam Systems Ord", "index": 55.2, "signal": "Underweight", "elapsed": 295, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "MSI", "name": "Motorola Solutions Ord", "index": 54.8, "signal": "Underweight", "elapsed": 288, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "ZBRA", "name": "Zebra Techs Ord", "index": 53.5, "signal": "Underweight", "elapsed": 289, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "AKAM", "name": "Akamai Technologies Ord", "index": 54.2, "signal": "Underweight", "elapsed": 301, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "AVGO", "name": "Broadcom Limited Ord", "index": 53.0, "signal": "Overweight", "elapsed": 255, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "WDC", "name": "Western Digital Ord", "index": 52.8, "signal": "Hold", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "PTC", "name": "Ptc Inc", "index": 52.6, "signal": "Underweight", "elapsed": 297, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "APP", "name": "Applovin Ord Shs Class A", "index": 49.0, "signal": "Overweight", "elapsed": 336, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "TRMB", "name": "Trimble Inc Ord", "index": 47.8, "signal": "Hold", "elapsed": 261, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "NXPI", "name": "Nxp Semiconductors Ord", "index": 48.0, "signal": "Underweight", "elapsed": 302, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "ADI", "name": "Analog Devices Ord", "index": 47.1, "signal": "Underweight", "elapsed": 305, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "JBL", "name": "Jabil Circuit Ord", "index": 46.1, "signal": "Underweight", "elapsed": 290, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "TER", "name": "Teradyne Ord", "index": 46.0, "signal": "Underweight", "elapsed": 329, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "STX", "name": "Seagate Technology Holdings Plc Ord", "index": 44.6, "signal": "Underweight", "elapsed": 305, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "SNDK", "name": "Sandisk Corp.", "index": 45.3, "signal": "Underweight", "elapsed": 344, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "MCHP", "name": "Microchip Technology Ord", "index": 44.1, "signal": "Hold", "elapsed": 311, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "CDW", "name": "Cdw Ord Shs", "index": 41.6, "signal": "Hold", "elapsed": 297, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "LRCX", "name": "Lam Research Ord", "index": 40.4, "signal": "Overweight", "elapsed": 317, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "KEYS", "name": "Keysight Technologies", "index": 39.8, "signal": "Hold", "elapsed": 294, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "FICO", "name": "Fair Isaac Ord", "index": 39.6, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "ON", "name": "On Semiconductor Ord", "index": 37.3, "signal": "Underweight", "elapsed": 312, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "IT", "name": "Gartner Ord", "index": 35.9, "signal": "Underweight", "elapsed": 293, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "SMCI", "name": "Super Micro Computer Ord", "index": 34.8, "signal": "Underweight", "elapsed": 285, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "KLAC", "name": "Kla Corporation Ord", "index": 34.8, "signal": "Hold", "elapsed": 294, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "TEL", "name": "Te Connectivity Plc Ord", "index": 33.6, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "TXN", "name": "Texas Instruments Ord", "index": 31.7, "signal": "Underweight", "elapsed": 324, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "GLW", "name": "Corning Ord", "index": 29.2, "signal": "Underweight", "elapsed": 309, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "Q", "name": "Qnity Electronics Inc", "index": 28.2, "signal": "Hold", "elapsed": 303, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "TYL", "name": "Tyler Technologies Ord", "index": 27.8, "signal": "Underweight", "elapsed": 305, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "SWKS", "name": "Skyworks Solutions Ord", "index": 26.4, "signal": "Underweight", "elapsed": 291, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "ROP", "name": "Roper Technologies Inc", "index": 22.1, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "TDY", "name": "Teledyne Tech Ord", "index": 13.5, "signal": "Hold", "elapsed": 291, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "VRSN", "name": "Verisign Ord", "index": 7.5, "signal": "Underweight", "elapsed": 275, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "MPWR", "name": "Monolithic Power Systems Ord", "index": 12.8, "signal": "Underweight", "elapsed": 304, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "APH", "name": "Amphenol Cl A Ord", "index": 5.9, "signal": "Hold", "elapsed": 292, "status": "ok", "tb": false}, {"sector": "Information Technology", "ticker": "FSLR", "name": "First Solar Ord", "index": 5.4, "signal": "Underweight", "elapsed": 299, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "ECL", "name": "Ecolab Ord", "index": 93.1, "signal": "Underweight", "elapsed": 313, "status": "ok", "tb": true}, {"sector": "Maerials", "ticker": "IFF", "name": "Intl Flav & Frag U Ord", "index": 76.6, "signal": "Underweight", "elapsed": 274, "status": "ok", "tb": true}, {"sector": "Maerials", "ticker": "DOW", "name": "Dow Inc Ord", "index": 81.7, "signal": "Hold", "elapsed": 290, "status": "ok", "tb": true}, {"sector": "Maerials", "ticker": "LIN", "name": "Linde Plc Ord", "index": 75.3, "signal": "Hold", "elapsed": 299, "status": "ok", "tb": true}, {"sector": "Maerials", "ticker": "AVY", "name": "Avery Dennison Ord", "index": 73.0, "signal": "Underweight", "elapsed": 274, "status": "ok", "tb": true}, {"sector": "Maerials", "ticker": "CRH", "name": "Crh Plc", "index": 68.0, "signal": "Underweight", "elapsed": 310, "status": "ok", "tb": true}, {"sector": "Maerials", "ticker": "DD", "name": "Dupont De Nemours Inc Ord", "index": 65.0, "signal": "Hold", "elapsed": 277, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "FCX", "name": "Freeport-Mcmoran Inc", "index": 64.4, "signal": "Underweight", "elapsed": 296, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "CTVA", "name": "Corteva Inc Ord", "index": 63.8, "signal": "Underweight", "elapsed": 305, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "PPG", "name": "Ppg Industries Ord", "index": 52.8, "signal": "Underweight", "elapsed": 300, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "ALB", "name": "Albemarle Ord", "index": 50.3, "signal": "Underweight", "elapsed": 303, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "SW", "name": "Smurfit Westrock Plc Ord", "index": 46.1, "signal": "Underweight", "elapsed": 273, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "LYB", "name": "Lyondellbasell Industries Cl A Ord", "index": 41.6, "signal": "Hold", "elapsed": 316, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "AMCR", "name": "Amcor Plc Ord", "index": 38.8, "signal": "Underweight", "elapsed": 273, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "APD", "name": "Air Products And Chemicals Ord", "index": 36.3, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "NEM", "name": "Newmont Corp Ord", "index": 35.7, "signal": "Underweight", "elapsed": 318, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "NUE", "name": "Nucor Ord", "index": 34.7, "signal": "Underweight", "elapsed": 296, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "VMC", "name": "Vulcan Materials Ord", "index": 32.8, "signal": "Underweight", "elapsed": 293, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "MOS", "name": "The Mosaic Company Ord", "index": 28.8, "signal": "Underweight", "elapsed": 303, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "SHW", "name": "Sherwin Williams Ord", "index": 27.3, "signal": "Underweight", "elapsed": 296, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "BALL", "name": "Ball Ord", "index": 24.9, "signal": "Underweight", "elapsed": 263, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "MLM", "name": "Martin Marietta Ord", "index": 21.6, "signal": "Underweight", "elapsed": 307, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "IP", "name": "International Paper Co Ord", "index": 21.0, "signal": "Underweight", "elapsed": 304, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "STLD", "name": "Steel Dynamics Ord", "index": 18.1, "signal": "Hold", "elapsed": 300, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "CF", "name": "Cf Industries Holdings Ord", "index": 12.8, "signal": "Underweight", "elapsed": 300, "status": "ok", "tb": false}, {"sector": "Maerials", "ticker": "PKG", "name": "Packaging Corp Of America Ord", "index": 5.3, "signal": "Underweight", "elapsed": 273, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "EQIX", "name": "Equinix Inc Common Stock Reit", "index": 95.9, "signal": "Underweight", "elapsed": 304, "status": "ok", "tb": true}, {"sector": "Real Estate", "ticker": "IRM", "name": "Iron Mountain Ord", "index": 89.5, "signal": "Underweight", "elapsed": 294, "status": "ok", "tb": true}, {"sector": "Real Estate", "ticker": "DLR", "name": "Digital Realty Reit", "index": 93.5, "signal": "Overweight", "elapsed": 301, "status": "ok", "tb": true}, {"sector": "Real Estate", "ticker": "CBRE", "name": "Cbre Group Cl A Ord", "index": 79.9, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": true}, {"sector": "Real Estate", "ticker": "CSGP", "name": "Costar Group Ord", "index": 72.9, "signal": "Underweight", "elapsed": 289, "status": "ok", "tb": true}, {"sector": "Real Estate", "ticker": "WELL", "name": "Welltower Inc Ord", "index": 64.9, "signal": "Underweight", "elapsed": 296, "status": "ok", "tb": true}, {"sector": "Real Estate", "ticker": "AMT", "name": "American Tower Cl A Reit", "index": 63.4, "signal": "Underweight", "elapsed": 308, "status": "ok", "tb": true}, {"sector": "Real Estate", "ticker": "PSA", "name": "Public Storage Reit", "index": 62.6, "signal": "Underweight", "elapsed": 290, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "PLD", "name": "Prologis Reit", "index": 58.7, "signal": "Underweight", "elapsed": 296, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "HST", "name": "Host Hotels & Resorts Reit", "index": 50.5, "signal": "Underweight", "elapsed": 282, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "DOC", "name": "Healthpeak Properties Inc Ord", "index": 50.4, "signal": "Underweight", "elapsed": 275, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "O", "name": "Realty Income Reit Ord", "index": 50.4, "signal": "Underweight", "elapsed": 308, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "EQR", "name": "Equity Residential Reit", "index": 36.2, "signal": "ERROR", "elapsed": 2, "status": "No market data for 'EQR': latest row is 2026-08-21, 11 days before the requested 2026-09-01 (stale) \u2014 refusing to use it", "tb": false}, {"sector": "Real Estate", "ticker": "AVB", "name": "Avalonbay Communities Reit", "index": 49.7, "signal": "Underweight", "elapsed": 271, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "INVH", "name": "Invitation Homes Inc Ord", "index": 49.4, "signal": "Underweight", "elapsed": 267, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "KIM", "name": "Kimco Realty Reit", "index": 40.5, "signal": "Underweight", "elapsed": 268, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "CPT", "name": "Camden Property Reit", "index": 39.3, "signal": "Underweight", "elapsed": 279, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "EXR", "name": "Extra Space Storage Reit", "index": 36.4, "signal": "Underweight", "elapsed": 274, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "WY", "name": "Weyerhaeuser Reit", "index": 33.6, "signal": "Underweight", "elapsed": 269, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "CCI", "name": "Crown Castle International Ord", "index": 33.1, "signal": "Underweight", "elapsed": 308, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "SBAC", "name": "Sba Communications Cl A Ord", "index": 32.4, "signal": "Hold", "elapsed": 264, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "UDR", "name": "Udr Reit", "index": 32.2, "signal": "Underweight", "elapsed": 269, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "BXP", "name": "Bxp Inc Ord", "index": 32.0, "signal": "Underweight", "elapsed": 303, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "VTR", "name": "Ventas Reit", "index": 31.1, "signal": "Underweight", "elapsed": 303, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "REG", "name": "Regency Centers Reit", "index": 30.9, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "ESS", "name": "Essex Property Reit", "index": 30.0, "signal": "Underweight", "elapsed": 264, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "ARE", "name": "Alexandria Real Estate Equities Reit", "index": 30.6, "signal": "Underweight", "elapsed": 301, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "SPG", "name": "Simon Property Group Reit", "index": 28.8, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "FRT", "name": "Federal Reit", "index": 25.7, "signal": "Underweight", "elapsed": 295, "status": "ok", "tb": false}, {"sector": "Real Estate", "ticker": "MAA", "name": "Mid America Apartment Communiti Reit", "index": 24.5, "signal": "Underweight", "elapsed": 289, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "AES", "name": "Aes Ord", "index": 95.4, "signal": "Underweight", "elapsed": 267, "status": "ok", "tb": true}, {"sector": "Real Estate", "ticker": "VICI", "name": "Vici Properties Inc Ord", "index": 3.1, "signal": "Underweight", "elapsed": 328, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "DUK", "name": "Duke Energy Ord", "index": 82.5, "signal": "Hold", "elapsed": 302, "status": "ok", "tb": true}, {"sector": "Untilities", "ticker": "PCG", "name": "Pg&E Ord", "index": 77.4, "signal": "Underweight", "elapsed": 313, "status": "ok", "tb": true}, {"sector": "Untilities", "ticker": "EXC", "name": "Exelon Corp Ord", "index": 72.9, "signal": "Underweight", "elapsed": 288, "status": "ok", "tb": true}, {"sector": "Untilities", "ticker": "ETR", "name": "Entergy Ord", "index": 71.3, "signal": "Underweight", "elapsed": 320, "status": "ok", "tb": true}, {"sector": "Untilities", "ticker": "NEE", "name": "Nextera Energy Ord", "index": 68.2, "signal": "Underweight", "elapsed": 303, "status": "ok", "tb": true}, {"sector": "Untilities", "ticker": "NRG", "name": "Nrg Energy Ord", "index": 67.2, "signal": "Underweight", "elapsed": 337, "status": "ok", "tb": true}, {"sector": "Untilities", "ticker": "CEG", "name": "Constellation Energy Corp Ord", "index": 61.7, "signal": "Underweight", "elapsed": 321, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "AEE", "name": "Ameren Ord", "index": 59.5, "signal": "Underweight", "elapsed": 325, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "XEL", "name": "Xcel Energy Ord", "index": 59.1, "signal": "Underweight", "elapsed": 293, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "PPL", "name": "Ppl Ord", "index": 58.1, "signal": "Underweight", "elapsed": 289, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "CMS", "name": "Cms Energy Ord", "index": 50.9, "signal": "Underweight", "elapsed": 304, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "EIX", "name": "Edison International Ord", "index": 47.5, "signal": "Underweight", "elapsed": 277, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "CNP", "name": "Centerpoint Energy Ord", "index": 47.4, "signal": "Underweight", "elapsed": 274, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "AEP", "name": "American Electric Power Ord", "index": 47.3, "signal": "Underweight", "elapsed": 305, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "ED", "name": "Consolidated Edison Ord", "index": 47.1, "signal": "Underweight", "elapsed": 308, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "SO", "name": "Southern Ord", "index": 44.1, "signal": "Underweight", "elapsed": 307, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "ES", "name": "Eversource Energy", "index": 43.6, "signal": "Underweight", "elapsed": 297, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "NI", "name": "Nisource Ord", "index": 40.1, "signal": "Underweight", "elapsed": 261, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "D", "name": "Dominion Energy Ord", "index": 43.1, "signal": "Underweight", "elapsed": 306, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "DTE", "name": "Dte Energy Ord", "index": 36.7, "signal": "Underweight", "elapsed": 266, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "LNT", "name": "Alliant Energy Ord", "index": 36.1, "signal": "Hold", "elapsed": 260, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "PEG", "name": "Public Srvce Ent Ord", "index": 31.4, "signal": "Underweight", "elapsed": 274, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "SRE", "name": "Sempra Energy Ord", "index": 34.3, "signal": "Hold", "elapsed": 316, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "EVRG", "name": "Evergy Ord Shs", "index": 29.9, "signal": "Underweight", "elapsed": 296, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "VST", "name": "Vistra Corp Ord", "index": 32.7, "signal": "Overweight", "elapsed": 330, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "FE", "name": "Firstenergy Ord", "index": 29.2, "signal": "Underweight", "elapsed": 298, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "PNW", "name": "Pinnacle West Ord", "index": 27.2, "signal": "Underweight", "elapsed": 305, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "WEC", "name": "Wec Energy Group Inc Ord", "index": 20.6, "signal": "Underweight", "elapsed": 293, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "AWK", "name": "American Water Works Ord", "index": 16.6, "signal": "Underweight", "elapsed": 308, "status": "ok", "tb": false}, {"sector": "Untilities", "ticker": "ATO", "name": "Atmos Energy Ord", "index": 5.9, "signal": "Hold", "elapsed": 300, "status": "ok", "tb": false}];
+
+const SIGNAL_ORDER = ["Buy","Overweight","Hold","Underweight","Sell","ERROR"];
+const SIGNAL_LABELS = {Buy:"Buy",Overweight:"Overweight",Hold:"Hold",Underweight:"Underweight",Sell:"Sell",ERROR:"No data"};
+
+function fmtElapsed(s){
+  const m = Math.floor(s/60), r = s%60;
+  return m + "m " + String(r).padStart(2,"0") + "s";
+}
+
+function renderMeta(){
+  const tbCount = DATA.filter(d=>d.tb).length;
+  document.getElementById("metaBlock").innerHTML =
+    "<div><b>"+DATA.length+"</b> tickers &middot; <b>"+tbCount+"</b> trailblazers &middot; 11 sectors</div>"+
+    "<div>date <b>2026-09-01</b></div>";
+}
+
+function renderStats(){
+  const counts = {Buy:0,Overweight:0,Hold:0,Underweight:0,Sell:0,ERROR:0};
+  DATA.forEach(d=>{ if(counts[d.signal]!==undefined) counts[d.signal]++; });
+  const bullish = counts.Buy + counts.Overweight;
+  const bearish = counts.Underweight + counts.Sell;
+  const tbCount = DATA.filter(d=>d.tb).length;
+  const tiles = [
+    {k:"all", label:"Stocks Analyzed", n:DATA.length, cls:""},
+    {k:"tb", label:"AI Trailblazers", n:tbCount, cls:"tb"},
+    {k:"bull", label:"Bullish", n:bullish, cls:"pos"},
+    {k:"Hold", label:"Hold", n:counts.Hold, cls:"neu"},
+    {k:"bear", label:"Bearish", n:bearish, cls:"neg"},
+  ];
+  document.getElementById("statStrip").innerHTML = tiles.map(t=>
+    '<div class="stat-tile '+t.cls+'"><div class="n">'+t.n+'</div><div class="l">'+t.label+'</div></div>'
+  ).join("");
+}
+
+function renderSectorSelect(){
+  const sectors = [...new Set(DATA.map(d=>d.sector))].sort();
+  const sel = document.getElementById("sectorSelect");
+  sectors.forEach(s=>{
+    const o = document.createElement("option");
+    o.value = s; o.textContent = s;
+    sel.appendChild(o);
+  });
+}
+
+function renderChips(){
+  const el = document.getElementById("signalChips");
+  el.innerHTML = SIGNAL_ORDER.map(s=>
+    '<button class="chip" data-signal="'+s+'">'+SIGNAL_LABELS[s]+'</button>'
+  ).join("");
+}
+
+let state = { search:"", sector:"", signals:new Set(), tbOnly:false, sortKey:"index", sortDir:-1 };
+
+function applyFilters(){
+  let rows = DATA.filter(d=>{
+    if(state.tbOnly && !d.tb) return false;
+    if(state.sector && d.sector!==state.sector) return false;
+    if(state.signals.size && !state.signals.has(d.signal)) return false;
+    if(state.search){
+      const q = state.search.toLowerCase();
+      if(!d.ticker.toLowerCase().includes(q) && !d.sector.toLowerCase().includes(q) && !(d.name||"").toLowerCase().includes(q)) return false;
+    }
+    return true;
+  });
+  rows.sort((a,b)=>{
+    let av=a[state.sortKey], bv=b[state.sortKey];
+    if(typeof av==="string"){ av=av.toLowerCase(); bv=bv.toLowerCase(); }
+    if(av<bv) return -1*state.sortDir;
+    if(av>bv) return 1*state.sortDir;
+    return 0;
+  });
+  return rows;
+}
+
+const maxIndex = Math.max(...DATA.map(d=>d.index));
+
+function renderSectorSummary(){
+  const el = document.getElementById("sectorSummary");
+  if(!state.sector){ el.style.display = "none"; return; }
+  const rows = DATA.filter(d=>d.sector===state.sector);
+  const avg = rows.reduce((a,d)=>a+d.index,0) / rows.length;
+  const counts = {Buy:0,Overweight:0,Hold:0,Underweight:0,Sell:0,ERROR:0};
+  rows.forEach(d=>{ if(counts[d.signal]!==undefined) counts[d.signal]++; });
+  el.style.display = "flex";
+  el.innerHTML =
+    '<div>'+rows.length+' tickers in <b>'+state.sector+'</b></div>'+
+    '<div>avg AIDE Index <b>'+avg.toFixed(1)+'</b></div>'+
+    '<div class="ss-signals">'+
+      '<span style="color:var(--pos)">'+(counts.Buy+counts.Overweight)+' bullish</span>'+
+      '<span style="color:var(--neu)">'+counts.Hold+' hold</span>'+
+      '<span style="color:var(--neg)">'+(counts.Underweight+counts.Sell)+' bearish</span>'+
+      (counts.ERROR? '<span style="color:var(--crit)">'+counts.ERROR+' no data</span>' : '') +
+    '</div>';
+}
+
+function copyVisibleTickers(){
+  const rows = applyFilters();
+  const text = rows.map(d=>d.ticker).join(", ");
+  const btn = document.getElementById("copyBtn");
+  const done = ()=>{
+    btn.textContent = "Copied " + rows.length;
+    btn.classList.add("copied");
+    setTimeout(()=>{ btn.textContent = "Copy tickers"; btn.classList.remove("copied"); }, 1400);
+  };
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done).catch(()=>fallbackCopy(text, done));
+  } else {
+    fallbackCopy(text, done);
+  }
+}
+
+function fallbackCopy(text, done){
+  const ta = document.createElement("textarea");
+  ta.value = text;
+  ta.style.position = "fixed";
+  ta.style.opacity = "0";
+  document.body.appendChild(ta);
+  ta.select();
+  try{ document.execCommand("copy"); done(); }catch(e){}
+  document.body.removeChild(ta);
+}
+
+function renderTable(){
+  const rows = applyFilters();
+  renderSectorSummary();
+  document.getElementById("countLine").textContent =
+    "Showing " + rows.length + " of " + DATA.length + " tickers";
+  document.getElementById("emptyState").style.display = rows.length? "none":"block";
+  const tbody = document.getElementById("tbody");
+  tbody.innerHTML = rows.map(d=>{
+    const pct = Math.round((d.index/maxIndex)*100);
+    return '<tr class="'+(d.signal==="ERROR"?"error-row":"")+'" data-ticker="'+d.ticker+'">'+
+      '<td class="ticker">'+d.ticker+(d.tb?'<span class="tb-star" title="AI Trailblazer">&#9733;</span>':'')+(d.name?'<span class="co-name">'+d.name+'</span>':'')+'</td>'+
+      '<td class="sector">'+d.sector+'</td>'+
+      '<td class="index-cell"><div class="index-wrap"><span class="index-num">'+d.index.toFixed(1)+'</span><div class="index-bar"><span style="width:'+pct+'%"></span></div></div></td>'+
+      '<td><span class="pill '+d.signal+'">'+SIGNAL_LABELS[d.signal]+'</span></td>'+
+      '</tr>';
+  }).join("");
+  [...tbody.querySelectorAll("tr")].forEach(tr=>{
+    tr.addEventListener("click", ()=>openDrawer(tr.dataset.ticker));
+  });
+  document.querySelectorAll("thead th").forEach(th=>{
+    th.classList.toggle("active", th.dataset.key===state.sortKey);
+    const arrow = th.querySelector(".arrow");
+    if(th.dataset.key===state.sortKey) arrow.innerHTML = state.sortDir===1?"&#9650;":"&#9660;";
+  });
+}
+
+let drawerExpanded = false;
+const reportCache = new Map();
+let dbCapPromise = null;
+function getDb(){
+  if(!dbCapPromise){
+    dbCapPromise = (window.claude && window.claude.use)
+      ? claude.use("db").catch(()=>null)
+      : Promise.resolve(null);
+  }
+  return dbCapPromise;
+}
+
+function openDrawer(ticker){
+  const d = DATA.find(x=>x.ticker===ticker);
+  if(!d) return;
+  document.getElementById("drawerTicker").textContent = d.ticker;
+  document.getElementById("drawerSub").textContent = (d.name? d.name + " · " : "") + d.sector + (d.tb ? " · AI Trailblazer" : "") + " · analyzed 2026-09-01";
+  document.getElementById("drawerStats").innerHTML =
+    '<div class="item">AIDE Index<b>'+d.index.toFixed(1)+'</b></div>'+
+    '<div class="item">Signal<b><span class="pill '+d.signal+'">'+SIGNAL_LABELS[d.signal]+'</span></b></div>'+
+    '';
+  const body = document.getElementById("drawerBody");
+  if(d.status !== "ok"){
+    body.innerHTML = '<div class="drawer-error">'+d.status+'</div>';
+  } else if(reportCache.has(ticker)){
+    body.innerHTML = marked.parse(reportCache.get(ticker));
+  } else {
+    body.innerHTML = '<div class="drawer-loading">Loading full report&hellip;</div>';
+    loadReport(ticker);
+  }
+  document.getElementById("scrim").classList.add("open");
+  const drawer = document.getElementById("drawer");
+  drawer.classList.add("open");
+  drawer.classList.toggle("expanded", drawerExpanded);
+  drawer.setAttribute("aria-hidden","false");
+}
+
+let reportsBundlePromise = null;
+function getReportsBundle(){
+  if(!reportsBundlePromise){
+    reportsBundlePromise = fetch("reports.json").then(r=>{
+      if(!r.ok) throw new Error("http "+r.status);
+      return r.json();
+    });
+  }
+  return reportsBundlePromise;
+}
+
+async function loadReport(ticker){
+  const stillOpen = ()=> document.getElementById("drawerTicker").textContent === ticker;
+  const body = document.getElementById("drawerBody");
+  try{
+    const bundle = await getReportsBundle();
+    const report = bundle[ticker];
+    if(!report){
+      if(stillOpen()) body.innerHTML = '<div class="drawer-error">No stored report for this ticker.</div>';
+      return;
+    }
+    reportCache.set(ticker, report);
+    if(stillOpen()) body.innerHTML = marked.parse(report);
+  }catch(e){
+    if(stillOpen()) body.innerHTML = '<div class="drawer-error">Couldn\'t load reports.json — make sure it sits next to index.html and you\'re viewing this over the local server (not opened as a file://).</div>';
+  }
+}
+
+document.getElementById("drawerExpand").addEventListener("click", ()=>{
+  drawerExpanded = !drawerExpanded;
+  const drawer = document.getElementById("drawer");
+  drawer.classList.toggle("expanded", drawerExpanded);
+  const btn = document.getElementById("drawerExpand");
+  btn.innerHTML = drawerExpanded ? "&#8600;" : "&#8599;";
+  btn.title = drawerExpanded ? "Shrink back down" : "Expand to full screen";
+});
+function closeDrawer(){
+  document.getElementById("scrim").classList.remove("open");
+  const drawer = document.getElementById("drawer");
+  drawer.classList.remove("open");
+  drawer.setAttribute("aria-hidden","true");
+}
+
+document.getElementById("scrim").addEventListener("click", closeDrawer);
+document.getElementById("drawerClose").addEventListener("click", closeDrawer);
+document.addEventListener("keydown", e=>{ if(e.key==="Escape") closeDrawer(); });
+
+document.getElementById("searchInput").addEventListener("input", e=>{
+  state.search = e.target.value; renderTable();
+});
+document.getElementById("sectorSelect").addEventListener("change", e=>{
+  state.sector = e.target.value; renderTable();
+});
+document.getElementById("copyBtn").addEventListener("click", copyVisibleTickers);
+document.getElementById("tbToggle").addEventListener("click", ()=>{
+  state.tbOnly = !state.tbOnly;
+  document.getElementById("tbToggle").classList.toggle("active", state.tbOnly);
+  renderTable();
+});
+
+function getStoredTheme(){
+  try{ return localStorage.getItem("theme"); }catch(e){ return null; }
+}
+function setStoredTheme(v){
+  try{ localStorage.setItem("theme", v); }catch(e){}
+}
+function systemPrefersDark(){
+  return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+}
+function effectiveTheme(){
+  const stored = getStoredTheme();
+  if(stored==="light" || stored==="dark") return stored;
+  return systemPrefersDark() ? "dark" : "light";
+}
+function applyTheme(theme){
+  if(theme==="light" || theme==="dark"){
+    document.documentElement.setAttribute("data-theme", theme);
+  } else {
+    document.documentElement.removeAttribute("data-theme");
+  }
+  document.getElementById("themeIcon").innerHTML = effectiveTheme()==="dark" ? "&#9728;" : "&#9789;";
+}
+applyTheme(getStoredTheme());
+document.getElementById("themeToggle").addEventListener("click", ()=>{
+  const next = effectiveTheme()==="dark" ? "light" : "dark";
+  setStoredTheme(next);
+  applyTheme(next);
+});
+document.getElementById("signalChips").addEventListener("click", e=>{
+  const btn = e.target.closest(".chip");
+  if(!btn) return;
+  const s = btn.dataset.signal;
+  if(state.signals.has(s)){ state.signals.delete(s); btn.classList.remove("active"); }
+  else { state.signals.add(s); btn.classList.add("active"); }
+  renderTable();
+});
+document.querySelectorAll("thead th").forEach(th=>{
+  th.addEventListener("click", ()=>{
+    const key = th.dataset.key;
+    if(state.sortKey===key){ state.sortDir*=-1; }
+    else { state.sortKey=key; state.sortDir = key==="ticker"||key==="sector"?1:-1; }
+    renderTable();
+  });
+});
+
+// ---------------------------------------------------------------------
+// Chat ("Ask AIDE") — Claude grounded in this table + the full reports
+// ---------------------------------------------------------------------
+let sampleCapPromise = null;
+function getSample(){
+  if(!sampleCapPromise){
+    sampleCapPromise = (window.claude && window.claude.use)
+      ? claude.use("sample").catch(()=>null)
+      : Promise.resolve(null);
+  }
+  return sampleCapPromise;
+}
+
+function buildSystemInstructions(){
+  const bySignal = {};
+  DATA.forEach(d=>{ bySignal[d.signal] = (bySignal[d.signal]||0) + 1; });
+  const sectors = [...new Set(DATA.map(d=>d.sector))].sort();
+  const tbCount = DATA.filter(d=>d.tb).length;
+  return [
+    "You are the research assistant embedded in the AIDE 500 dashboard, a page that scores all 500 S&P 500 companies for real AI adoption (an AIDE Index, 0-100, based on filings, job postings and executive statements, not marketing claims) and rates each with an AI trading-analyst pipeline (TradingAgents): Buy / Overweight / Hold / Underweight / Sell, or no-data.",
+    "Snapshot, as of September 1, 2026: " + DATA.length + " companies across " + sectors.length + " sectors ("+sectors.join(", ")+"). "
+      + tbCount + " are AI Trailblazers (top 20% AIDE Index within their sector). Signal counts: "
+      + Object.entries(bySignal).map(([s,n])=>n+" "+s).join(", ") + ".",
+    "You have two tools: queryStocks (filter/search the table by sector, signal, Trailblazer status, or AIDE Index range) and getCompanyReport (the full multi-agent analyst report for one ticker: technicals, sentiment, news, fundamentals, bull/bear debate, final call). Always use these tools to look up real tickers, ratings and reasoning rather than guessing or inventing numbers — if you're not sure a company is in this dataset, call queryStocks with a search term first.",
+    "Answer concisely in markdown. Refer to tickers in backticks (e.g. `NVDA`). When summarizing multiple companies, use a short bulleted list rather than a long table. If a question is outside this dataset (not about these 500 companies or their ratings), say so briefly.",
+  ].join("\n\n");
+}
+
+const CHAT_TOOLS = [
+  {
+    name: "queryStocks",
+    description: "Search/filter the 500-company table. Returns matching rows (ticker, name, sector, AIDE Index, signal). Use this to find companies by sector, rating, Trailblazer status, index range, or name/ticker search before answering.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        search: { type: "string", description: "Case-insensitive match against ticker, company name, or sector." },
+        sector: { type: "string", description: "Exact GICS sector name." },
+        signal: { type: "string", enum: ["Buy","Overweight","Hold","Underweight","Sell","ERROR"], description: "ERROR means no market data / no rating." },
+        trailblazerOnly: { type: "boolean", description: "true = only the 103 AI Trailblazers." },
+        minIndex: { type: "number" },
+        maxIndex: { type: "number" },
+        limit: { type: "number", description: "Max rows to return, default 25, max 100." },
+      },
+    },
+    execute(input){
+      let rows = DATA;
+      if(input.search){
+        const q = String(input.search).toLowerCase();
+        rows = rows.filter(d => d.ticker.toLowerCase().includes(q) || (d.name||"").toLowerCase().includes(q) || d.sector.toLowerCase().includes(q));
+      }
+      if(input.sector) rows = rows.filter(d => d.sector === input.sector);
+      if(input.signal) rows = rows.filter(d => d.signal === input.signal);
+      if(input.trailblazerOnly) rows = rows.filter(d => d.tb);
+      if(typeof input.minIndex === "number") rows = rows.filter(d => d.index >= input.minIndex);
+      if(typeof input.maxIndex === "number") rows = rows.filter(d => d.index <= input.maxIndex);
+      const limit = Math.min(Math.max(Number(input.limit) || 25, 1), 100);
+      const shown = rows.slice(0, limit).map(d => ({ ticker:d.ticker, name:d.name, sector:d.sector, index:d.index, signal:d.signal, trailblazer:d.tb }));
+      return { matchCount: rows.length, shownCount: shown.length, results: shown };
+    },
+  },
+  {
+    name: "getCompanyReport",
+    description: "Fetch the full AI analyst report for one ticker (technical, sentiment, news, fundamentals, bull/bear debate, final portfolio decision). Use after queryStocks confirms the ticker exists.",
+    inputSchema: {
+      type: "object",
+      properties: { ticker: { type: "string", description: "Exact ticker, e.g. NVDA." } },
+      required: ["ticker"],
+    },
+    async execute(input){
+      const ticker = String(input.ticker || "").toUpperCase().trim();
+      const row = DATA.find(d => d.ticker === ticker);
+      if(!row) return "No company with ticker '" + ticker + "' in this dataset. Use queryStocks to search first.";
+      if(row.status !== "ok") return ticker + " has no report: " + row.status;
+      const db = await getDb();
+      if(!db) return "Reports aren't available in this view right now.";
+      try{
+        const snap = await db.doc("reports/" + ticker).get();
+        if(!snap.exists) return "No stored report for " + ticker + ".";
+        let report = String(snap.data().report || "");
+        const LIMIT = 7000;
+        const truncated = report.length > LIMIT;
+        if(truncated) report = report.slice(0, LIMIT) + "\n\n[report truncated for length]";
+        return { ticker, truncated, report };
+      }catch(e){
+        return "Couldn't load the report for " + ticker + " right now.";
+      }
+    },
+  },
+];
+
+let chatTurns = [];
+let chatBusy = false;
+
+function chatScrollToEnd(){
+  const body = document.getElementById("chatBody");
+  body.scrollTop = body.scrollHeight;
+}
+
+function addChatBubble(role, text, cls){
+  const body = document.getElementById("chatBody");
+  const el = document.createElement("div");
+  el.className = "chat-msg " + (cls || role);
+  if(role === "assistant" && cls !== "thinking" && cls !== "error"){
+    el.innerHTML = marked.parse(text || "");
+  } else {
+    el.textContent = text || "";
+  }
+  body.appendChild(el);
+  chatScrollToEnd();
+  return el;
+}
+
+const CHAT_ERROR_COPY = {
+  not_granted: "Chat access wasn't granted for this view.",
+  sampling_disabled: "Claude isn't available for this account.",
+  rate_limited: "You're sending messages too fast — try again in a moment.",
+  session_expired: "Please sign in again to keep chatting.",
+  refused: "Claude couldn't answer that — try rephrasing.",
+  empty_completion: "Claude didn't return an answer — try rephrasing or asking for less at once.",
+  upstream_error: "Something went wrong reaching Claude — try again.",
+  cancelled: "Stopped.",
+};
+
+async function sendChatMessage(text){
+  text = (text || "").trim();
+  if(!text || chatBusy) return;
+  chatBusy = true;
+
+  const emptyEl = document.getElementById("chatEmpty");
+  if(emptyEl) emptyEl.remove();
+
+  addChatBubble("user", text);
+  chatTurns.push({ role: "user", content: text });
+
+  const input = document.getElementById("chatInput");
+  const sendBtn = document.getElementById("chatSend");
+  input.value = "";
+  input.style.height = "auto";
+  input.disabled = true;
+  sendBtn.disabled = true;
+
+  const thinkingEl = addChatBubble("assistant", "Thinking…", "thinking");
+
+  const sampleFn = await getSample();
+  if(!sampleFn){
+    thinkingEl.className = "chat-msg error";
+    thinkingEl.textContent = "Chat isn't available in this view.";
+    chatBusy = false; input.disabled = false; sendBtn.disabled = false;
+    return;
+  }
+
+  const turnsForCall = [{ role: "user", content: buildSystemInstructions() }, ...chatTurns];
+  let started = false;
+
+  const runCall = (withTools) => sampleFn(turnsForCall, {
+    cache: false,
+    tools: withTools ? CHAT_TOOLS : undefined,
+    onText: ({ text: whole }) => {
+      if(!started){ thinkingEl.className = "chat-msg assistant"; started = true; }
+      thinkingEl.innerHTML = marked.parse(whole);
+      chatScrollToEnd();
+    },
+  });
+
+  try{
+    let result;
+    try{
+      result = await runCall(true);
+    }catch(e){
+      if(e && e.code === "tools_unavailable"){
+        result = await runCall(false);
+      } else {
+        throw e;
+      }
+    }
+    chatTurns.push({ role: "assistant", content: result.text });
+    if(result.truncated){
+      const note = document.createElement("div");
+      note.className = "chat-msg thinking";
+      note.textContent = "(answer cut short — ask a narrower question)";
+      document.getElementById("chatBody").appendChild(note);
+    }
+  }catch(e){
+    const code = e && e.code;
+    const msg = CHAT_ERROR_COPY[code] || "Something went wrong — try again.";
+    if(e && e.text){
+      thinkingEl.className = "chat-msg assistant";
+      thinkingEl.innerHTML = marked.parse(e.text) + '<div style="margin-top:6px;color:var(--crit);font-size:12px;">' + msg + '</div>';
+    } else {
+      thinkingEl.className = "chat-msg error";
+      thinkingEl.textContent = msg;
+    }
+  } finally {
+    chatScrollToEnd();
+    chatBusy = false;
+    input.disabled = false;
+    sendBtn.disabled = false;
+    input.focus();
+  }
+}
+
+function openChat(){
+  document.getElementById("chatScrim").classList.add("open");
+  const panel = document.getElementById("chatPanel");
+  panel.classList.add("open");
+  panel.setAttribute("aria-hidden", "false");
+  document.getElementById("chatInput").focus();
+}
+function closeChat(){
+  document.getElementById("chatScrim").classList.remove("open");
+  const panel = document.getElementById("chatPanel");
+  panel.classList.remove("open");
+  panel.setAttribute("aria-hidden", "true");
+}
+function resetChat(){
+  chatTurns = [];
+  const body = document.getElementById("chatBody");
+  body.innerHTML =
+    '<div class="chat-empty" id="chatEmpty">' +
+      '<p>Ask about ratings, sectors, or any company below — answers are grounded in the live table and full analyst reports.</p>' +
+      '<div class="chat-suggestions">' +
+        '<button class="chat-suggestion" type="button">Summarize the AI Trailblazers overall</button>' +
+        '<button class="chat-suggestion" type="button">Which sectors look most bullish right now?</button>' +
+        '<button class="chat-suggestion" type="button">What\'s the bull case for NVDA?</button>' +
+        '<button class="chat-suggestion" type="button">List Trailblazers rated Sell or Underweight</button>' +
+      '</div>' +
+    '</div>';
+}
+
+document.getElementById("chatFab").addEventListener("click", openChat);
+document.getElementById("chatCloseBtn").addEventListener("click", closeChat);
+document.getElementById("chatScrim").addEventListener("click", closeChat);
+document.getElementById("chatClearBtn").addEventListener("click", resetChat);
+document.addEventListener("keydown", e=>{ if(e.key==="Escape") closeChat(); });
+document.getElementById("chatForm").addEventListener("submit", e=>{
+  e.preventDefault();
+  sendChatMessage(document.getElementById("chatInput").value);
+});
+document.getElementById("chatInput").addEventListener("keydown", e=>{
+  if(e.key === "Enter" && !e.shiftKey){
+    e.preventDefault();
+    sendChatMessage(document.getElementById("chatInput").value);
+  }
+});
+document.getElementById("chatInput").addEventListener("input", e=>{
+  const el = e.target;
+  el.style.height = "auto";
+  el.style.height = Math.min(el.scrollHeight, 110) + "px";
+});
+document.getElementById("chatBody").addEventListener("click", e=>{
+  const btn = e.target.closest(".chat-suggestion");
+  if(btn) sendChatMessage(btn.textContent);
+});
+
+getSample().then(fn=>{ if(fn) document.getElementById("chatFab").hidden = false; });
+
+renderMeta();
+renderStats();
+renderSectorSelect();
+renderChips();
+renderTable();
+</script>
+
+</body></html>
+</body></html>
